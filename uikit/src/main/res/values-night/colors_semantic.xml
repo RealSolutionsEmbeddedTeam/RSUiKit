@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text Tokens Dark -->
+    <color name="rs_text_primary">@color/rs_gray_dark_50</color>
+    <color name="rs_text_primary_on_brand">@color/rs_gray_dark_50</color>
+
+    <color name="rs_text_secondary">@color/rs_gray_dark_300</color>
+    <color name="rs_text_secondary_on_hover">@color/rs_gray_dark_200</color>
+    <color name="rs_text_secondary_on_brand">@color/rs_gray_dark_300</color>
+
+    <color name="rs_text_tertiary">@color/rs_gray_dark_400</color>
+    <color name="rs_text_tertiary_on_hover">@color/rs_gray_dark_300</color>
+    <color name="rs_text_tertiary_on_brand">@color/rs_gray_dark_400</color>
+
+    <color name="rs_text_quaternary">@color/rs_gray_dark_400</color>
+    <color name="rs_text_quaternary_on_brand">@color/rs_gray_dark_400</color>
+
+    <color name="rs_text_placeholder">@color/rs_gray_dark_500</color>
+    <color name="rs_text_placeholder_subtle">@color/rs_gray_dark_700</color>
+
+    <color name="rs_text_white">@color/rs_white</color>
+    <color name="rs_text_brand_solid">@color/rs_ultramarine_500</color>
+    <color name="rs_text_brand_solid_alt">@color/rs_ultramarine_500</color>
+    <color name="rs_text_brand_alt_solid">@color/rs_black_rock_500</color>
+    <color name="rs_text_disabled">@color/rs_gray_dark_400</color>
+    <color name="rs_text_error_solid">@color/rs_red_500</color>
+    <color name="rs_text_success_solid">@color/rs_green_500</color>
+    <color name="rs_text_warning_solid">@color/rs_orange_500</color>
+
+    <color name="rs_text_brand_tertiary">@color/rs_ultramarine_400</color>
+    <color name="rs_text_brand_secondary">@color/rs_ultramarine_300</color>
+    <color name="rs_text_brand_quaternary">@color/rs_ultramarine_500</color>
+    <color name="rs_text_error_tertiary">@color/rs_red_400</color>
+
+    <color name="rs_text_warning_tertiary">@color/rs_orange_400</color>
+    <color name="rs_text_warning_quaternary">@color/rs_orange_500</color>
+
+    <color name="rs_text_pink_tertiary">@color/rs_pink_400</color>
+    <color name="rs_text_pink_quaternary">@color/rs_pink_500</color>
+    <color name="rs_text_pink_primary">@color/rs_pink_50</color>
+    <color name="rs_text_pink_secondary">@color/rs_pink_300</color>
+
+    <color name="rs_text_sky_tertiary">@color/rs_sky_400</color>
+    <color name="rs_text_sky_quaternary">@color/rs_sky_500</color>
+    <color name="rs_text_sky_primary">@color/rs_sky_50</color>
+    <color name="rs_text_sky_secondary">@color/rs_sky_300</color>
+
+    <color name="rs_text_teal_tertiary">@color/rs_teal_400</color>
+    <color name="rs_text_teal_quaternary">@color/rs_teal_500</color>
+    <color name="rs_text_teal_primary">@color/rs_teal_50</color>
+    <color name="rs_text_teal_secondary">@color/rs_teal_300</color>
+
+    <!-- Border Tokens Dark -->
+    <color name="rs_border_surface">@color/rs_gray_dark_950</color>
+    <color name="rs_border_primary">@color/rs_gray_dark_700</color>
+    <color name="rs_border_secondary">@color/rs_gray_dark_800</color>
+    <color name="rs_border_tertiary">@color/rs_gray_dark_800</color>
+    <color name="rs_border_disabled">@color/rs_gray_dark_700</color>
+    <color name="rs_border_disabled_subtle">@color/rs_gray_dark_800</color>
+    <color name="rs_border_strong">@color/rs_gray_dark_25</color>
+
+    <color name="rs_border_brand_primary">@color/rs_ultramarine_700</color>
+    <color name="rs_border_error_primary">@color/rs_red_700</color>
+    <color name="rs_border_success_primary">@color/rs_green_700</color>
+    <color name="rs_border_warning_primary">@color/rs_orange_700</color>
+
+    <color name="rs_border_pink_primary">@color/rs_pink_700</color>
+    <color name="rs_border_sky_primary">@color/rs_sky_700</color>
+    <color name="rs_border_teal_primary">@color/rs_teal_700</color>
+
+    <!-- Background Tokens Dark -->
+    <color name="rs_bg_primary">@color/rs_gray_dark_950</color>
+    <color name="rs_bg_primary_alt">@color/rs_gray_dark_900</color>
+    <color name="rs_bg_primary_on_hover">@color/rs_gray_dark_800</color>
+
+    <color name="rs_bg_secondary">@color/rs_gray_dark_900</color>
+    <color name="rs_bg_secondary_alt">@color/rs_gray_dark_950</color>
+    <color name="rs_bg_secondary_solid">@color/rs_gray_dark_600</color>
+    <color name="rs_bg_secondary_hover">@color/rs_gray_dark_800</color>
+    <color name="rs_bg_secondary_subtle">@color/rs_gray_dark_900</color>
+
+    <color name="rs_bg_tertiary">@color/rs_gray_dark_800</color>
+    <color name="rs_bg_quaternary">@color/rs_gray_dark_700</color>
+    <color name="rs_bg_active">@color/rs_gray_dark_800</color>
+
+    <color name="rs_bg_disabled">@color/rs_gray_dark_800</color>
+    <color name="rs_bg_disabled_alt">@color/rs_gray_dark_600</color>
+    <color name="rs_bg_disabled_subtle">@color/rs_gray_dark_900</color>
+
+    <color name="rs_bg_overlay">@color/rs_gray_dark_800</color>
+
+    <color name="rs_bg_brand_primary">@color/rs_ultramarine_900</color>
+    <color name="rs_bg_brand_primary_alt">@color/rs_ultramarine_950</color>
+    <color name="rs_bg_brand_tertiary">@color/rs_ultramarine_800</color>
+    <color name="rs_bg_brand_quaternary">@color/rs_ultramarine_700</color>
+    <color name="rs_bg_brand_secondary">@color/rs_ultramarine_700</color>
+    <color name="rs_bg_brand_solid">@color/rs_ultramarine_600</color>
+    <color name="rs_bg_brand_solid_hover">@color/rs_ultramarine_500</color>
+    <color name="rs_bg_brand_section">@color/rs_gray_dark_800</color>
+    <color name="rs_bg_brand_section_subtle">@color/rs_gray_dark_950</color>
+
+    <color name="rs_bg_brand_alt_primary">@color/rs_black_rock_600</color>
+    <color name="rs_bg_brand_alt_section">@color/rs_black_rock_800</color>
+
+    <color name="rs_bg_error_primary">@color/rs_red_950</color>
+    <color name="rs_bg_error_tertiary">@color/rs_red_800</color>
+    <color name="rs_bg_error_quaternary">@color/rs_red_700</color>
+    <color name="rs_bg_error_solid">@color/rs_red_600</color>
+    <color name="rs_bg_error_solid_hover">@color/rs_red_500</color>
+    <color name="rs_bg_error_primary_hover">@color/rs_red_900</color>
+
+    <color name="rs_bg_warning_primary">@color/rs_warning_950</color>
+    <color name="rs_bg_warning_tertiary">@color/rs_orange_800</color>
+    <color name="rs_bg_warning_quaternary">@color/rs_orange_700</color>
+    <color name="rs_bg_warning_solid">@color/rs_orange_600</color>
+    <color name="rs_bg_warning_primary_hover">@color/rs_warning_900</color>
+
+    <color name="rs_bg_success_primary">@color/rs_green_950</color>
+    <color name="rs_bg_success_tertiary">@color/rs_green_800</color>
+    <color name="rs_bg_success_quaternary">@color/rs_green_700</color>
+    <color name="rs_bg_success_solid">@color/rs_green_600</color>
+    <color name="rs_bg_success_primary_hover">@color/rs_green_900</color>
+
+    <color name="rs_bg_pink_primary">@color/rs_pink_950</color>
+    <color name="rs_bg_pink_tertiary">@color/rs_pink_800</color>
+    <color name="rs_bg_pink_quaternary">@color/rs_pink_700</color>
+    <color name="rs_bg_pink_solid">@color/rs_pink_600</color>
+    <color name="rs_bg_pink_solid_hover">@color/rs_pink_500</color>
+    <color name="rs_bg_pink_primary_hover">@color/rs_pink_900</color>
+
+    <color name="rs_bg_sky_primary">@color/rs_sky_950</color>
+    <color name="rs_bg_sky_tertiary">@color/rs_sky_800</color>
+    <color name="rs_bg_sky_quaternary">@color/rs_sky_700</color>
+    <color name="rs_bg_sky_solid">@color/rs_sky_600</color>
+    <color name="rs_bg_sky_solid_hover">@color/rs_sky_500</color>
+    <color name="rs_bg_sky_primary_hover">@color/rs_sky_900</color>
+
+    <color name="rs_bg_teal_primary">@color/rs_teal_950</color>
+    <color name="rs_bg_teal_tertiary">@color/rs_teal_800</color>
+    <color name="rs_bg_teal_quaternary">@color/rs_teal_700</color>
+    <color name="rs_bg_teal_solid">@color/rs_teal_600</color>
+    <color name="rs_bg_teal_solid_hover">@color/rs_teal_500</color>
+    <color name="rs_bg_teal_primary_hover">@color/rs_teal_900</color>
+</resources>

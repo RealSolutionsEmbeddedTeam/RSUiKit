@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base -->
+    <color name="rs_base_white">#FFFFFF</color>
+    <color name="rs_base_black">#000000</color>
+    <!-- transparent Android'de renk olarak kullanılabilir -->
+    <color name="rs_base_transparent">#00000000</color>
+
+    <color name="rs_white">#FFFFFF</color>
+    <color name="rs_black">#000000</color>
+    <color name="rs_transparent">#00000000</color>
+
+    <!-- Gray Light Scale -->
+    <color name="rs_gray_light_25">#FDFDFD</color>
+    <color name="rs_gray_light_50">#FAFAFA</color>
+    <color name="rs_gray_light_100">#F5F5F5</color>
+    <color name="rs_gray_light_200">#E9EAEB</color>
+    <color name="rs_gray_light_300">#D5D7DA</color>
+    <color name="rs_gray_light_400">#A4A7AE</color>
+    <color name="rs_gray_light_500">#717680</color>
+    <color name="rs_gray_light_600">#525862</color>
+    <color name="rs_gray_light_700">#414651</color>
+    <color name="rs_gray_light_800">#252B37</color>
+    <color name="rs_gray_light_900">#181D27</color>
+    <color name="rs_gray_light_950">#0A0D12</color>
+
+    <!-- Gray Dark Scale -->
+    <color name="rs_gray_dark_25">#FAFAFA</color>
+    <color name="rs_gray_dark_50">#F7F7F7</color>
+    <color name="rs_gray_dark_100">#F0F0F1</color>
+    <color name="rs_gray_dark_200">#ECECED</color>
+    <color name="rs_gray_dark_300">#CECFD2</color>
+    <color name="rs_gray_dark_400">#94979C</color>
+    <color name="rs_gray_dark_500">#85888E</color>
+    <color name="rs_gray_dark_600">#61656C</color>
+    <color name="rs_gray_dark_700">#373A41</color>
+    <color name="rs_gray_dark_800">#22262F</color>
+    <color name="rs_gray_dark_900">#13161B</color>
+    <color name="rs_gray_dark_950">#0C0E12</color>
+
+    <!-- Ultramarine Scale -->
+    <color name="rs_ultramarine_25">#F6F7FF</color>
+    <color name="rs_ultramarine_50">#ECEFFF</color>
+    <color name="rs_ultramarine_100">#DDE3FF</color>
+    <color name="rs_ultramarine_200">#C0CDFF</color>
+    <color name="rs_ultramarine_300">#9DB3FF</color>
+    <color name="rs_ultramarine_400">#7A97FF</color>
+    <color name="rs_ultramarine_500">#5768FF</color>
+    <color name="rs_ultramarine_600">#3E4BD9</color>
+    <color name="rs_ultramarine_700">#2E39B3</color>
+    <color name="rs_ultramarine_800">#1F288C</color>
+    <color name="rs_ultramarine_900">#131A66</color>
+    <color name="rs_ultramarine_950">#0A0F3F</color>
+
+    <!-- Black Rock Scale -->
+    <color name="rs_black_rock_25">#F8F6FA</color>
+    <color name="rs_black_rock_50">#F0EAF6</color>
+    <color name="rs_black_rock_100">#DCD0EA</color>
+    <color name="rs_black_rock_200">#BEA9D6</color>
+    <color name="rs_black_rock_300">#9E7EC3</color>
+    <color name="rs_black_rock_400">#7E58AB</color>
+    <color name="rs_black_rock_500">#5C398A</color>
+    <color name="rs_black_rock_600">#3F2662</color>
+    <color name="rs_black_rock_700">#2C1946</color>
+    <color name="rs_black_rock_800">#1F0F32</color>
+    <color name="rs_black_rock_900">#17052F</color>
+    <color name="rs_black_rock_950">#0D021A</color>
+
+    <!-- Blue Scale -->
+    <color name="rs_blue_25">#F5F8FF</color>
+    <color name="rs_blue_50">#EBF1FF</color>
+    <color name="rs_blue_100">#D5E2FF</color>
+    <color name="rs_blue_200">#C0D5FF</color>
+    <color name="rs_blue_300">#97BAFF</color>
+    <color name="rs_blue_400">#6895FF</color>
+    <color name="rs_blue_500">#335CFF</color>
+    <color name="rs_blue_600">#3559E9</color>
+    <color name="rs_blue_700">#2547D0</color>
+    <color name="rs_blue_800">#1F3BAD</color>
+    <color name="rs_blue_900">#182F8B</color>
+    <color name="rs_blue_950">#122368</color>
+
+    <!-- Teal Scale -->
+    <color name="rs_teal_25">#F1FDFB</color>
+    <color name="rs_teal_50">#E4FBF8</color>
+    <color name="rs_teal_100">#D0FBF5</color>
+    <color name="rs_teal_200">#C2F5EE</color>
+    <color name="rs_teal_300">#84EBDD</color>
+    <color name="rs_teal_400">#3FDEC9</color>
+    <color name="rs_teal_500">#22D3BB</color>
+    <color name="rs_teal_600">#1DAF9C</color>
+    <color name="rs_teal_700">#178C7D</color>
+    <color name="rs_teal_800">#1A7569</color>
+    <color name="rs_teal_900">#16645A</color>
+    <color name="rs_teal_950">#0B463E</color>
+
+    <!-- Orange Scale -->
+    <color name="rs_orange_25">#FFF9F5</color>
+    <color name="rs_orange_50">#FFF3EB</color>
+    <color name="rs_orange_100">#FFE6D5</color>
+    <color name="rs_orange_200">#FFD9C0</color>
+    <color name="rs_orange_300">#FFC197</color>
+    <color name="rs_orange_400">#FFA468</color>
+    <color name="rs_orange_500">#FA7319</color>
+    <color name="rs_orange_600">#E16614</color>
+    <color name="rs_orange_700">#CE5E12</color>
+    <color name="rs_orange_800">#B75310</color>
+    <color name="rs_orange_900">#96440D</color>
+    <color name="rs_orange_950">#71330A</color>
+
+    <!-- Pink Scale -->
+    <color name="rs_pink_25">#FFF5F9</color>
+    <color name="rs_pink_50">#FFEBF4</color>
+    <color name="rs_pink_100">#FFD5EA</color>
+    <color name="rs_pink_200">#FFC0DF</color>
+    <color name="rs_pink_300">#FF97CB</color>
+    <color name="rs_pink_400">#FF68B3</color>
+    <color name="rs_pink_500">#FB4BA3</color>
+    <color name="rs_pink_600">#E9358F</color>
+    <color name="rs_pink_700">#D0257A</color>
+    <color name="rs_pink_800">#AD1F66</color>
+    <color name="rs_pink_900">#8B1852</color>
+    <color name="rs_pink_950">#68123D</color>
+
+    <!-- Sky Scale -->
+    <color name="rs_sky_25">#F5FBFF</color>
+    <color name="rs_sky_50">#EBF8FF</color>
+    <color name="rs_sky_100">#D5F1FF</color>
+    <color name="rs_sky_200">#C0EAFF</color>
+    <color name="rs_sky_300">#97DCFF</color>
+    <color name="rs_sky_400">#68CDFF</color>
+    <color name="rs_sky_500">#47C2FF</color>
+    <color name="rs_sky_600">#35ADE9</color>
+    <color name="rs_sky_700">#2597D0</color>
+    <color name="rs_sky_800">#1F7EAD</color>
+    <color name="rs_sky_900">#18658B</color>
+    <color name="rs_sky_950">#124B68</color>
+
+    <!-- Purple Scale -->
+    <color name="rs_purple_25">#FEF5FF</color>
+    <color name="rs_purple_50">#FEEBFF</color>
+    <color name="rs_purple_100">#DCD5FF</color>
+    <color name="rs_purple_200">#CAC0FF</color>
+    <color name="rs_purple_300">#A897FF</color>
+    <color name="rs_purple_400">#BC7FF6</color>
+    <color name="rs_purple_500">#7D52F4</color>
+    <color name="rs_purple_600">#693EE0</color>
+    <color name="rs_purple_700">#582CC9</color>
+    <color name="rs_purple_800">#4C25A7</color>
+    <color name="rs_purple_900">#3D1D86</color>
+    <color name="rs_purple_950">#351A75</color>
+
+    <!-- Yellow Scale -->
+    <color name="rs_yellow_25">#FFFCF5</color>
+    <color name="rs_yellow_50">#FFFAEB</color>
+    <color name="rs_yellow_100">#FFFCCC</color>
+    <color name="rs_yellow_200">#FFECC0</color>
+    <color name="rs_yellow_300">#FFE097</color>
+    <color name="rs_yellow_400">#FFD268</color>
+    <color name="rs_yellow_500">#F6B51E</color>
+    <color name="rs_yellow_600">#E6A819</color>
+    <color name="rs_yellow_700">#C99A2C</color>
+    <color name="rs_yellow_800">#A78025</color>
+    <color name="rs_yellow_900">#86661D</color>
+    <color name="rs_yellow_950">#624C18</color>
+
+    <!-- Green Scale -->
+    <color name="rs_green_25">#EFFCF5</color>
+    <color name="rs_green_50">#E0FAEC</color>
+    <color name="rs_green_100">#D0FBE9</color>
+    <color name="rs_green_200">#C2F5DA</color>
+    <color name="rs_green_300">#84EBB4</color>
+    <color name="rs_green_400">#3EE089</color>
+    <color name="rs_green_500">#1FC168</color>
+    <color name="rs_green_600">#1DAF61</color>
+    <color name="rs_green_700">#178C4E</color>
+    <color name="rs_green_800">#1A7544</color>
+    <color name="rs_green_900">#16643B</color>
+    <color name="rs_green_950">#0B4627</color>
+
+    <!-- Red Scale -->
+    <color name="rs_red_25">#FFF5F5</color>
+    <color name="rs_red_50">#FFEBEC</color>
+    <color name="rs_red_100">#FFD5D8</color>
+    <color name="rs_red_200">#FFC0C5</color>
+    <color name="rs_red_300">#FF97A0</color>
+    <color name="rs_red_400">#FF6875</color>
+    <color name="rs_red_500">#FB3748</color>
+    <color name="rs_red_600">#E93544</color>
+    <color name="rs_red_700">#D02533</color>
+    <color name="rs_red_800">#AD1F2B</color>
+    <color name="rs_red_900">#8B1822</color>
+    <color name="rs_red_950">#681219</color>
+</resources>

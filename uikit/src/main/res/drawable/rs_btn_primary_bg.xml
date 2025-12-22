@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Disabled -->
+    <item android:state_enabled="false">
+        <shape>
+            <gradient
+                android:angle="270"
+                android:startColor="@color/rs_alpha_brand_40"
+                android:endColor="@color/rs_alpha_brand_30" />
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+
+    <!-- Pressed -->
+    <item android:state_pressed="true">
+        <shape>
+            <gradient
+                android:angle="270"
+                android:startColor="@color/rs_alpha_brand_90"
+                android:endColor="@color/rs_alpha_brand_80" />
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+
+    <!-- Default -->
+    <item>
+        <shape>
+            <gradient
+                android:angle="270"
+                android:startColor="@color/rs_alpha_brand_darker_100"
+                android:endColor="@color/rs_alpha_brand_100" />
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+
+</selector>

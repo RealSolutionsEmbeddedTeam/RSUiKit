@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Alpha Dark (light tema için "dark" alpha: siyah bazlı) -->
+    <color name="rs_alpha_dark_10">#1A000000</color>
+    <color name="rs_alpha_dark_20">#33000000</color>
+    <color name="rs_alpha_dark_30">#4D000000</color>
+    <color name="rs_alpha_dark_40">#66000000</color>
+    <color name="rs_alpha_dark_50">#80000000</color>
+    <color name="rs_alpha_dark_60">#99000000</color>
+    <color name="rs_alpha_dark_70">#B3000000</color>
+    <color name="rs_alpha_dark_80">#CC000000</color>
+    <color name="rs_alpha_dark_90">#E6000000</color>
+    <color name="rs_alpha_dark_100">#FF000000</color>
+
+    <!-- Alpha Light (beyaz bazlı) -->
+    <color name="rs_alpha_light_10">#1AFFFFFF</color>
+    <color name="rs_alpha_light_20">#33FFFFFF</color>
+    <color name="rs_alpha_light_30">#4DFFFFFF</color>
+    <color name="rs_alpha_light_40">#66FFFFFF</color>
+    <color name="rs_alpha_light_50">#80FFFFFF</color>
+    <color name="rs_alpha_light_60">#99FFFFFF</color>
+    <color name="rs_alpha_light_70">#B3FFFFFF</color>
+    <color name="rs_alpha_light_80">#CCFFFFFF</color>
+    <color name="rs_alpha_light_90">#E6FFFFFF</color>
+    <color name="rs_alpha_light_100">#FFFFFFFF</color>
+
+    <!-- Alpha White -->
+    <color name="rs_alpha_white_10">#1AFFFFFF</color>
+    <color name="rs_alpha_white_20">#33FFFFFF</color>
+    <color name="rs_alpha_white_30">#4DFFFFFF</color>
+    <color name="rs_alpha_white_40">#66FFFFFF</color>
+    <color name="rs_alpha_white_50">#80FFFFFF</color>
+    <color name="rs_alpha_white_60">#99FFFFFF</color>
+    <color name="rs_alpha_white_70">#B3FFFFFF</color>
+    <color name="rs_alpha_white_80">#CCFFFFFF</color>
+    <color name="rs_alpha_white_90">#E6FFFFFF</color>
+    <color name="rs_alpha_white_100">#FFFFFFFF</color>
+
+    <!-- Brand alpha (RGB 87,104,255 = #5768FF) -->
+    <color name="rs_alpha_brand_0">#005768FF</color>
+    <color name="rs_alpha_brand_10">#1A5768FF</color>
+    <color name="rs_alpha_brand_20">#335768FF</color>
+    <color name="rs_alpha_brand_30">#4D5768FF</color>
+    <color name="rs_alpha_brand_40">#665768FF</color>
+    <color name="rs_alpha_brand_80">#CC5768FF</color>
+    <color name="rs_alpha_brand_90">#E65768FF</color>
+    <color name="rs_alpha_brand_100">#FF5768FF</color>
+
+    <!-- Brand darker alpha (RGB 62,75,217 = #3E4BD9) -->
+    <color name="rs_alpha_brand_darker_0">#003E4BD9</color>
+    <color name="rs_alpha_brand_darker_10">#1A3E4BD9</color>
+    <color name="rs_alpha_brand_darker_20">#333E4BD9</color>
+    <color name="rs_alpha_brand_darker_30">#4D3E4BD9</color>
+    <color name="rs_alpha_brand_darker_40">#663E4BD9</color>
+    <color name="rs_alpha_brand_darker_80">#CC3E4BD9</color>
+    <color name="rs_alpha_brand_darker_90">#E63E4BD9</color>
+    <color name="rs_alpha_brand_darker_100">#FF3E4BD9</color>
+
+    <!-- Error alpha (RGB 251,55,72 = #FB3748) -->
+    <color name="rs_alpha_error_0">#00FB3748</color>
+    <color name="rs_alpha_error_10">#1AFB3748</color>
+    <color name="rs_alpha_error_20">#33FB3748</color>
+    <color name="rs_alpha_error_30">#4DFB3748</color>
+    <color name="rs_alpha_error_40">#66FB3748</color>
+    <color name="rs_alpha_error_80">#CCFB3748</color>
+    <color name="rs_alpha_error_90">#E6FB3748</color>
+    <color name="rs_alpha_error_100">#FFFB3748</color>
+
+    <!-- Error darker alpha (RGB 233,53,68 = #E93544) -->
+    <color name="rs_alpha_error_darker_0">#00E93544</color>
+    <color name="rs_alpha_error_darker_10">#1AE93544</color>
+    <color name="rs_alpha_error_darker_20">#33E93544</color>
+    <color name="rs_alpha_error_darker_30">#4DE93544</color>
+    <color name="rs_alpha_error_darker_40">#66E93544</color>
+    <color name="rs_alpha_error_darker_80">#CCE93544</color>
+    <color name="rs_alpha_error_darker_90">#E6E93544</color>
+    <color name="rs_alpha_error_darker_100">#FFE93544</color>
+
+    <!-- Warning alpha (RGB 250,115,25 = #FA7319) -->
+    <color name="rs_alpha_warning_0">#00FA7319</color>
+    <color name="rs_alpha_warning_10">#1AFA7319</color>
+    <color name="rs_alpha_warning_20">#33FA7319</color>
+    <color name="rs_alpha_warning_30">#4DFA7319</color>
+    <color name="rs_alpha_warning_40">#66FA7319</color>
+    <color name="rs_alpha_warning_80">#CCFA7319</color>
+    <color name="rs_alpha_warning_90">#E6FA7319</color>
+    <color name="rs_alpha_warning_100">#FFFA7319</color>
+
+    <!-- Warning darker alpha (RGB 225,102,20 = #E16614) -->
+    <color name="rs_alpha_warning_darker_0">#00E16614</color>
+    <color name="rs_alpha_warning_darker_10">#1AE16614</color>
+    <color name="rs_alpha_warning_darker_20">#33E16614</color>
+    <color name="rs_alpha_warning_darker_30">#4DE16614</color>
+    <color name="rs_alpha_warning_darker_40">#66E16614</color>
+    <color name="rs_alpha_warning_darker_80">#CCE16614</color>
+    <color name="rs_alpha_warning_darker_90">#E6E16614</color>
+    <color name="rs_alpha_warning_darker_100">#FFE16614</color>
+
+    <!-- Focus ring -->
+    <color name="rs_alpha_focus_ring_neutral_l1">#FFFFFFFF</color>
+    <color name="rs_alpha_focus_ring_neutral_l2">#29A4A7AE</color> <!-- rgba(164,167,174,0.16) => 0.16~0x29 -->
+
+    <!-- Convenience -->
+    <color name="rs_alpha_black_10">#1A000000</color>
+</resources>
