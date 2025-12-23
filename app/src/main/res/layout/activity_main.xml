@@ -12,8 +12,7 @@
         android:id="@+id/inpSicil"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:layout_margin="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,16 +22,30 @@
         app:rsState="normal"
         tools:ignore="MissingConstraints" />
 
+    <com.realsolutions.uikit.RSPasswordInput
+        android:id="@+id/inpPass"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpSicil"
+        app:rsHint="Parolanızı girin"
+        app:rsLabel="Parola"
+        app:rsState="normal"
+        tools:ignore="MissingConstraints" />
+
     <com.realsolutions.uikit.RSButton
         android:id="@+id/btnPrimary"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
         android:text="Hatalı"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpSicil"
+        app:layout_constraintTop_toBottomOf="@+id/inpPass"
         app:rsType="primary"
         tools:ignore="MissingConstraints" />
 
@@ -40,12 +53,11 @@
         android:id="@+id/btnSecondary"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="32dp"
         android:text="Doğru"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpSicil"
+        app:layout_constraintTop_toBottomOf="@+id/btnPrimary"
         app:rsType="secondary"
         tools:ignore="MissingConstraints" />
 

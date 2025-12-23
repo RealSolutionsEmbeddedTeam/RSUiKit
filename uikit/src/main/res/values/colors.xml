@@ -6,7 +6,12 @@
     <color name="rs_input_stroke_default">#E9EAEB</color>
     <color name="rs_input_stroke_focused">#5768FF</color>
     <color name="rs_input_stroke_error">#FB3748</color>
-    <color name="rs_input_stroke_success">#1FC168</color>
+    <color name="rs_input_stroke_success">#E9EAEB</color>
+
+    <color name="rs_input_icon_default">#E9EAEB</color>
+    <color name="rs_input_icon_focused">#5768FF</color>
+    <color name="rs_input_icon_error">#FB3748</color>
+    <color name="rs_input_icon_success">#1FC168</color>
 
     <color name="rs_input_text">#181D27</color>
     <color name="rs_input_hint">#A4A7AE</color>
