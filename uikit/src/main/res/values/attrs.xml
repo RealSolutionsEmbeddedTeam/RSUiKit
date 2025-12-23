@@ -8,4 +8,14 @@
             <enum name="plain_light" value="4"/>
         </attr>
     </declare-styleable>
+    <declare-styleable name="RSEditText">
+        <attr name="rsLabel" format="string"/>
+        <attr name="rsHint" format="string"/>
+        <attr name="rsState" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="focused" value="1"/>
+            <enum name="error" value="2"/>
+            <enum name="success" value="3"/>
+        </attr>
+    </declare-styleable>
 </resources>

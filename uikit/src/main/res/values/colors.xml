@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rs_input_bg">#FFFFFF</color>
+    <color name="rs_input_bg_focused">#EEF1FF</color>
+
+    <color name="rs_input_stroke_default">#E9EAEB</color>
+    <color name="rs_input_stroke_focused">#5768FF</color>
+    <color name="rs_input_stroke_error">#FB3748</color>
+    <color name="rs_input_stroke_success">#1FC168</color>
+
+    <color name="rs_input_text">#181D27</color>
+    <color name="rs_input_hint">#A4A7AE</color>
+
+    <color name="rs_input_label_focused">#5768FF</color>
+    <color name="rs_input_label_error">#FB3748</color>
+    <color name="rs_input_label_default">#717680</color>
+</resources>
