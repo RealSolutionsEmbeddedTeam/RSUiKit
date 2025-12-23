@@ -8,23 +8,45 @@
     android:theme="@style/Theme.RSUiKitDemo"
     tools:context=".MainActivity">
 
-    <com.realsolutions.uikit.RSButton
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="184dp"
-        android:text="Kaydet"
+    <com.realsolutions.uikit.RSEditText
+        android:id="@+id/inpSicil"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:rsHint="Sicil numaranızı girin"
+        app:rsLabel="Sicil No"
+        app:rsState="normal"
+        tools:ignore="MissingConstraints" />
+
+    <com.realsolutions.uikit.RSButton
+        android:id="@+id/btnPrimary"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:text="Hatalı"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpSicil"
         app:rsType="primary"
         tools:ignore="MissingConstraints" />
 
-    <com.realsolutions.uikit.RSCheckBox
+    <com.realsolutions.uikit.RSButton
+        android:id="@+id/btnSecondary"
         android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:text="Deneme"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="74dp" />
+        android:layout_height="50dp"
+        android:layout_marginTop="144dp"
+        android:text="Doğru"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpSicil"
+        app:rsType="secondary"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
