@@ -43,4 +43,14 @@
         <attr name="rsState" />
     </declare-styleable>
 
+    <!-- ===================== -->
+    <!-- RSLoadingCircle -->
+    <!-- ===================== -->
+    <declare-styleable name="RSLoadingCircle">
+        <attr name="rsSize" format="dimension"/>
+        <attr name="rsSpeed" format="float"/>    <!-- degrees per second -->
+        <attr name="rsTrailDeg" format="float"/> <!-- 0..360 -->
+        <attr name="rsColor" format="color"/>    <!-- HEAD color -->
+    </declare-styleable>
+
 </resources>
