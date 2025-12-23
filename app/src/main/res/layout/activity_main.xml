@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:theme="@style/Theme.RSUiKitDemo"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/Theme.RSUiKitDemo"
     tools:context=".MainActivity">
 
     <com.realsolutions.uikit.RSButton
@@ -18,5 +18,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:rsType="primary"
         tools:ignore="MissingConstraints" />
+
+    <com.realsolutions.uikit.RSCheckBox
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Deneme"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="74dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
