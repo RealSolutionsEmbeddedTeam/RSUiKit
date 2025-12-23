@@ -207,16 +207,16 @@ public class RSEditText extends FrameLayout {
                 til.setHintTextColor(ContextCompat.getColorStateList(getContext(), R.color.rs_input_label_error));
                 til.setBoxBackgroundColor(ContextCompat.getColor(getContext(), R.color.rs_input_bg));
                 til.setEndIconDrawable(rsDrawable(R.drawable.rs_ic_error));
-                til.setEndIconTintList(ContextCompat.getColorStateList(getContext(), R.color.rs_input_stroke_error));
+                til.setEndIconTintList(ContextCompat.getColorStateList(getContext(), R.color.rs_input_icon_error));
                 til.setEndIconVisible(true);
                 break;
 
             case STATE_SUCCESS:
-                til.setBoxStrokeColor(ContextCompat.getColor(getContext(), R.color.rs_input_stroke_default));
+                til.setBoxStrokeColor(ContextCompat.getColor(getContext(), R.color.rs_input_stroke_success));
                 til.setHintTextColor(ContextCompat.getColorStateList(getContext(), R.color.rs_input_label_default));
                 til.setBoxBackgroundColor(ContextCompat.getColor(getContext(), R.color.rs_input_bg));
                 til.setEndIconDrawable(rsDrawable(R.drawable.rs_ic_success));
-                til.setEndIconTintList(ContextCompat.getColorStateList(getContext(), R.color.rs_input_stroke_success));
+                til.setEndIconTintList(ContextCompat.getColorStateList(getContext(), R.color.rs_input_icon_success));
                 til.setEndIconVisible(true);
                 break;
 
