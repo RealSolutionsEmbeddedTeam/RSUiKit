@@ -7,169 +7,72 @@
     android:theme="@style/Theme.RSUiKitDemo"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/main"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
+    <com.realsolutions.uikit.RSEditText
+        android:id="@+id/inpSicil"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rsHint="Sicil numaranızı girin"
+        app:rsLabel="Sicil No"
+        app:rsState="normal"
+        tools:ignore="MissingConstraints" />
 
-        <!-- Title -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="RSUiKit Demo"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+    <com.realsolutions.uikit.RSPasswordInput
+        android:id="@+id/inpPass"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpSicil"
+        app:rsHint="Parolanızı girin"
+        app:rsLabel="Parola"
+        app:rsState="normal"
+        tools:ignore="MissingConstraints" />
 
-        <!-- RSButton Section -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:text="RSButton"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+    <com.realsolutions.uikit.RSButton
+        android:id="@+id/btnPrimary"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Hatalı"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpPass"
+        app:rsType="primary"
+        tools:ignore="MissingConstraints" />
 
-        <com.realsolutions.uikit.RSButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Primary Button"
-            app:rsType="primary" />
+    <com.realsolutions.uikit.RSButton
+        android:id="@+id/btnSecondary"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:text="Doğru"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPrimary"
+        app:rsType="secondary"
+        tools:ignore="MissingConstraints" />
 
-        <com.realsolutions.uikit.RSButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:text="Secondary Button"
-            app:rsType="secondary" />
-
-        <!-- Divider -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginBottom="24dp"
-            android:background="#E0E0E0" />
-
-        <!-- RSCheckBox SM Section -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:text="RSCheckBox - Size SM (16dp)"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
-
-            <com.realsolutions.uikit.RSCheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:text="Unchecked"
-                app:rsSize="sm" />
-
-            <com.realsolutions.uikit.RSCheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:checked="true"
-                android:text="Checked"
-                app:rsSize="sm" />
-
-            <com.realsolutions.uikit.RSCheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:enabled="false"
-                android:text="Disabled"
-                app:rsSize="sm" />
-
-        </LinearLayout>
-
-        <!-- Divider -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginBottom="24dp"
-            android:background="#E0E0E0" />
-
-        <!-- RSCheckBox MD Section -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:text="RSCheckBox - Size MD (24dp)"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
-
-            <com.realsolutions.uikit.RSCheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:text="Unchecked"
-                app:rsSize="md" />
-
-            <com.realsolutions.uikit.RSCheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:checked="true"
-                android:text="Checked"
-                app:rsSize="md" />
-
-            <com.realsolutions.uikit.RSCheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:enabled="false"
-                android:text="Disabled"
-                app:rsSize="md" />
-
-        </LinearLayout>
-
-        <!-- Divider -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginBottom="24dp"
-            android:background="#E0E0E0" />
-
-        <!-- Interactive Demo -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
-            android:text="Interactive Demo"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <com.realsolutions.uikit.RSCheckBox
-            android:id="@+id/checkbox_interactive"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Tıkla ve test et"
-            app:rsSize="md" />
-
-        <TextView
-            android:id="@+id/checkbox_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Durum: Unchecked"
-            android:textColor="#666666" />
-
-    </LinearLayout>
+    <com.realsolutions.uikit.RSLoadingCircle
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:rsSize="96dp"
+        app:rsTrailDeg="360"
+        app:rsSpeed="400"
+        app:rsColor="#5661FF"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSecondary"
+        tools:ignore="MissingConstraints" />
 
 </ScrollView>

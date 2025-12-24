@@ -9,46 +9,34 @@ import com.realsolutions.rsuikit.R;
 import com.realsolutions.uikit.RSButton;
 import com.realsolutions.uikit.RSCheckBox;
 
+import com.realsolutions.uikit.RSButton;
+import com.realsolutions.uikit.RSEditText;
+import com.realsolutions.uikit.RSPasswordInput;
+
 public class MainActivity extends AppCompatActivity {
+
+    RSEditText rsEditText;
+    RSButton btnPrimary, btnSecondary;
+    RSPasswordInput inpPass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.realsolutions.rsuikit.R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 
-        // Bileşenleri tanımla
-        RSCheckBox cbInteractive = findViewById(com.realsolutions.rsuikit.R.id.cb_interactive);
-        RSButton btnUnchecked = findViewById(R.id.btn_set_unchecked);
-        RSButton btnChecked = findViewById(com.realsolutions.rsuikit.R.id.btn_set_checked);
-        RSButton btnIndeterminate = findViewById(R.id.btn_set_indeterminate);
+        rsEditText = findViewById(R.id.inpSicil);
+        inpPass = findViewById(R.id.inpPass);
+        btnPrimary = findViewById(R.id.btnPrimary);
+        btnSecondary = findViewById(R.id.btnSecondary);
 
-        // 1. Durum Dinleme (Listener)
-        cbInteractive.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            // Standart check işlemi yapıldığında burası çalışır
-            // Ancak bizim 'status' değişkenimiz daha kapsamlıdır
-            String statusName = "Değişti";
-            Toast.makeText(this, "Check durumu: " + isChecked, Toast.LENGTH_SHORT).show();
+        btnPrimary.setOnClickListener(view -> {
+            rsEditText.setErrorState(null);
+            inpPass.setErrorState();
         });
 
-        // 2. Programatik Olarak Durum Atama
-        btnUnchecked.setOnClickListener(v -> {
-            cbInteractive.setStatus(RSCheckBox.STATUS_UNCHECKED);
-        });
-
-        btnChecked.setOnClickListener(v -> {
-            cbInteractive.setStatus(RSCheckBox.STATUS_CHECKED);
-        });
-
-        btnIndeterminate.setOnClickListener(v -> {
-            cbInteractive.setStatus(RSCheckBox.STATUS_INDETERMINATE);
-        });
-
-        // 3. Durumu Kontrol Etme
-        cbInteractive.setOnClickListener(v -> {
-            int currentStatus = cbInteractive.getStatus();
-            if (currentStatus == RSCheckBox.STATUS_INDETERMINATE) {
-                // Özel bir mantık çalıştırılabilir
-            }
+        btnSecondary.setOnClickListener(view -> {
+            rsEditText.setSuccessState();
+            inpPass.setSuccessState();
         });
     }
 }

@@ -24,4 +24,12 @@
     <dimen name="rs_button_height_sm">36dp</dimen>
     <dimen name="rs_button_height_md">48dp</dimen>
     <dimen name="rs_button_height_lg">56dp</dimen>
+
+    <!-- EditText -->
+    <dimen name="rs_input_radius">16dp</dimen>
+    <dimen name="rs_input_stroke">2dp</dimen>
+    <dimen name="rs_input_padding_horizontal">16dp</dimen>
+    <dimen name="rs_input_padding_vertical">14dp</dimen>
+    <dimen name="rs_input_text_size">20sp</dimen>
+    <dimen name="rs_input_label_size">14sp</dimen>
 </resources>

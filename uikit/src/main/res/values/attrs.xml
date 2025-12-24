@@ -1,4 +1,20 @@
 <resources>
+
+    <!-- ===================== -->
+    <!-- Shared attributes (ONLY ONCE) -->
+    <!-- ===================== -->
+    <attr name="rsLabel" format="string" />
+    <attr name="rsHint" format="string" />
+    <attr name="rsState" format="enum">
+        <enum name="normal" value="0" />
+        <enum name="focused" value="1" />
+        <enum name="error" value="2" />
+        <enum name="success" value="3" />
+    </attr>
+
+    <!-- ===================== -->
+    <!-- RSButton -->
+    <!-- ===================== -->
     <declare-styleable name="RSButton">
         <attr name="rsType" format="enum">
             <enum name="primary" value="0" />
@@ -9,7 +25,9 @@
         </attr>
     </declare-styleable>
 
+    <!-- ===================== -->
     <!-- RSCheckBox -->
+    <!-- ===================== -->
     <declare-styleable name="RSCheckBox">
         <attr name="rsSize" format="enum">
             <enum name="sm" value="0" />
@@ -24,4 +42,33 @@
 
     <!-- Custom State for Selectors -->
     <attr name="state_indeterminate" format="boolean" />
+
+    <!-- ===================== -->
+    <!-- RSEditText -->
+    <!-- ===================== -->
+    <declare-styleable name="RSEditText">
+        <attr name="rsLabel" />
+        <attr name="rsHint" />
+        <attr name="rsState" />
+    </declare-styleable>
+
+    <!-- ===================== -->
+    <!-- RSPasswordInput -->
+    <!-- ===================== -->
+    <declare-styleable name="RSPasswordInput">
+        <attr name="rsLabel" />
+        <attr name="rsHint" />
+        <attr name="rsState" />
+    </declare-styleable>
+
+    <!-- ===================== -->
+    <!-- RSLoadingCircle -->
+    <!-- ===================== -->
+    <declare-styleable name="RSLoadingCircle">
+        <attr name="rsSize" format="dimension"/>
+        <attr name="rsSpeed" format="float"/>    <!-- degrees per second -->
+        <attr name="rsTrailDeg" format="float"/> <!-- 0..360 -->
+        <attr name="rsColor" format="color"/>    <!-- HEAD color -->
+    </declare-styleable>
+
 </resources>
