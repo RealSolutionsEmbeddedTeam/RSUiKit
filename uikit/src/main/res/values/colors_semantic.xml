@@ -214,4 +214,5 @@
     <color name="rs_bg_teal_solid">@color/rs_teal_600</color>
     <color name="rs_bg_teal_solid_hover">@color/rs_teal_700</color>
     <color name="rs_bg_teal_primary_hover">@color/rs_teal_50</color>
+
 </resources>

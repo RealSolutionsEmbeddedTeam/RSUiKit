@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RSCheckBox - Ana button drawable -->
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Checked + Disabled -->
+    <item android:id="@+id/checked_disabled" android:state_checked="true" android:state_enabled="false" android:drawable="@drawable/rs_checkbox_box_checked_disabled"/>
+
+    <!-- Checked -->
+    <item android:id="@+id/checked" android:state_checked="true" android:drawable="@drawable/rs_checkbox_box_checked"/>
+
+    <!-- Unchecked + Disabled -->
+    <item android:id="@+id/unchecked_disabled" android:state_enabled="false" android:drawable="@drawable/rs_checkbox_box_unchecked_disabled"/>
+
+    <!-- Unchecked (default) -->
+    <item android:id="@+id/unchecked" android:drawable="@drawable/rs_checkbox_box_unchecked"/>
+
+</animated-selector>
