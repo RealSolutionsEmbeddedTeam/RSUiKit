@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -39,10 +39,10 @@
         android:id="@+id/btnPrimary"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:text="Hatalı"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inpPass"
         app:rsType="primary"
@@ -52,27 +52,37 @@
         android:id="@+id/btnSecondary"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="16dp"
         android:text="Doğru"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPrimary"
+        app:layout_constraintStart_toEndOf="@+id/btnPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/inpPass"
         app:rsType="secondary"
         tools:ignore="MissingConstraints" />
 
     <com.realsolutions.uikit.RSLoadingCircle
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:rsSize="96dp"
-        app:rsTrailDeg="360"
-        app:rsSpeed="400"
-        app:rsColor="#5661FF"
-        android:layout_marginTop="4dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.884"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSecondary"
+        app:rsColor="#5661FF"
+        app:rsSpeed="400"
+        app:rsTrailDeg="360"
         tools:ignore="MissingConstraints" />
 
-</ScrollView>
+    <com.realsolutions.uikit.RSCheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="48dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPrimary"
+        app:rsSize="md"
+        app:rsStatus="checked"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

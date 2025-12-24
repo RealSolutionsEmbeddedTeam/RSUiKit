@@ -13,12 +13,16 @@
     <dimen name="rs_radius_lg">12dp</dimen>
 
     <!-- Checkbox -->
-    <dimen name="rs_checkbox_size_sm">16dp</dimen>
+    <dimen name="rs_checkbox_radius">8dp</dimen>
+    <dimen name="rs_checkbox_size_sm">20dp</dimen>
     <dimen name="rs_checkbox_size_md">24dp</dimen>
-    <dimen name="rs_checkbox_border_width">2dp</dimen>
-    <dimen name="rs_checkbox_icon_size_sm">10dp</dimen>
-    <dimen name="rs_checkbox_icon_size_md">14dp</dimen>
-    <dimen name="rs_checkbox_icon_stroke">2dp</dimen>
+    <dimen name="rs_checkbox_size_lg">28dp</dimen>
+    <dimen name="rs_checkbox_stroke_sm">2dp</dimen>
+    <dimen name="rs_checkbox_stroke_md">2dp</dimen>
+    <dimen name="rs_checkbox_stroke_lg">2dp</dimen>
+    <dimen name="rs_checkbox_dash_h_sm">2dp</dimen>
+    <dimen name="rs_checkbox_dash_h_md">3dp</dimen>
+    <dimen name="rs_checkbox_dash_h_lg">3dp</dimen>
 
     <!-- Button Heights -->
     <dimen name="rs_button_height_sm">36dp</dimen>

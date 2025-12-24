@@ -19,4 +19,11 @@
     <color name="rs_input_label_focused">#5768FF</color>
     <color name="rs_input_label_error">#FB3748</color>
     <color name="rs_input_label_default">#717680</color>
+
+    <color name="rs_cb_blue">#3B66FF</color>
+    <color name="rs_cb_border">#D0D5DD</color>
+    <color name="rs_cb_white">#FFFFFF</color>
+    <color name="rs_cb_disabled_bg">#F2F4F7</color>
+    <color name="rs_cb_disabled_border">#E4E7EC</color>
+    <color name="rs_cb_disabled_icon">#98A2B3</color>
 </resources>

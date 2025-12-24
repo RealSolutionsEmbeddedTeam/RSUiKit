@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     RSEditText rsEditText;
     RSButton btnPrimary, btnSecondary;
     RSPasswordInput inpPass;
+    RSCheckBox check;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         inpPass = findViewById(R.id.inpPass);
         btnPrimary = findViewById(R.id.btnPrimary);
         btnSecondary = findViewById(R.id.btnSecondary);
+        check = findViewById(R.id.checkBox);
 
         btnPrimary.setOnClickListener(view -> {
             rsEditText.setErrorState(null);
@@ -37,6 +39,16 @@ public class MainActivity extends AppCompatActivity {
         btnSecondary.setOnClickListener(view -> {
             rsEditText.setSuccessState();
             inpPass.setSuccessState();
+        });
+
+        check.setOnClickListener(view -> {
+            if (check.getStatus() == RSCheckBox.STATUS_CHECKED){
+                Toast.makeText(this, "Checked", Toast.LENGTH_SHORT).show();
+                check.setChecked(false);
+            } else {
+                Toast.makeText(this, "Unchecked", Toast.LENGTH_SHORT).show();
+                check.setIndeterminate();
+            }
         });
     }
 }

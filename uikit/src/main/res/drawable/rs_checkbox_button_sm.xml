@@ -1,0 +1,8 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:state_enabled="false" android:drawable="@drawable/rs_checkbox_unchecked_sm" />
+    <item app:state_indeterminate="true" android:drawable="@drawable/rs_checkbox_indeterminate_sm" />
+    <item android:state_checked="true" android:drawable="@drawable/rs_checkbox_checked_sm" />
+    <item android:drawable="@drawable/rs_checkbox_unchecked_sm" />
+</selector>

@@ -46,7 +46,6 @@ public class RSLoadingCircle extends View {
 
         if (attrs != null) {
             TypedArray ta = getContext().obtainStyledAttributes(attrs, R.styleable.RSLoadingCircle);
-            sizePx = ta.getDimensionPixelSize(R.styleable.RSLoadingCircle_rsSize, sizePx);
             speedDegPerSec = ta.getFloat(R.styleable.RSLoadingCircle_rsSpeed, speedDegPerSec);
             trailDeg = ta.getFloat(R.styleable.RSLoadingCircle_rsTrailDeg, trailDeg);
             glowColor = ta.getColor(R.styleable.RSLoadingCircle_rsColor, glowColor);
