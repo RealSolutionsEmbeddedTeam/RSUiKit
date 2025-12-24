@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RSCheckBox - Belirsiz (Yarı Dolu) Durum Görseli -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Arka plan (Brand rengi) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/rs_bg_brand_solid"/>
+            <corners android:radius="4dp"/>
+            <size android:width="20dp" android:height="20dp"/>
+        </shape>
+    </item>
+
+    <!-- Yatay çizgi ikonu -->
+    <item
+        android:width="10dp"
+        android:height="2dp"
+        android:gravity="center"
+        android:drawable="@drawable/rs_ic_indeterminate"/>
+</layer-list>

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- RSCheckBox - Ana button drawable -->
-<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- RSCheckBox - Ana button drawable (Custom states destekli) -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- Checked + Disabled -->
-    <item android:id="@+id/checked_disabled" android:state_checked="true" android:state_enabled="false" android:drawable="@drawable/rs_checkbox_box_checked_disabled"/>
+    <!-- Indeterminate (Belirsiz) Durumu -->
+    <item app:state_indeterminate="true" android:state_enabled="false" android:drawable="@drawable/rs_checkbox_box_checked_disabled" />
+    <item app:state_indeterminate="true" android:drawable="@drawable/rs_checkbox_box_indeterminate" />
 
-    <!-- Checked -->
-    <item android:id="@+id/checked" android:state_checked="true" android:drawable="@drawable/rs_checkbox_box_checked"/>
+    <!-- Checked (Seçili) Durumu -->
+    <item android:state_checked="true" android:state_enabled="false" android:drawable="@drawable/rs_checkbox_box_checked_disabled"/>
+    <item android:state_checked="true" android:drawable="@drawable/rs_checkbox_box_checked"/>
 
-    <!-- Unchecked + Disabled -->
-    <item android:id="@+id/unchecked_disabled" android:state_enabled="false" android:drawable="@drawable/rs_checkbox_box_unchecked_disabled"/>
+    <!-- Unchecked (Seçili Değil) Durumu -->
+    <item android:state_enabled="false" android:drawable="@drawable/rs_checkbox_box_unchecked_disabled"/>
+    <item android:drawable="@drawable/rs_checkbox_box_unchecked"/>
 
-    <!-- Unchecked (default) -->
-    <item android:id="@+id/unchecked" android:drawable="@drawable/rs_checkbox_box_unchecked"/>
-
-</animated-selector>
+</selector>

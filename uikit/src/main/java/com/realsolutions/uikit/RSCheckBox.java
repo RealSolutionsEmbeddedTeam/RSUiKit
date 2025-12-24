@@ -12,25 +12,20 @@ import androidx.core.widget.CompoundButtonCompat;
 
 /**
  * RealSolutions UI Kit CheckBox
- *
- * Usage (XML):
- *  <com.realsolutions.uikit.RSCheckBox
- *      android:layout_width="wrap_content"
- *      android:layout_height="wrap_content"
- *      android:text="Deneme"
- *      app:rsSize="sm" />
- *
- * Requires:
- *  - res/values/attrs.xml with <attr name="rsSize" .../>
- *  - drawable: rs_checkbox_button
+ * Üç farklı durumu (Checked, Unchecked, Indeterminate) destekleyen,
+ * Figma tasarımına sadık özel bileşen.
  */
 public class RSCheckBox extends AppCompatCheckBox {
 
-    // Must match attrs.xml values
-    public static final int SIZE_SM = 0;
-    public static final int SIZE_MD = 1;
+    // Durum Sabitleri (attrs.xml ile uyumlu)
+    public static final int STATUS_UNCHECKED = 0;
+    public static final int STATUS_CHECKED = 1;
+    public static final int STATUS_INDETERMINATE = 2;
 
-    private int size = SIZE_SM;
+    // Selector'da kullanacağımız özel durum dizisi
+    private static final int[] STATE_INDETERMINATE = {R.attr.state_indeterminate};
+
+    private int status = STATUS_UNCHECKED;
 
     public RSCheckBox(Context context) {
         super(context);
@@ -48,58 +43,81 @@ public class RSCheckBox extends AppCompatCheckBox {
     }
 
     private void init(@Nullable AttributeSet attrs) {
-        // Read rsSize from XML
         if (attrs != null) {
             TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.RSCheckBox);
-            size = a.getInt(R.styleable.RSCheckBox_rsSize, SIZE_SM);
+            status = a.getInt(R.styleable.RSCheckBox_rsStatus, STATUS_UNCHECKED);
             a.recycle();
         }
 
         applyStyle();
-        applySize(size);
+        // Başlangıç durumunu uygula
+        setStatus(status);
     }
 
-    /**
-     * Apply RSUiKit styling - custom checkbox drawable.
-     */
     private void applyStyle() {
-        // Apply custom checkbox drawable (Figma tasarımına uygun)
+        // Figma tasarımına uygun custom drawable
         Drawable buttonDrawable = ContextCompat.getDrawable(getContext(), R.drawable.rs_checkbox_button);
         setButtonDrawable(buttonDrawable);
 
-        // Remove any tint that might override our colors
+        // Herhangi bir tint'in bizim özel renklerimizi ezmesini engelle
         CompoundButtonCompat.setButtonTintList(this, null);
 
-        // Ensure proper padding between checkbox and text
-        int paddingStart = dp(8);
+        // Metin ile checkbox arasındaki boşluk (8dp)
+        int paddingStart = (int) (8 * getResources().getDisplayMetrics().density);
         setCompoundDrawablePadding(paddingStart);
+
+        // Standart dokunma alanı (min 48dp)
+        int minArea = (int) (48 * getResources().getDisplayMetrics().density);
+        setMinHeight(minArea);
+        setMinWidth(minArea);
     }
 
     /**
-     * Apply size programmatically.
+     * Checkbox durumunu ayarlar ve görünümü tazeler.
+     * @param status STATUS_UNCHECKED, STATUS_CHECKED veya STATUS_INDETERMINATE
      */
-    public void applySize(int size) {
-        this.size = size;
+    public void setStatus(int status) {
+        this.status = status;
 
-        // Checkbox size is controlled by the drawable intrinsic size
-        // We just need to ensure proper min dimensions for touch target
-        int minTouchTarget = dp(48);
-        setMinHeight(minTouchTarget);
-        setMinWidth(minTouchTarget);
+        // Android'in yerleşik 'checked' durumunu senkronize et
+        // Sadece STATUS_CHECKED durumunda yerleşik checked true olur
+        super.setChecked(status == STATUS_CHECKED);
 
-        // Make sure it redraws
-        invalidate();
-        requestLayout();
+        // Drawable state'i yenile (onCreateDrawableState tetiklenir)
+        refreshDrawableState();
+    }
+
+    public int getStatus() {
+        return status;
     }
 
     /**
-     * Get current size.
+     * Yerleşik setChecked çağrıldığında durumu otomatik güncelle.
      */
-    public int getSize() {
-        return size;
+    @Override
+    public void setChecked(boolean checked) {
+        setStatus(checked ? STATUS_CHECKED : STATUS_UNCHECKED);
     }
 
-    private int dp(int v) {
-        return (int) (v * getResources().getDisplayMetrics().density);
+    @Override
+    protected int[] onCreateDrawableState(int extraSpace) {
+        // Eğer durum indeterminate ise, listeye bizim özel state'imizi ekliyoruz
+        if (status == STATUS_INDETERMINATE) {
+            final int[] drawableState = super.onCreateDrawableState(extraSpace + 1);
+            mergeDrawableStates(drawableState, STATE_INDETERMINATE);
+            return drawableState;
+        }
+        return super.onCreateDrawableState(extraSpace);
+    }
+
+    @Override
+    public boolean performClick() {
+        // Tıklandığında döngüsel geçiş mantığı
+        if (status == STATUS_INDETERMINATE) {
+            setStatus(STATUS_CHECKED);
+        } else {
+            setStatus(status == STATUS_CHECKED ? STATUS_UNCHECKED : STATUS_CHECKED);
+        }
+        return super.performClick();
     }
 }

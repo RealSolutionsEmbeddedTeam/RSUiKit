@@ -21,4 +21,7 @@
             <enum name="indeterminate" value="2" />
         </attr>
     </declare-styleable>
+
+    <!-- Custom State for Selectors -->
+    <attr name="state_indeterminate" format="boolean" />
 </resources>
