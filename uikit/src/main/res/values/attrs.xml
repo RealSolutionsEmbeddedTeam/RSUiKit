@@ -26,6 +26,24 @@
     </declare-styleable>
 
     <!-- ===================== -->
+    <!-- RSCheckBox -->
+    <!-- ===================== -->
+    <declare-styleable name="RSCheckBox">
+        <attr name="rsSize" format="enum">
+            <enum name="sm" value="0" />
+            <enum name="md" value="1" />
+        </attr>
+        <attr name="rsStatus" format="enum">
+            <enum name="unchecked" value="0" />
+            <enum name="checked" value="1" />
+            <enum name="indeterminate" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <!-- Custom State for Selectors -->
+    <attr name="state_indeterminate" format="boolean" />
+
+    <!-- ===================== -->
     <!-- RSEditText -->
     <!-- ===================== -->
     <declare-styleable name="RSEditText">
