@@ -10,32 +10,32 @@ import androidx.core.widget.CompoundButtonCompat;
 
 /**
  * RealSolutions UI Kit CheckBox
- *
+ * <p>
  * - Sizes:
- *   sm = 16x16
- *   md = 24x24
- *
+ * sm = 16x16
+ * md = 24x24
+ * <p>
  * - Status:
- *   unchecked / checked / indeterminate
- *
+ * unchecked / checked / indeterminate
+ * <p>
  * Usage (XML):
- *  <com.realsolutions.uikit.RSCheckBox
- *      android:layout_width="wrap_content"
- *      android:layout_height="wrap_content"
- *      app:rsSize="md"
- *      app:rsStatus="indeterminate" />
- *
+ * <com.realsolutions.uikit.RSCheckBox
+ * android:layout_width="wrap_content"
+ * android:layout_height="wrap_content"
+ * app:rsSize="md"
+ * app:rsStatus="indeterminate" />
+ * <p>
  * Requires drawables:
- *  - rs_checkbox_unchecked_sm.xml
- *  - rs_checkbox_checked_sm.xml
- *  - rs_checkbox_indeterminate_sm.xml
- *  - rs_checkbox_unchecked_md.xml
- *  - rs_checkbox_checked_md.xml
- *  - rs_checkbox_indeterminate_md.xml
- *
+ * - rs_checkbox_unchecked_sm.xml
+ * - rs_checkbox_checked_sm.xml
+ * - rs_checkbox_indeterminate_sm.xml
+ * - rs_checkbox_unchecked_md.xml
+ * - rs_checkbox_checked_md.xml
+ * - rs_checkbox_indeterminate_md.xml
+ * <p>
  * And icons:
- *  - rs_ic_check.xml
- *  - rs_ic_minus.xml
+ * - rs_ic_check.xml
+ * - rs_ic_minus.xml
  */
 public class RSCheckBox extends AppCompatCheckBox {
 
@@ -97,11 +97,13 @@ public class RSCheckBox extends AppCompatCheckBox {
 
         if (size == SIZE_SM) {
             if (status == STATUS_CHECKED) resId = R.drawable.rs_checkbox_checked_sm;
-            else if (status == STATUS_INDETERMINATE) resId = R.drawable.rs_checkbox_indeterminate_sm;
+            else if (status == STATUS_INDETERMINATE)
+                resId = R.drawable.rs_checkbox_indeterminate_sm;
             else resId = R.drawable.rs_checkbox_unchecked_sm;
         } else {
             if (status == STATUS_CHECKED) resId = R.drawable.rs_checkbox_checked_md;
-            else if (status == STATUS_INDETERMINATE) resId = R.drawable.rs_checkbox_indeterminate_md;
+            else if (status == STATUS_INDETERMINATE)
+                resId = R.drawable.rs_checkbox_indeterminate_md;
             else resId = R.drawable.rs_checkbox_unchecked_md;
         }
 

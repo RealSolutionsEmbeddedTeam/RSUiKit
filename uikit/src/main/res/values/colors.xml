@@ -26,4 +26,16 @@
     <color name="rs_cb_disabled_bg">#F2F4F7</color>
     <color name="rs_cb_disabled_border">#E4E7EC</color>
     <color name="rs_cb_disabled_icon">#98A2B3</color>
+
+    <!-- RSRadioButton Colors -->
+    <color name="rs_radio_border_default">@color/rs_border_primary</color>
+    <color name="rs_radio_border_checked">@color/rs_border_brand_solid_alt</color>
+    <color name="rs_radio_border_hover">@color/rs_border_brand_solid</color>
+    <color name="rs_radio_bg">@color/rs_bg_primary</color>
+    <color name="rs_radio_bg_disabled">@color/rs_bg_disabled_alt</color>
+    <color name="rs_radio_bg_disabled_checked">@color/rs_bg_secondary</color>
+    <color name="rs_radio_focus_ring_l1">@color/rs_alpha_focus_ring_neutral_l1</color>
+    <color name="rs_radio_focus_ring_l2">@color/rs_alpha_focus_ring_neutral_l2</color>
+    <color name="rs_radio_shadow">#0D0A0D12</color>
+    <color name="rs_radio_shadow_disabled">#080A0D14</color>
 </resources>

@@ -63,6 +63,15 @@
     </declare-styleable>
 
     <!-- ===================== -->
+    <!-- RSRadioButton -->
+    <!-- ===================== -->
+    <declare-styleable name="RSRadioButton">
+        <attr name="rsSize" />
+        <attr name="android:text" />
+    </declare-styleable>
+
+
+    <!-- ===================== -->
     <!-- RSLoadingCircle -->
     <!-- ===================== -->
     <declare-styleable name="RSLoadingCircle">

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RSRadioButton MD - State Selector -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Disabled + Checked -->
+    <item android:state_enabled="false" android:state_checked="true" android:drawable="@drawable/rs_radio_checked_disabled_md" />
+
+    <!-- Disabled + Unchecked -->
+    <item android:state_enabled="false" android:state_checked="false" android:drawable="@drawable/rs_radio_unchecked_disabled_md" />
+
+    <!-- Enabled + Checked -->
+    <item android:state_checked="true" android:drawable="@drawable/rs_radio_checked_md" />
+
+    <!-- Enabled + Unchecked (Default) -->
+    <item android:drawable="@drawable/rs_radio_unchecked_md" />
+
+</selector>

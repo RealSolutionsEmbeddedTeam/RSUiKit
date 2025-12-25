@@ -86,4 +86,16 @@
         app:rsStatus="checked"
         tools:ignore="MissingConstraints" />
 
+    <com.realsolutions.uikit.RSRadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="108dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="36dp"
+        android:text="geldi"
+        app:rsSize="md"
+        android:enabled="true"
+        android:checked="false"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
