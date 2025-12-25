@@ -38,6 +38,7 @@
             <enum name="checked" value="1" />
             <enum name="indeterminate" value="2" />
         </attr>
+        <attr name="android:text" />
     </declare-styleable>
 
     <!-- Custom State for Selectors -->

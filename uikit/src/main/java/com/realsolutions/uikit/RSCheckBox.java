@@ -48,6 +48,7 @@ public class RSCheckBox extends AppCompatCheckBox {
 
     private int size = SIZE_MD;
     private int status = STATUS_UNCHECKED;
+    private String text;
 
     public RSCheckBox(Context context) {
         super(context);
@@ -76,6 +77,8 @@ public class RSCheckBox extends AppCompatCheckBox {
             TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.RSCheckBox);
             size = a.getInt(R.styleable.RSCheckBox_rsSize, SIZE_MD);
             status = a.getInt(R.styleable.RSCheckBox_rsStatus, STATUS_UNCHECKED);
+            text = a.getText(R.styleable.RSCheckBox_android_text).toString();
+            setText(text);
             a.recycle();
         }
 
