@@ -71,4 +71,17 @@
         <attr name="rsColor" format="color" />    <!-- HEAD color -->
     </declare-styleable>
 
+    <!-- ===================== -->
+    <!-- RSGridBackgroundView -->
+    <!-- ===================== -->
+    <declare-styleable name="GridBackgroundView">
+        <attr name="gridRows" format="integer" />
+        <attr name="gridColumns" format="integer" />
+        <attr name="gridLineColor" format="color" />
+        <attr name="gridLineWidth" format="dimension" />
+        <attr name="gridPadding" format="dimension" />
+        <attr name="gridShowOuterBorder" format="boolean" />
+    </declare-styleable>
+
+
 </resources>
