@@ -5,19 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Theme.RSUiKitDemo"
-    tools:context=".MainActivity"
-    android:background="@color/rs_bg_brand_section">
+    tools:context=".MainActivity">
 
-    <com.realsolutions.uikit.RSGridBackgroundView
-        android:id="@+id/gridBackground"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:gridRows="6"
-        app:gridColumns="10"
-        app:gridLineColor="@android:color/holo_blue_dark"
-        app:gridLineWidth="1dp"
-        app:gridShowOuterBorder="true"
-        tools:ignore="MissingConstraints" />
+
 
     <com.realsolutions.uikit.RSEditText
         android:id="@+id/inpSicil"
