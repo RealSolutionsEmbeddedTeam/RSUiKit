@@ -12,6 +12,8 @@ import com.realsolutions.uikit.RSCheckBox;
 import com.realsolutions.uikit.RSButton;
 import com.realsolutions.uikit.RSEditText;
 import com.realsolutions.uikit.RSPasswordInput;
+import com.realsolutions.uikit.RSToast;
+import com.realsolutions.uikit.RSToastType;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,10 +41,14 @@ public class MainActivity extends AppCompatActivity {
         btnSecondary.setOnClickListener(view -> {
             rsEditText.setSuccessState();
             inpPass.setSuccessState();
+            RSToast.show(
+                    findViewById(android.R.id.content),
+                    "Kod okunamadı. Lütfen tekrar okutunuz.", RSToastType.INFO
+            );
         });
 
         check.setOnClickListener(view -> {
-            if (check.getStatus() == RSCheckBox.STATUS_CHECKED){
+            if (check.getStatus() == RSCheckBox.STATUS_CHECKED) {
                 Toast.makeText(this, "Checked", Toast.LENGTH_SHORT).show();
                 check.setChecked(false);
             } else {

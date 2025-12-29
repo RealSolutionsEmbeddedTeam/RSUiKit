@@ -20,6 +20,11 @@
     <color name="rs_input_label_error">#FB3748</color>
     <color name="rs_input_label_default">#717680</color>
 
+    <color name="rs_toast_error_bg">#1C1C1E</color>
+    <color name="rs_toast_success_bg">#1E7F43</color>
+    <color name="rs_toast_warning_bg">#8A6D1D</color>
+    <color name="rs_toast_info_bg">#1E5AA8</color>
+
     <color name="rs_cb_blue">#3B66FF</color>
     <color name="rs_cb_border">#D0D5DD</color>
     <color name="rs_cb_white">#FFFFFF</color>
