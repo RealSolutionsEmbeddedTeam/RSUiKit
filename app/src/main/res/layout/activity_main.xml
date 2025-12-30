@@ -7,6 +7,8 @@
     android:theme="@style/Theme.RSUiKitDemo"
     tools:context=".MainActivity">
 
+
+
     <com.realsolutions.uikit.RSEditText
         android:id="@+id/inpSicil"
         android:layout_width="300dp"
