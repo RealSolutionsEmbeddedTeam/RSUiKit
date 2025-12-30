@@ -1,0 +1,19 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- bg circle -->
+    <item>
+        <shape android:shape="oval">
+            <size android:width="20dp" android:height="20dp"/>
+            <solid android:color="@color/rs_radio_border_checked"/>
+        </shape>
+    </item>
+
+    <!-- inner white circle -->
+    <item android:top="6dp" android:left="6dp" android:right="6dp" android:bottom="6dp">
+        <shape android:shape="oval">
+            <size android:width="8dp" android:height="8dp"/>
+            <solid android:color="@color/rs_radio_bg"/>
+        </shape>
+    </item>
+
+</layer-list>
