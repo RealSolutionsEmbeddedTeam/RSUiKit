@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    RSCallout Action Button Background
+    Figma specs: radius 50px (pill shape), bg rs-bg-disabled_alt
+    Padding: 4px top/bottom, 12px left/right
+-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/rs_gray_light_400">
+
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white" />
+            <corners android:radius="@dimen/rs_callout_action_corner_radius" />
+        </shape>
+    </item>
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/rs_bg_disabled_alt" />
+            <corners android:radius="@dimen/rs_callout_action_corner_radius" />
+        </shape>
+    </item>
+
+</ripple>

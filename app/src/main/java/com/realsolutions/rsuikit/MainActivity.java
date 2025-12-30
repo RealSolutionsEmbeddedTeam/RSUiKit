@@ -1,5 +1,6 @@
 package com.realsolutions.rsuikit;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -8,8 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.realsolutions.rsuikit.R;
 import com.realsolutions.uikit.RSButton;
 import com.realsolutions.uikit.RSCheckBox;
-
-import com.realsolutions.uikit.RSButton;
+import com.realsolutions.uikit.RSCallout;
 import com.realsolutions.uikit.RSEditText;
 import com.realsolutions.uikit.RSPasswordInput;
 import com.realsolutions.uikit.RSToast;
@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
     RSPasswordInput inpPass;
     RSCheckBox check;
 
+    // RSCallout örnekleri
+    RSCallout calloutInfo, calloutSuccess, calloutWarning, calloutError;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         btnPrimary = findViewById(R.id.btnPrimary);
         btnSecondary = findViewById(R.id.btnSecondary);
         check = findViewById(R.id.checkBox);
+
+        // RSCallout binding
+        calloutInfo = findViewById(R.id.calloutInfo);
+        calloutSuccess = findViewById(R.id.calloutSuccess);
 
         btnPrimary.setOnClickListener(view -> {
             rsEditText.setErrorState(null);
@@ -56,5 +64,20 @@ public class MainActivity extends AppCompatActivity {
                 check.setIndeterminate();
             }
         });
+
+        // RSCallout Action Click Listeners
+        calloutInfo.setOnActionClickListener(v -> {
+            Toast.makeText(this, "Info: Daha fazla tıklandı!", Toast.LENGTH_SHORT).show();
+        });
+
+        calloutSuccess.setOnActionClickListener(v -> {
+            Toast.makeText(this, "Success: Tamam tıklandı!", Toast.LENGTH_SHORT).show();
+            // Örnek: Callout'u gizle
+            // calloutSuccess.setVisibility(View.GONE);
+        });
+
+//         Programatik değişiklik örneği
+//         calloutWarning.setMessage("Yeni uyarı mesajı");
+//         calloutError.setType(RSCallout.TYPE_INFO
     }
 }

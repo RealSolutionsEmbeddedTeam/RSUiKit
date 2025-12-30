@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    RSCallout Base Layout
+    Figma katman hiyerarşisine sadık kalınarak oluşturulmuş tek base layout.
+
+    Figma Specs:
+    - Container: 328px width, hug height, radius 24px, border 1px, padding 16px, gap 16px
+    - Icon Container: 28x28, radius full (circle), 4px padding, background varies by type
+    - Icon: 20x20, centered in container
+    - Content: vertical, gap 16px
+    - Title: Heading/sm (16px SemiBold), rs-text-primary
+    - Message: Body/md/regular (14px Regular), rs-text-tertiary
+    - Action: Body/md/medium (14px Medium), pill shape (radius 50px), rs-bg-disabled_alt
+
+    Hierarchy:
+    └── rootContainer (LinearLayout - horizontal)
+        ├── iconContainer (FrameLayout) [28x28 circle]
+        │   └── iconView (ImageView) [20x20, centered]
+        └── contentContainer (LinearLayout - vertical, gap 16px)
+            ├── titleView (TextView) [optional, Heading/sm]
+            ├── messageView (TextView) [Body/md/regular]
+            └── actionView (TextView/Button) [optional, pill shape]
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rs_callout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rs_callout_bg_info"
+    android:gravity="top"
+    android:orientation="horizontal"
+    android:padding="@dimen/rs_callout_padding">
+
+    <!-- Icon Container (28x28 circle with background) -->
+    <FrameLayout
+        android:id="@+id/rs_callout_icon_container"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="@dimen/rs_callout_icon_margin"
+        android:background="@drawable/rs_callout_icon_bg_info">
+
+        <!-- Icon (20x20, centered with 4dp padding) -->
+        <ImageView
+            android:id="@+id/rs_callout_icon"
+            android:layout_width="@dimen/rs_callout_icon_size"
+            android:layout_height="@dimen/rs_callout_icon_size"
+            android:layout_gravity="center"
+            android:contentDescription="@string/rs_callout_icon_desc"
+            android:scaleType="centerInside"
+            tools:src="@drawable/rs_ic_callout_info" />
+
+    </FrameLayout>
+
+    <!-- Content Container (vertical, gap 16px) -->
+    <LinearLayout
+        android:id="@+id/rs_callout_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Title (optional) - Heading/sm: 16sp SemiBold, rs-text-primary -->
+        <TextView
+            android:id="@+id/rs_callout_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/rs_callout_title_margin_bottom"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/rs_text_primary"
+            android:textSize="@dimen/rs_callout_title_text_size"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="Title"
+            tools:visibility="visible" />
+
+        <!-- Message - Body/md/regular: 14sp Regular, rs-text-tertiary -->
+        <TextView
+            android:id="@+id/rs_callout_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.43"
+            android:textColor="@color/rs_text_tertiary"
+            android:textSize="@dimen/rs_callout_message_text_size"
+            tools:text="Banners display an actionable message used as a prominent way of communicating with your users." />
+
+        <!-- Action Button (optional) - Body/md/medium: 14sp Medium, pill shape -->
+        <TextView
+            android:id="@+id/rs_callout_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/rs_callout_action_margin_top"
+            android:background="@drawable/rs_callout_action_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="@dimen/rs_callout_action_padding_horizontal"
+            android:paddingTop="@dimen/rs_callout_action_padding_vertical"
+            android:paddingEnd="@dimen/rs_callout_action_padding_horizontal"
+            android:paddingBottom="@dimen/rs_callout_action_padding_vertical"
+            android:textColor="@color/rs_text_primary"
+            android:textSize="@dimen/rs_callout_action_text_size"
+            android:visibility="gone"
+            tools:text="Learn more"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</LinearLayout>

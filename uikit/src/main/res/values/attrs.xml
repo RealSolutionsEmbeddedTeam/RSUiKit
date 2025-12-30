@@ -93,4 +93,26 @@
     </declare-styleable>
 
 
+    <!-- RSCallout -->
+    <declare-styleable name="RSCallout">
+        <!-- Callout type: info, success, warning, error -->
+        <attr name="rsCalloutType" format="enum">
+            <enum name="info" value="0" />
+            <enum name="success" value="1" />
+            <enum name="warning" value="2" />
+            <enum name="error" value="3" />
+        </attr>
+        <!-- Title text -->
+        <attr name="rsCalloutTitle" format="string" />
+        <!-- Message text -->
+        <attr name="rsCalloutMessage" format="string" />
+        <!-- Action button text -->
+        <attr name="rsCalloutActionText" format="string" />
+        <!-- Show/hide title -->
+        <attr name="rsCalloutShowTitle" format="boolean" />
+        <!-- Show/hide action button -->
+        <attr name="rsCalloutShowAction" format="boolean" />
+    </declare-styleable>
+
+
 </resources>

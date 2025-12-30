@@ -8,7 +8,6 @@
     tools:context=".MainActivity">
 
 
-
     <com.realsolutions.uikit.RSEditText
         android:id="@+id/inpSicil"
         android:layout_width="300dp"
@@ -88,16 +87,44 @@
         app:rsStatus="checked"
         tools:ignore="MissingConstraints" />
 
-    <com.realsolutions.uikit.RSRadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="108dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="36dp"
-        android:text="geldi"
-        app:rsSize="md"
-        android:enabled="true"
-        android:checked="false"
-        tools:ignore="MissingConstraints" />
+    <!-- RSCallout Examples -->
+
+    <!-- Info Callout - with title and action -->
+
+    <!-- Success Callout - only message and action -->
+    <com.realsolutions.uikit.RSCallout
+        android:id="@+id/calloutInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox"
+        app:rsCalloutActionText="Daha fazla"
+        app:rsCalloutMessage="Bu bir bilgi mesajıdır. Kullanıcıya önemli bilgiler iletmek için kullanılır."
+        app:rsCalloutShowAction="true"
+        app:rsCalloutShowTitle="true"
+        app:rsCalloutTitle="Bilgilendirme"
+        app:rsCalloutType="warning" />
+
+    <com.realsolutions.uikit.RSCallout
+        android:id="@+id/calloutSuccess"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calloutInfo"
+        app:rsCalloutActionText="Tamam"
+        app:rsCalloutMessage="İşlem başarıyla tamamlandı."
+        app:rsCalloutShowAction="true"
+        app:rsCalloutShowTitle="false"
+        app:rsCalloutType="success" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
