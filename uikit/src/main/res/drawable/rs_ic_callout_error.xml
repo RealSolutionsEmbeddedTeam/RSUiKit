@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSCallout Icon - Error (Diamond with "!") - Pure outline -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+
+    <!-- Diamond outline -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M10,2.929L17.071,10L10,17.071L2.929,10Z"
+        android:strokeWidth="1.67"
+        android:strokeColor="@color/rs_error_600"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- ! line (top) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M10,7L10,10.5"
+        android:strokeWidth="1.67"
+        android:strokeColor="@color/rs_error_600"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- ! dot (bottom) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M10,12.5L10.0083,12.5"
+        android:strokeWidth="2"
+        android:strokeColor="@color/rs_error_600"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+</vector>

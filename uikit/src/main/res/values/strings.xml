@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="rs_empty">" "</string>
+
+    <!-- Callout -->
+    <string name="rs_callout_icon_desc">Callout icon</string>
+    <string name="rs_callout_action_default">Learn more</string>
+
 </resources>
