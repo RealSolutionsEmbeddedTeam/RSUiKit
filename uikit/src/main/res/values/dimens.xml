@@ -37,6 +37,14 @@
     <dimen name="rs_input_text_size">15sp</dimen>
     <dimen name="rs_input_label_size">10sp</dimen>
 
+    <!-- RadioButton -->
+    <dimen name="rs_radio_size_sm">16dp</dimen>
+    <dimen name="rs_radio_size_md">20dp</dimen>
+    <dimen name="rs_radio_stroke_sm">2dp</dimen>
+    <dimen name="rs_radio_stroke_md">3dp</dimen>
+    <dimen name="rs_radio_dot_sm">6dp</dimen>
+    <dimen name="rs_radio_dot_md">8dp</dimen>
+
     <!-- Loading Panel -->
     <dimen name="rs_login_panel_radius">32dp</dimen>
     <dimen name="rs_login_panel_padding">24dp</dimen>
