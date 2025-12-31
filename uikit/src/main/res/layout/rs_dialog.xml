@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/rs_dialog_width"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rs_dialog_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/rs_dialog_padding">
+
+    <!-- Icon Container -->
+    <FrameLayout
+        android:id="@+id/rs_dialog_icon_container"
+        android:layout_width="@dimen/rs_dialog_icon_container_size"
+        android:layout_height="@dimen/rs_dialog_icon_container_size"
+        android:layout_marginBottom="@dimen/rs_dialog_content_gap"
+        android:background="@drawable/rs_dialog_icon_bg">
+
+        <ImageView
+            android:id="@+id/rs_dialog_icon"
+            android:layout_width="@dimen/rs_dialog_icon_size"
+            android:layout_height="@dimen/rs_dialog_icon_size"
+            android:layout_gravity="center"
+            android:importantForAccessibility="no"
+            app:tint="@color/rs_text_brand_tertiary" />
+    </FrameLayout>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/rs_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/rs_spacing_1"
+        android:textColor="@color/rs_text_primary"
+        android:textSize="@dimen/rs_dialog_title_size"
+        android:textStyle="bold" />
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/rs_dialog_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/rs_dialog_content_gap"
+        android:textColor="@color/rs_text_secondary"
+        android:textSize="@dimen/rs_dialog_description_size" />
+
+    <!-- Buttons Container -->
+    <LinearLayout
+        android:id="@+id/rs_dialog_buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.realsolutions.uikit.RSButton
+            android:id="@+id/rs_dialog_neutral_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/rs_dialog_button_gap"
+            android:layout_weight="1"
+            app:rsType="neutral" />
+
+        <com.realsolutions.uikit.RSButton
+            android:id="@+id/rs_dialog_primary_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:rsType="primary" />
+    </LinearLayout>
+
+</LinearLayout>

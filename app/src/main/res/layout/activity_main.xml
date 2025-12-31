@@ -1,130 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/Theme.RSUiKitDemo"
-    tools:context=".MainActivity">
+    android:fillViewport="true">
 
-
-    <com.realsolutions.uikit.RSEditText
-        android:id="@+id/inpSicil"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rsHint="Sicil numaranızı girin"
-        app:rsLabel="Sicil No"
-        app:rsState="normal"
-        tools:ignore="MissingConstraints" />
-
-    <com.realsolutions.uikit.RSPasswordInput
-        android:id="@+id/inpPass"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpSicil"
-        app:rsHint="Parolanızı girin"
-        app:rsLabel="Parola"
-        app:rsState="normal"
-        tools:ignore="MissingConstraints" />
-
-    <com.realsolutions.uikit.RSButton
-        android:id="@+id/btnPrimary"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:text="Hatalı"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.115"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inpPass"
-        app:rsType="primary"
-        tools:ignore="MissingConstraints" />
-
-    <com.realsolutions.uikit.RSButton
-        android:id="@+id/btnSecondary"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="16dp"
-        android:text="Doğru"
-        app:layout_constraintStart_toEndOf="@+id/btnPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/inpPass"
-        app:rsType="secondary"
-        tools:ignore="MissingConstraints" />
-
-    <com.realsolutions.uikit.RSLoadingCircle
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.884"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSecondary"
-        app:rsColor="#5661FF"
-        app:rsSpeed="400"
-        app:rsTrailDeg="360"
-        tools:ignore="MissingConstraints" />
-
-    <com.realsolutions.uikit.RSCheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="108dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="36dp"
-        android:text="Deneme"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPrimary"
-        app:rsSize="md"
-        app:rsStatus="checked"
-        tools:ignore="MissingConstraints" />
-
-    <!-- RSCallout Examples -->
-
-    <!-- Info Callout - with title and action -->
-
-    <!-- Success Callout - only message and action -->
-    <com.realsolutions.uikit.RSCallout
-        android:id="@+id/calloutInfo"
-        android:layout_width="0dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox"
-        app:rsCalloutActionText="Daha fazla"
-        app:rsCalloutMessage="Bu bir bilgi mesajıdır. Kullanıcıya önemli bilgiler iletmek için kullanılır."
-        app:rsCalloutShowAction="true"
-        app:rsCalloutShowTitle="true"
-        app:rsCalloutTitle="Bilgilendirme"
-        app:rsCalloutType="warning" />
+        android:paddingBottom="32dp"
+        android:theme="@style/Theme.RSUiKitDemo"
+        tools:context=".MainActivity">
 
-    <com.realsolutions.uikit.RSCallout
-        android:id="@+id/calloutSuccess"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calloutInfo"
-        app:rsCalloutActionText="Tamam"
-        app:rsCalloutMessage="İşlem başarıyla tamamlandı."
-        app:rsCalloutShowAction="true"
-        app:rsCalloutShowTitle="false"
-        app:rsCalloutType="success" />
+        <com.realsolutions.uikit.RSEditText
+            android:id="@+id/inpSicil"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rsHint="Sicil numaranızı girin"
+            app:rsLabel="Sicil No"
+            app:rsState="normal" />
+
+        <com.realsolutions.uikit.RSPasswordInput
+            android:id="@+id/inpPass"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inpSicil"
+            app:rsHint="Parolanızı girin"
+            app:rsLabel="Parola"
+            app:rsState="normal" />
+
+        <com.realsolutions.uikit.RSButton
+            android:id="@+id/btnPrimary"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:text="Hatalı"
+            app:layout_constraintEnd_toStartOf="@+id/btnSecondary"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inpPass"
+            app:rsType="primary" />
+
+        <com.realsolutions.uikit.RSButton
+            android:id="@+id/btnSecondary"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Doğru"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/inpPass"
+            app:rsType="secondary" />
+
+        <com.realsolutions.uikit.RSLoadingCircle
+            android:id="@+id/loadingCircle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSecondary"
+            app:rsColor="#5661FF"
+            app:rsSpeed="400"
+            app:rsTrailDeg="360" />
+
+        <com.realsolutions.uikit.RSCheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Deneme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loadingCircle"
+            app:rsSize="md"
+            app:rsStatus="checked" />
+
+        <!-- RSCallout Examples -->
+        <com.realsolutions.uikit.RSCallout
+            android:id="@+id/calloutInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox"
+            app:rsCalloutActionText="Daha fazla"
+            app:rsCalloutMessage="Bu bir bilgi mesajıdır. Kullanıcıya önemli bilgiler iletmek için kullanılır."
+            app:rsCalloutShowAction="true"
+            app:rsCalloutShowTitle="true"
+            app:rsCalloutTitle="Bilgilendirme"
+            app:rsCalloutType="warning" />
+
+        <com.realsolutions.uikit.RSCallout
+            android:id="@+id/calloutSuccess"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calloutInfo"
+            app:rsCalloutActionText="Tamam"
+            app:rsCalloutMessage="İşlem başarıyla tamamlandı."
+            app:rsCalloutShowAction="true"
+            app:rsCalloutShowTitle="false"
+            app:rsCalloutType="success" />
+
+        <!-- RSDialog Example 1 - Icon Visible + 2 Buttons (Neutral + Primary) -->
+        <com.realsolutions.uikit.RSDialog
+            android:id="@+id/dialogExample1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calloutSuccess"
+            app:rsDialogActionType="defaultAction"
+            app:rsDialogPrimaryButtonType="primary"
+            app:rsDialogAnimateIcon="true"
+            app:rsDialogDescription="Turn on GPS location to see more relevant weather reports, sport scores and local news."
+            app:rsDialogIcon="@drawable/rs_ic_dialog_location"
+            app:rsDialogNeutralButtonType="neutral"
+            app:rsDialogNeutralText="Neutral"
+            app:rsDialogPrimaryText="Primary"
+            app:rsDialogShowIcon="true"
+            app:rsDialogTitle="Dialog Örneği" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

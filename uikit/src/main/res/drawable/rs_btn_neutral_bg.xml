@@ -1,27 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!-- Neutral Button Background - Figma: #D5D7DA (rs_gray_light_300) -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Disabled -->
     <item android:state_enabled="false">
         <shape>
-            <solid android:color="@color/rs_bg_disabled_alt"/>
-            <corners android:radius="12dp"/>
+            <solid android:color="@color/rs_bg_disabled_alt" />
+            <corners android:radius="12dp" />
         </shape>
     </item>
 
     <!-- Pressed -->
     <item android:state_pressed="true">
         <shape>
-            <solid android:color="@color/rs_bg_secondary_hover"/>
-            <corners android:radius="12dp"/>
+            <solid android:color="@color/rs_gray_light_400" />
+            <corners android:radius="12dp" />
         </shape>
     </item>
 
-    <!-- Default -->
+    <!-- Default: Figma rs_gray_light_300 (#D5D7DA) -->
     <item>
         <shape>
-            <solid android:color="@color/rs_bg_secondary"/>
-            <corners android:radius="12dp"/>
+            <solid android:color="@color/rs_gray_light_300" />
+            <corners android:radius="12dp" />
         </shape>
     </item>
 
