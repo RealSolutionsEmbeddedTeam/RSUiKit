@@ -115,4 +115,45 @@
     </declare-styleable>
 
 
+    <!-- ===================== -->
+    <!-- RSDialog -->
+    <!-- ===================== -->
+    <declare-styleable name="RSDialog">
+        <!-- Show/hide icon -->
+        <attr name="rsDialogShowIcon" format="boolean" />
+        <!-- Action type: default (2 buttons) or single (1 button) -->
+        <attr name="rsDialogActionType" format="enum">
+            <enum name="defaultAction" value="0" />
+            <enum name="single" value="1" />
+        </attr>
+        <!-- Title text -->
+        <attr name="rsDialogTitle" format="string" />
+        <!-- Description text -->
+        <attr name="rsDialogDescription" format="string" />
+        <!-- Neutral button text -->
+        <attr name="rsDialogNeutralText" format="string" />
+        <!-- Primary button text -->
+        <attr name="rsDialogPrimaryText" format="string" />
+        <!-- Custom icon resource -->
+        <attr name="rsDialogIcon" format="reference" />
+        <!-- Animate icon rotation -->
+        <attr name="rsDialogAnimateIcon" format="boolean" />
+        <!-- Neutral button type (uses RSButton types) -->
+        <attr name="rsDialogNeutralButtonType" format="enum">
+            <enum name="primary" value="0" />
+            <enum name="secondary" value="1" />
+            <enum name="neutral" value="2" />
+            <enum name="plainDark" value="3" />
+            <enum name="plainLight" value="4" />
+        </attr>
+        <!-- Primary button type (uses RSButton types) -->
+        <attr name="rsDialogPrimaryButtonType" format="enum">
+            <enum name="primary" value="0" />
+            <enum name="secondary" value="1" />
+            <enum name="neutral" value="2" />
+            <enum name="plainDark" value="3" />
+            <enum name="plainLight" value="4" />
+        </attr>
+    </declare-styleable>
+
 </resources>

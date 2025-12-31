@@ -13,22 +13,22 @@ import java.util.Objects;
 
 /**
  * RealSolutions UI Kit Button
- *
+ * <p>
  * Usage (XML):
- *  <com.realsolutions.uikit.RSButton
- *      android:layout_width="match_parent"
- *      android:layout_height="wrap_content"
- *      android:text="Kaydet"
- *      app:rsType="primary" />
- *
+ * <com.realsolutions.uikit.RSButton
+ * android:layout_width="match_parent"
+ * android:layout_height="wrap_content"
+ * android:text="Kaydet"
+ * app:rsType="primary" />
+ * <p>
  * Requires:
- *  - res/values/attrs.xml with <attr name="rsType" .../>
- *  - drawables & colors:
- *      rs_btn_primary_bg + rs_btn_primary_text
- *      rs_btn_secondary_bg + rs_btn_secondary_text
- *      rs_btn_neutral_bg + rs_btn_neutral_text
- *      rs_btn_plain_dark_bg + rs_btn_plain_dark_text
- *      rs_btn_plain_light_bg + rs_btn_plain_light_text
+ * - res/values/attrs.xml with <attr name="rsType" .../>
+ * - drawables & colors:
+ * rs_btn_primary_bg + rs_btn_primary_text
+ * rs_btn_secondary_bg + rs_btn_secondary_text
+ * rs_btn_neutral_bg + rs_btn_neutral_text
+ * rs_btn_plain_dark_bg + rs_btn_plain_dark_text
+ * rs_btn_plain_light_bg + rs_btn_plain_light_text
  */
 public class RSButton extends MaterialButton {
 
@@ -64,6 +64,10 @@ public class RSButton extends MaterialButton {
         setInsetTop(0);
         setInsetBottom(0);
 
+        // CRITICAL: Disable MaterialButton's built-in backgroundTint
+        // This allows our custom drawable backgrounds to work correctly
+        setBackgroundTintList(null);
+
         // Optional: keep padding nice if user doesn't set it
         // (MaterialButton already has padding, but some themes override it)
         if (getPaddingLeft() == 0 && getPaddingRight() == 0) {
@@ -90,28 +94,33 @@ public class RSButton extends MaterialButton {
 
         switch (type) {
             case TYPE_SECONDARY:
-                setBackground(Objects.requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_secondary_bg)));
+                setBackground(Objects
+                        .requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_secondary_bg)));
                 setTextColor(ContextCompat.getColorStateList(getContext(), R.color.rs_btn_secondary_text));
                 break;
 
             case TYPE_NEUTRAL:
-                setBackground(Objects.requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_neutral_bg)));
+                setBackground(
+                        Objects.requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_neutral_bg)));
                 setTextColor(ContextCompat.getColorStateList(getContext(), R.color.rs_btn_neutral_text));
                 break;
 
             case TYPE_PLAIN_DARK:
-                setBackground(Objects.requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_plain_dark_bg)));
+                setBackground(Objects
+                        .requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_plain_dark_bg)));
                 setTextColor(ContextCompat.getColorStateList(getContext(), R.color.rs_btn_plain_dark_text));
                 break;
 
             case TYPE_PLAIN_LIGHT:
-                setBackground(Objects.requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_plain_light_bg)));
+                setBackground(Objects
+                        .requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_plain_light_bg)));
                 setTextColor(ContextCompat.getColorStateList(getContext(), R.color.rs_btn_plain_light_text));
                 break;
 
             case TYPE_PRIMARY:
             default:
-                setBackground(Objects.requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_primary_bg)));
+                setBackground(
+                        Objects.requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_primary_bg)));
                 setTextColor(ContextCompat.getColorStateList(getContext(), R.color.rs_btn_primary_text));
                 break;
         }
@@ -119,6 +128,16 @@ public class RSButton extends MaterialButton {
         // Make sure it redraws
         invalidate();
         requestLayout();
+    }
+
+    /**
+     * Set button type (alias for applyType).
+     *
+     * @param type TYPE_PRIMARY, TYPE_SECONDARY, TYPE_NEUTRAL, TYPE_PLAIN_DARK, or
+     *             TYPE_PLAIN_LIGHT
+     */
+    public void setType(int type) {
+        applyType(type);
     }
 
     /**

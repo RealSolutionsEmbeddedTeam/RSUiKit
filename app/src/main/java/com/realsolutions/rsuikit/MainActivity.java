@@ -10,6 +10,7 @@ import com.realsolutions.rsuikit.R;
 import com.realsolutions.uikit.RSButton;
 import com.realsolutions.uikit.RSCheckBox;
 import com.realsolutions.uikit.RSCallout;
+import com.realsolutions.uikit.RSDialog;
 import com.realsolutions.uikit.RSEditText;
 import com.realsolutions.uikit.RSPasswordInput;
 import com.realsolutions.uikit.RSToast;
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
     // RSCallout örnekleri
     RSCallout calloutInfo, calloutSuccess, calloutWarning, calloutError;
+
+    // RSDialog örneği
+    RSDialog dialogExample1;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -41,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
         calloutInfo = findViewById(R.id.calloutInfo);
         calloutSuccess = findViewById(R.id.calloutSuccess);
 
+        // RSDialog binding
+        dialogExample1 = findViewById(R.id.dialogExample1);
+
         btnPrimary.setOnClickListener(view -> {
             rsEditText.setErrorState(null);
             inpPass.setErrorState();
@@ -51,8 +58,7 @@ public class MainActivity extends AppCompatActivity {
             inpPass.setSuccessState();
             RSToast.show(
                     findViewById(android.R.id.content),
-                    "Kod okunamadı. Lütfen tekrar okutunuz.", RSToastType.INFO
-            );
+                    "Kod okunamadı. Lütfen tekrar okutunuz.", RSToastType.INFO);
         });
 
         check.setOnClickListener(view -> {
@@ -76,8 +82,17 @@ public class MainActivity extends AppCompatActivity {
             // calloutSuccess.setVisibility(View.GONE);
         });
 
-//         Programatik değişiklik örneği
-//         calloutWarning.setMessage("Yeni uyarı mesajı");
-//         calloutError.setType(RSCallout.TYPE_INFO
+//        // RSDialog Button Click Listeners
+//        dialogExample1.setOnNeutralClickListener(v -> {
+//            Toast.makeText(this, "Dialog: Neutral tıklandı!", Toast.LENGTH_SHORT).show();
+//        });
+//
+//        dialogExample1.setOnPrimaryClickListener(v -> {
+//            Toast.makeText(this, "Dialog: Primary tıklandı!", Toast.LENGTH_SHORT).show();
+//        });
+
+        // Programatik değişiklik örneği
+        // calloutWarning.setMessage("Yeni uyarı mesajı");
+        // calloutError.setType(RSCallout.TYPE_INFO
     }
 }
