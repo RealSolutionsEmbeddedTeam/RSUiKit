@@ -129,16 +129,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/calloutSuccess"
             app:rsDialogActionType="defaultAction"
-            app:rsDialogPrimaryButtonType="primary"
             app:rsDialogAnimateIcon="true"
             app:rsDialogDescription="Turn on GPS location to see more relevant weather reports, sport scores and local news."
             app:rsDialogIcon="@drawable/rs_ic_dialog_location"
-            app:rsDialogNeutralButtonType="neutral"
             app:rsDialogNeutralText="Neutral"
             app:rsDialogPrimaryText="Primary"
             app:rsDialogShowIcon="true"
-            app:rsDialogTitle="Dialog Örneği" />
+            app:rsDialogTitle="Location Services" />
 
+        <!-- RSLoadingBar Example -->
+        <com.realsolutions.uikit.RSLoadingBar
+            android:id="@+id/loadingBar"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dialogExample1"
+            app:rsLevel="50" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

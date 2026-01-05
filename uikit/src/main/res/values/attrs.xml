@@ -156,4 +156,12 @@
         </attr>
     </declare-styleable>
 
+    <!-- ===================== -->
+    <!-- RSLoadingBar -->
+    <!-- ===================== -->
+    <declare-styleable name="RSLoadingBar">
+        <!-- Progress level 0-100 -->
+        <attr name="rsLevel" format="integer" />
+    </declare-styleable>
+
 </resources>
