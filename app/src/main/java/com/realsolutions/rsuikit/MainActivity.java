@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             inpPass.setSuccessState();
             RSToast.show(
                     findViewById(android.R.id.content),
-                    "Kod okunamadı. Lütfen tekrar okutunuz.", RSToastType.INFO);
+                    "Kod okunamadı.", RSToastType.INFO);
         });
 
         check.setOnClickListener(view -> {
