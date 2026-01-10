@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
+    <com.realsolutions.uikit.select.RSSelect
+        android:id="@+id/rsSelectUser"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/myLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rsLeadingIcon="@drawable/rs_ic_success"
+        app:rsPlaceholder="Select a user..."
+        app:rsState="normal" />
+
     <com.realsolutions.uikit.RSLabel
         android:id="@+id/myLabel"
         android:layout_width="wrap_content"

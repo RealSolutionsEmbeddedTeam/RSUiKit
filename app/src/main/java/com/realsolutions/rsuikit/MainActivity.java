@@ -17,6 +17,9 @@ import com.realsolutions.uikit.RSPasswordInput;
 import com.realsolutions.uikit.RSToast;
 import com.realsolutions.uikit.RSToastType;
 import com.realsolutions.uikit.navbar.RSNavBar;
+import com.realsolutions.uikit.select.RSSelect;
+
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
 
         // programmatic select
         nav.selectItem(R.id.nav_scan, false);
+
+        RSSelect sel = findViewById(R.id.rsSelectUser);
+
+        sel.setItems(Arrays.asList("Ali Veli", "Turgay Hopal", "Ayşe Yılmaz"));
+
+        sel.setOnItemSelectedListener((index, value) -> {
+            // seçildi
+        });
 
         // hide/show
         // nav.hide(true);

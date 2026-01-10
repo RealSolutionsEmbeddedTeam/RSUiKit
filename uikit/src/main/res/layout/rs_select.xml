@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/rsSelectRoot"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <!-- Leading (icon/avatar) -->
+        <ImageView
+            android:id="@+id/rsSelectLeading"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:visibility="gone"
+            android:contentDescription="@null"/>
+
+        <!-- Text -->
+        <TextView
+            android:id="@+id/rsSelectText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="14sp"
+            android:includeFontPadding="false"/>
+
+        <!-- Chevron -->
+        <ImageView
+            android:id="@+id/rsSelectChevron"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:contentDescription="@null"
+            android:src="@drawable/rs_ic_chevron_down"/>
+
+    </LinearLayout>
+
+</merge>

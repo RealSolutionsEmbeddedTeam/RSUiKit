@@ -227,5 +227,15 @@
         <attr name="rsEnabled" />
     </declare-styleable>
 
+    <!-- ===================== -->
+    <!-- RSSelect -->
+    <!-- ===================== -->
+
+    <declare-styleable name="RSSelect">
+        <attr name="rsPlaceholder" format="string" />
+        <attr name="rsLeadingIcon" format="reference" />
+        <attr name="rsState" />
+        <attr name="rsEnabled" />
+    </declare-styleable>
 
 </resources>
