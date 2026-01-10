@@ -144,9 +144,8 @@ public class RSSelect extends LinearLayout {
             if (!rsEnabled) return;
 
             boolean hasValue = value != null && !value.trim().isEmpty();
-
             if (hasValue) {
-                clearSelection();
+                clearSelection(true);
             } else {
                 showDropdown();
             }
