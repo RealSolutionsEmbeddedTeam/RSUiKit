@@ -5,6 +5,7 @@
     <!-- ===================== -->
     <attr name="rsLabel" format="string" />
     <attr name="rsHint" format="string" />
+    <attr name="rsEnabled" format="boolean"/>
     <attr name="rsState" format="enum">
         <enum name="normal" value="0" />
         <enum name="focused" value="1" />
@@ -194,9 +195,17 @@
         <attr name="rsItemId" format="reference|integer"/>
         <attr name="rsIcon" format="reference"/>
         <attr name="rsLabel"/>
-        <attr name="rsEnabled" format="boolean"/>
+        <attr name="rsEnabled"/>
         <attr name="rsBadge" format="string"/>
         <attr name="rsItemIconSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="RSLabel">
+        <attr name="rsText" format="string"/>
+        <attr name="rsRequired" format="boolean"/>
+        <attr name="rsSuffixText" format="string"/>
+        <attr name="rsShowInfo" format="boolean"/>
+        <attr name="rsEnabled"/>
     </declare-styleable>
 
 </resources>

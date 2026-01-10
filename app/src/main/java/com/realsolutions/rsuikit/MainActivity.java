@@ -12,6 +12,7 @@ import com.realsolutions.uikit.RSCheckBox;
 import com.realsolutions.uikit.RSCallout;
 import com.realsolutions.uikit.RSDialog;
 import com.realsolutions.uikit.RSEditText;
+import com.realsolutions.uikit.RSLabel;
 import com.realsolutions.uikit.RSPasswordInput;
 import com.realsolutions.uikit.RSToast;
 import com.realsolutions.uikit.RSToastType;
@@ -25,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        RSLabel label = findViewById(R.id.myLabel);
+        label.setOnInfoClickListener(v -> {
+            RSToast.show(v, "Info clicked", RSToastType.INFO);
+        });
 
         RSNavBar nav = findViewById(R.id.rsNavBar);
         nav.setItemWeights(1.0f, 1.7f);
