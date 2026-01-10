@@ -15,19 +15,10 @@ import com.realsolutions.uikit.RSEditText;
 import com.realsolutions.uikit.RSPasswordInput;
 import com.realsolutions.uikit.RSToast;
 import com.realsolutions.uikit.RSToastType;
+import com.realsolutions.uikit.navbar.RSNavBar;
 
 public class MainActivity extends AppCompatActivity {
 
-    RSEditText rsEditText;
-    RSButton btnPrimary, btnSecondary;
-    RSPasswordInput inpPass;
-    RSCheckBox check;
-
-    // RSCallout örnekleri
-    RSCallout calloutInfo, calloutSuccess, calloutWarning, calloutError;
-
-    // RSDialog örneği
-    RSDialog dialogExample1;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -35,64 +26,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rsEditText = findViewById(R.id.inpSicil);
-        inpPass = findViewById(R.id.inpPass);
-        btnPrimary = findViewById(R.id.btnPrimary);
-        btnSecondary = findViewById(R.id.btnSecondary);
-        check = findViewById(R.id.checkBox);
+        RSNavBar nav = findViewById(R.id.rsNavBar);
+        nav.setItemWeights(1.0f, 1.7f);
+        nav.setWeightAnimDuration(200);
 
-        // RSCallout binding
-        calloutInfo = findViewById(R.id.calloutInfo);
-        calloutSuccess = findViewById(R.id.calloutSuccess);
-
-        // RSDialog binding
-        dialogExample1 = findViewById(R.id.dialogExample1);
-
-        btnPrimary.setOnClickListener(view -> {
-            rsEditText.setErrorState(null);
-            inpPass.setErrorState();
-        });
-
-        btnSecondary.setOnClickListener(view -> {
-            rsEditText.setSuccessState();
-            inpPass.setSuccessState();
-            RSToast.show(
-                    findViewById(android.R.id.content),
-                    "Kod okunamadı.", RSToastType.INFO);
-        });
-
-        check.setOnClickListener(view -> {
-            if (check.getStatus() == RSCheckBox.STATUS_CHECKED) {
-                Toast.makeText(this, "Checked", Toast.LENGTH_SHORT).show();
-                check.setChecked(false);
-            } else {
-                Toast.makeText(this, "Unchecked", Toast.LENGTH_SHORT).show();
-                check.setIndeterminate();
+        nav.setOnItemSelectedListener(itemId -> {
+            if (itemId == R.id.nav_search) {
+                // fragment replace / navigate
+            } else if (itemId == R.id.nav_scan) {
             }
         });
 
-        // RSCallout Action Click Listeners
-        calloutInfo.setOnActionClickListener(v -> {
-            Toast.makeText(this, "Info: Daha fazla tıklandı!", Toast.LENGTH_SHORT).show();
-        });
+        // programmatic select
+        nav.selectItem(R.id.nav_scan, false);
 
-        calloutSuccess.setOnActionClickListener(v -> {
-            Toast.makeText(this, "Success: Tamam tıklandı!", Toast.LENGTH_SHORT).show();
-            // Örnek: Callout'u gizle
-            // calloutSuccess.setVisibility(View.GONE);
-        });
+        // hide/show
+        // nav.hide(true);
+        // nav.show(true);
 
-//        // RSDialog Button Click Listeners
-//        dialogExample1.setOnNeutralClickListener(v -> {
-//            Toast.makeText(this, "Dialog: Neutral tıklandı!", Toast.LENGTH_SHORT).show();
-//        });
-//
-//        dialogExample1.setOnPrimaryClickListener(v -> {
-//            Toast.makeText(this, "Dialog: Primary tıklandı!", Toast.LENGTH_SHORT).show();
-//        });
-
-        // Programatik değişiklik örneği
-        // calloutWarning.setMessage("Yeni uyarı mesajı");
-        // calloutError.setType(RSCallout.TYPE_INFO
     }
 }

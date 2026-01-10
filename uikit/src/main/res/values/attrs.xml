@@ -164,4 +164,39 @@
         <attr name="rsLevel" format="integer" />
     </declare-styleable>
 
+    <!-- ===================== -->
+    <!-- RSNavBar -->
+    <!-- ===================== -->
+
+    <declare-styleable name="RSNavBar">
+        <attr name="rsLabelMode" format="enum">
+            <enum name="always" value="0"/>
+            <enum name="selectedOnly" value="1"/>
+            <enum name="never" value="2"/>
+        </attr>
+
+        <attr name="rsIndicatorMode" format="enum">
+            <enum name="topLine" value="0"/>
+            <enum name="dot" value="1"/>
+            <enum name="none" value="2"/>
+        </attr>
+
+        <attr name="rsIconSize" format="dimension"/>
+        <attr name="rsBarPaddingHorizontal" format="dimension"/>
+        <attr name="rsBarPaddingVertical" format="dimension"/>
+
+        <attr name="rsSelectedColor" format="color|reference"/>
+        <attr name="rsUnselectedColor" format="color|reference"/>
+        <attr name="rsIndicatorColor" format="color|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="RSNavBarItem">
+        <attr name="rsItemId" format="reference|integer"/>
+        <attr name="rsIcon" format="reference"/>
+        <attr name="rsLabel"/>
+        <attr name="rsEnabled" format="boolean"/>
+        <attr name="rsBadge" format="string"/>
+        <attr name="rsItemIconSize" format="dimension"/>
+    </declare-styleable>
+
 </resources>
