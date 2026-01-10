@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         sel.setItems(Arrays.asList("Ali Veli", "Turgay Hopal", "Ayşe Yılmaz"));
 
+
         sel.setOnItemSelectedListener((index, value) -> {
             // seçildi
         });

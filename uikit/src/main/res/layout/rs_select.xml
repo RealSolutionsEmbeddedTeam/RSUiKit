@@ -35,6 +35,9 @@
             android:id="@+id/rsSelectChevron"
             android:layout_width="18dp"
             android:layout_height="18dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:importantForAccessibility="no"
             android:contentDescription="@null"
             android:src="@drawable/rs_ic_chevron_down"/>
 

@@ -62,6 +62,9 @@ public class RSSelect extends LinearLayout {
     private int cChevron;
     private RSSelectStringAdapter adapter;
 
+    @DrawableRes private int chevronIconRes = R.drawable.rs_ic_chevron_down;
+    @DrawableRes private int clearIconRes   = R.drawable.rs_ic_x_circle;
+
     @Nullable
     private OnItemSelectedListener listener;
 
@@ -123,6 +126,17 @@ public class RSSelect extends LinearLayout {
         setOnClickListener(v -> {
             if (!rsEnabled) return;
             showDropdown();
+        });
+        chevron.setOnClickListener(v -> {
+            if (!rsEnabled) return;
+
+            boolean hasValue = value != null && !value.trim().isEmpty();
+
+            if (hasValue) {
+                clearSelection();
+            } else {
+                showDropdown();
+            }
         });
 
         applyText();
@@ -238,6 +252,7 @@ public class RSSelect extends LinearLayout {
             text.setText(hasValue ? value : placeholder);
             text.setTextColor(cTextDisabled);
             text.setAlpha(0.55f);
+            applyEndIcon(hasValue);
             return;
         }
 
@@ -249,6 +264,11 @@ public class RSSelect extends LinearLayout {
             text.setText(placeholder);
             text.setTextColor(cTextPlaceholder);
         }
+        applyEndIcon(hasValue);
+    }
+
+    private void applyEndIcon(boolean hasValue) {
+        chevron.setImageResource(hasValue ? clearIconRes : chevronIconRes);
     }
 
     private void applyStyle() {

@@ -236,6 +236,7 @@
         <attr name="rsLeadingIcon" format="reference" />
         <attr name="rsState" />
         <attr name="rsEnabled" />
+        <attr name="rsClearable" format="boolean" />
     </declare-styleable>
 
 </resources>
