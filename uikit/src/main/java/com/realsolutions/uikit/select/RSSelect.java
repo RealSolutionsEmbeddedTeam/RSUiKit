@@ -46,7 +46,6 @@ public class RSSelect extends LinearLayout {
     private int rsState = STATE_NORMAL;
     private boolean rsEnabled = true;
 
-    // colors (token isimlerini kendi palette göre değiştir)
     private int cTextPrimary;
     private int cTextPlaceholder;
     private int cTextDisabled;
@@ -83,13 +82,12 @@ public class RSSelect extends LinearLayout {
         text = findViewById(R.id.rsSelectText);
         chevron = findViewById(R.id.rsSelectChevron);
 
-        // ---- tokens (RSUiKit paletine göre düzenle) ----
         cTextPrimary = ContextCompat.getColor(context, R.color.rs_text_primary);
         cTextPlaceholder = ContextCompat.getColor(context, R.color.rs_text_tertiary);
         cTextDisabled = ContextCompat.getColor(context, R.color.rs_text_tertiary);
 
         cBg = ContextCompat.getColor(context, R.color.rs_base_white);
-        cBgDisabled = ContextCompat.getColor(context, R.color.rs_bg_disabled); // yoksa gray_50 gibi bir şey
+        cBgDisabled = ContextCompat.getColor(context, R.color.rs_bg_disabled);
 
         cStrokeNormal = ContextCompat.getColor(context, R.color.rs_text_secondary);
         cStrokeFocused = ContextCompat.getColor(context, R.color.rs_text_brand_solid);
@@ -118,7 +116,6 @@ public class RSSelect extends LinearLayout {
             setLeadingVisible(false);
         }
 
-        // open dropdown on click
         root.setOnClickListener(v -> {
             if (!rsEnabled) return;
             showDropdown();
@@ -191,9 +188,6 @@ public class RSSelect extends LinearLayout {
         leading.setImageResource(res);
         leading.setVisibility(VISIBLE);
     }
-
-    // avatar desteği istersen:
-    // public void setLeadingBitmap(Bitmap bmp) { ... }
 
     // ---------------- Internal ----------------
 
