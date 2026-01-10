@@ -30,11 +30,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RSLabel label = findViewById(R.id.myLabel);
-        label.setOnInfoClickListener(v -> {
-            RSToast.show(v, "Info clicked", RSToastType.INFO);
-        });
-
         RSNavBar nav = findViewById(R.id.rsNavBar);
         nav.setItemWeights(1.0f, 1.7f);
         nav.setWeightAnimDuration(200);
@@ -49,14 +44,6 @@ public class MainActivity extends AppCompatActivity {
         // programmatic select
         nav.selectItem(R.id.nav_scan, false);
 
-        RSSelect sel = findViewById(R.id.rsSelectUser);
-
-        sel.setItems(Arrays.asList("Ali Veli", "Turgay Hopal", "Ayşe Yılmaz"));
-
-
-        sel.setOnItemSelectedListener((index, value) -> {
-            // seçildi
-        });
 
         // hide/show
         // nav.hide(true);

@@ -6,40 +6,20 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-    <com.realsolutions.uikit.select.RSSelect
-        android:id="@+id/rsSelectUser"
-        android:layout_width="300dp"
+    <com.realsolutions.uikit.RSTextArea
+        android:id="@+id/rsTa"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/myLabel"
+        app:layout_constraintBottom_toTopOf="@+id/rsNavBar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:rsLeadingIcon="@drawable/rs_ic_success"
-        app:rsPlaceholder="Select a user..."
+        app:layout_constraintVertical_bias="0.372"
+        app:rsHint="Placeholder text..."
+        app:rsMaxLength="200"
+        app:rsShowCounter="true"
         app:rsState="normal" />
-
-    <com.realsolutions.uikit.RSLabel
-        android:id="@+id/myLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/rsNavBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rsShowInfo="true"
-        app:rsSuffixText="(Optional)"
-        app:rsText="Label"
-        app:rsRequired="true"/>
-
-    <com.realsolutions.uikit.RSHelperText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/rsNavBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myLabel"
-        app:rsState="normal"
-        app:rsText="This is a hint text to help user." />
 
     <com.realsolutions.uikit.navbar.RSNavBar
         android:id="@+id/rsNavBar"

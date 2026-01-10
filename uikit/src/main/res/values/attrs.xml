@@ -239,4 +239,17 @@
         <attr name="rsClearable" format="boolean" />
     </declare-styleable>
 
+    <!-- ===================== -->
+    <!-- RSTextArea -->
+    <!-- ===================== -->
+
+    <declare-styleable name="RSTextArea">
+        <attr name="rsHint" />
+        <attr name="rsText" />
+        <attr name="rsMaxLength" format="integer" />
+        <attr name="rsShowCounter" format="boolean" />
+        <attr name="rsState" />
+        <attr name="rsEnabled" />
+    </declare-styleable>
+
 </resources>
