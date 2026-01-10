@@ -5,7 +5,8 @@
     <!-- ===================== -->
     <attr name="rsLabel" format="string" />
     <attr name="rsHint" format="string" />
-    <attr name="rsEnabled" format="boolean"/>
+    <attr name="rsEnabled" format="boolean" />
+    <attr name="rsText" format="string" />
     <attr name="rsState" format="enum">
         <enum name="normal" value="0" />
         <enum name="focused" value="1" />
@@ -171,41 +172,60 @@
 
     <declare-styleable name="RSNavBar">
         <attr name="rsLabelMode" format="enum">
-            <enum name="always" value="0"/>
-            <enum name="selectedOnly" value="1"/>
-            <enum name="never" value="2"/>
+            <enum name="always" value="0" />
+            <enum name="selectedOnly" value="1" />
+            <enum name="never" value="2" />
         </attr>
 
         <attr name="rsIndicatorMode" format="enum">
-            <enum name="topLine" value="0"/>
-            <enum name="dot" value="1"/>
-            <enum name="none" value="2"/>
+            <enum name="topLine" value="0" />
+            <enum name="dot" value="1" />
+            <enum name="none" value="2" />
         </attr>
 
-        <attr name="rsIconSize" format="dimension"/>
-        <attr name="rsBarPaddingHorizontal" format="dimension"/>
-        <attr name="rsBarPaddingVertical" format="dimension"/>
+        <attr name="rsIconSize" format="dimension" />
+        <attr name="rsBarPaddingHorizontal" format="dimension" />
+        <attr name="rsBarPaddingVertical" format="dimension" />
 
-        <attr name="rsSelectedColor" format="color|reference"/>
-        <attr name="rsUnselectedColor" format="color|reference"/>
-        <attr name="rsIndicatorColor" format="color|reference"/>
+        <attr name="rsSelectedColor" format="color|reference" />
+        <attr name="rsUnselectedColor" format="color|reference" />
+        <attr name="rsIndicatorColor" format="color|reference" />
     </declare-styleable>
+
+    <!-- ===================== -->
+    <!-- RSNavBarItem -->
+    <!-- ===================== -->
 
     <declare-styleable name="RSNavBarItem">
-        <attr name="rsItemId" format="reference|integer"/>
-        <attr name="rsIcon" format="reference"/>
-        <attr name="rsLabel"/>
-        <attr name="rsEnabled"/>
-        <attr name="rsBadge" format="string"/>
-        <attr name="rsItemIconSize" format="dimension"/>
+        <attr name="rsItemId" format="reference|integer" />
+        <attr name="rsIcon" format="reference" />
+        <attr name="rsLabel" />
+        <attr name="rsEnabled" />
+        <attr name="rsBadge" format="string" />
+        <attr name="rsItemIconSize" format="dimension" />
     </declare-styleable>
 
+    <!-- ===================== -->
+    <!-- RSLabel -->
+    <!-- ===================== -->
+
     <declare-styleable name="RSLabel">
-        <attr name="rsText" format="string"/>
-        <attr name="rsRequired" format="boolean"/>
-        <attr name="rsSuffixText" format="string"/>
-        <attr name="rsShowInfo" format="boolean"/>
-        <attr name="rsEnabled"/>
+        <attr name="rsText" />
+        <attr name="rsRequired" format="boolean" />
+        <attr name="rsSuffixText" format="string" />
+        <attr name="rsShowInfo" format="boolean" />
+        <attr name="rsEnabled" />
     </declare-styleable>
+
+    <!-- ===================== -->
+    <!-- RSHelperText -->
+    <!-- ===================== -->
+
+    <declare-styleable name="RSHelperText">
+        <attr name="rsText" />
+        <attr name="rsState" />
+        <attr name="rsEnabled" />
+    </declare-styleable>
+
 
 </resources>

@@ -19,6 +19,16 @@
         app:rsText="Label"
         app:rsRequired="true"/>
 
+    <com.realsolutions.uikit.RSHelperText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/rsNavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myLabel"
+        app:rsState="normal"
+        app:rsText="This is a hint text to help user." />
+
     <com.realsolutions.uikit.navbar.RSNavBar
         android:id="@+id/rsNavBar"
         android:layout_width="match_parent"
