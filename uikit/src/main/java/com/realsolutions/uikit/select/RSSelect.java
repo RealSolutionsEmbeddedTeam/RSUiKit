@@ -62,11 +62,24 @@ public class RSSelect extends LinearLayout {
     private int cChevron;
     private RSSelectStringAdapter adapter;
 
-    @DrawableRes private int chevronIconRes = R.drawable.rs_ic_chevron_down;
-    @DrawableRes private int clearIconRes   = R.drawable.rs_ic_x_circle;
+    @DrawableRes
+    private int chevronIconRes = R.drawable.rs_ic_chevron_down;
+    @DrawableRes
+    private int clearIconRes = R.drawable.rs_ic_x_circle;
 
     @Nullable
     private OnItemSelectedListener listener;
+
+    public interface OnClearListener {
+        void onCleared();
+    }
+
+    @Nullable
+    private OnClearListener clearListener;
+
+    public void setOnClearListener(@Nullable OnClearListener l) {
+        this.clearListener = l;
+    }
 
     public RSSelect(@NonNull Context context) {
         this(context, null);
@@ -174,8 +187,15 @@ public class RSSelect extends LinearLayout {
     }
 
     public void clearSelection() {
+        clearSelection(true);
+    }
+
+    public void clearSelection(boolean notify) {
         value = null;
         applyText();
+        if (notify && clearListener != null) {
+            clearListener.onCleared();
+        }
     }
 
     @Nullable
