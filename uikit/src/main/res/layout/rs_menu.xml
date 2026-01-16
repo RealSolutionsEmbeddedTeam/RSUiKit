@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSMenu Container Layout
+     Figma Specs:
+     - width: 252dp (min), wrap_content
+     - padding: 16dp
+     - border-radius: 24dp
+     - background: rs-bg-primary
+     - elevation: 4dp (shadow)
+     - gap: 2dp between items
+     - flex-direction: column -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/rs_menu_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rs_menu_bg"
+        android:elevation="@dimen/rs_menu_elevation"
+        android:minWidth="@dimen/rs_menu_min_width"
+        android:orientation="vertical"
+        android:padding="@dimen/rs_menu_padding" />
+
+</FrameLayout>

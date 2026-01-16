@@ -79,4 +79,89 @@
     <dimen name="rs_dialog_description_size">14sp</dimen>
     <dimen name="rs_dialog_button_gap">8dp</dimen>
     <dimen name="rs_dialog_content_gap">16dp</dimen>
+
+    <!-- Menu -->
+    <dimen name="rs_menu_corner_radius">24dp</dimen>
+    <dimen name="rs_menu_padding">16dp</dimen>
+    <dimen name="rs_menu_min_width">252dp</dimen>
+    <dimen name="rs_menu_item_gap">2dp</dimen>
+    <dimen name="rs_menu_elevation">4dp</dimen>
+
+    <!-- MenuItem -->
+    <dimen name="rs_menu_item_padding">12dp</dimen>
+    <dimen name="rs_menu_item_radius">12dp</dimen>
+    <dimen name="rs_menu_item_icon_size">24dp</dimen>
+    <dimen name="rs_menu_item_icon_gap">8dp</dimen>
+    <dimen name="rs_menu_item_text_size">14sp</dimen>
+    <dimen name="rs_menu_item_checkmark_size">20dp</dimen>
+    <dimen name="rs_menu_item_focus_stroke">2dp</dimen>
+
+    <!-- Snackbar -->
+    <dimen name="rs_snackbar_radius">16dp</dimen>
+    <dimen name="rs_snackbar_padding">12dp</dimen>
+    <dimen name="rs_snackbar_gap">8dp</dimen>
+    <dimen name="rs_snackbar_icon_size">28dp</dimen>
+    <dimen name="rs_snackbar_elevation">8dp</dimen>
+    <dimen name="rs_snackbar_text_size">14sp</dimen>
+
+    <!-- Tag -->
+    <dimen name="rs_tag_radius">8dp</dimen>
+    <dimen name="rs_tag_padding_vertical">4dp</dimen>
+    <dimen name="rs_tag_padding_horizontal">12dp</dimen>
+    <dimen name="rs_tag_padding_start_with_icon">8dp</dimen>
+    <dimen name="rs_tag_gap">4dp</dimen>
+    <dimen name="rs_tag_icon_size">16dp</dimen>
+    <dimen name="rs_tag_text_size">14sp</dimen>
+
+    <!-- Status Badge -->
+    <dimen name="rs_status_badge_radius">6dp</dimen>
+    <dimen name="rs_status_badge_padding_vertical">2dp</dimen>
+    <dimen name="rs_status_badge_padding_end">6dp</dimen>
+    <dimen name="rs_status_badge_padding_start_dot">6dp</dimen>
+    <dimen name="rs_status_badge_padding_start_icon">4dp</dimen>
+    <dimen name="rs_status_badge_gap_linked">8dp</dimen>
+    <dimen name="rs_status_badge_gap">4dp</dimen>
+    <dimen name="rs_status_badge_dot_size">8dp</dimen>
+    <dimen name="rs_status_badge_icon_size">16dp</dimen>
+    <dimen name="rs_status_badge_text_size">14sp</dimen>
+    <dimen name="rs_status_badge_border_width">1dp</dimen>
+
+    <!-- TabItem -->
+    <dimen name="rs_tab_item_radius">50dp</dimen>
+    <dimen name="rs_tab_item_border_width">2dp</dimen>
+    <dimen name="rs_tab_item_gap">2dp</dimen>
+    <!-- Small size -->
+    <dimen name="rs_tab_item_padding_top_sm">4dp</dimen>
+    <dimen name="rs_tab_item_padding_bottom_sm">4dp</dimen>
+    <dimen name="rs_tab_item_padding_start_sm">12dp</dimen>
+    <dimen name="rs_tab_item_padding_end_sm">6dp</dimen>
+    <dimen name="rs_tab_item_padding_start_icon_sm">6dp</dimen>
+    <dimen name="rs_tab_item_padding_end_counter_sm">12dp</dimen>
+    <dimen name="rs_tab_item_icon_size_sm">16dp</dimen>
+    <dimen name="rs_tab_item_text_size_sm">14sp</dimen>
+    <!-- Medium size -->
+    <dimen name="rs_tab_item_padding_top_md">8dp</dimen>
+    <dimen name="rs_tab_item_padding_bottom_md">8dp</dimen>
+    <dimen name="rs_tab_item_padding_start_md">16dp</dimen>
+    <dimen name="rs_tab_item_padding_end_md">12dp</dimen>
+    <dimen name="rs_tab_item_padding_start_icon_md">12dp</dimen>
+    <dimen name="rs_tab_item_padding_end_counter_md">16dp</dimen>
+    <dimen name="rs_tab_item_icon_size_md">20dp</dimen>
+    <dimen name="rs_tab_item_text_size_md">16sp</dimen>
+    <!-- Default type underline -->
+    <dimen name="rs_tab_item_underline_height">2dp</dimen>
+
+
+    <!-- Badge (New Figma Design) -->
+    <dimen name="rs_badge_radius">999dp</dimen>
+    <dimen name="rs_badge_padding_vertical">2dp</dimen>
+    <dimen name="rs_badge_padding_horizontal">8dp</dimen>
+    <dimen name="rs_badge_padding_icon_side">4dp</dimen>
+    <dimen name="rs_badge_padding_dot_side">2dp</dimen>
+    <dimen name="rs_badge_padding_number">2dp</dimen>
+    <dimen name="rs_badge_gap">2dp</dimen>
+    <dimen name="rs_badge_icon_size">12dp</dimen>
+    <dimen name="rs_badge_dot_size">8dp</dimen>
+    <dimen name="rs_badge_text_size">12sp</dimen>
+    <dimen name="rs_badge_stroke_width">1dp</dimen>
 </resources>

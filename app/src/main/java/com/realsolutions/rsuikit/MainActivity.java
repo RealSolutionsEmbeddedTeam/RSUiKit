@@ -23,31 +23,11 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        RSNavBar nav = findViewById(R.id.rsNavBar);
-        nav.setItemWeights(1.0f, 1.7f);
-        nav.setWeightAnimDuration(200);
-
-        nav.setOnItemSelectedListener(itemId -> {
-            if (itemId == R.id.nav_search) {
-                // fragment replace / navigate
-            } else if (itemId == R.id.nav_scan) {
-            }
-        });
-
-        // programmatic select
-        nav.selectItem(R.id.nav_scan, false);
-
-
-        // hide/show
-        // nav.hide(true);
-        // nav.show(true);
-
+        // Demo layout - all components shown statically
     }
 }

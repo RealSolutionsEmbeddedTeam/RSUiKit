@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSTabItem: Tab button layout with optional icon, label, counter, and underline indicator -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <!-- Content row: icon + label + counter -->
+    <LinearLayout
+        android:id="@+id/rs_tab_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Leading icon (optional) -->
+        <ImageView
+            android:id="@+id/rs_tab_item_icon"
+            android:layout_width="@dimen/rs_tab_item_icon_size_sm"
+            android:layout_height="@dimen/rs_tab_item_icon_size_sm"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="4dp"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            tools:src="@drawable/rs_ic_status_badge_default"
+            tools:visibility="visible" />
+
+        <!-- Label text -->
+        <TextView
+            android:id="@+id/rs_tab_item_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif-medium"
+            android:includeFontPadding="false"
+            android:textColor="@color/rs_text_placeholder"
+            android:textSize="@dimen/rs_tab_item_text_size_sm"
+            tools:text="Label" />
+
+        <!-- Counter badge (optional) -->
+        <TextView
+            android:id="@+id/rs_tab_item_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/rs_tab_item_gap"
+            android:background="@drawable/rs_status_badge_bg_contained"
+            android:fontFamily="sans-serif-medium"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:textColor="@color/rs_text_primary"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="4"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <!-- Underline indicator (shown when selected for underline type) -->
+    <View
+        android:id="@+id/rs_tab_item_underline"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rs_tab_underline_indicator"
+        android:visibility="gone" />
+
+</LinearLayout>

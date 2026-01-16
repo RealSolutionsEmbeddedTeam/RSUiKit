@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSMenuItem Layout
+     Figma Specs:
+     - width: match_parent (stretch)
+     - padding: 12dp
+     - border-radius: 12dp
+     - gap: 8dp (icon-text)
+     - align-items: center
+
+     Structure:
+     - Leading Icon (optional, 24x24)
+     - Label Text (flex: 1)
+     - Trailing Checkmark (for Selected state, 20x20) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rs_menu_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rs_menu_item_bg"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/rs_menu_item_padding">
+
+    <!-- Leading Icon (optional) -->
+
+    <!-- Label Text -->
+    <ImageView
+        android:id="@+id/rs_menu_item_icon"
+        android:layout_width="@dimen/rs_menu_item_icon_size"
+        android:layout_height="@dimen/rs_menu_item_icon_size"
+        android:layout_marginEnd="@dimen/rs_menu_item_icon_gap"
+        android:importantForAccessibility="no"
+        android:visibility="gone"
+        tools:src="@drawable/rs_ic_dialog_location"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/rs_menu_item_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/rs_text_primary"
+        android:textSize="@dimen/rs_menu_item_text_size"
+        tools:text="Label item" />
+
+    <!-- Trailing Checkmark (for Selected state) -->
+    <ImageView
+        android:id="@+id/rs_menu_item_checkmark"
+        android:layout_width="@dimen/rs_menu_item_checkmark_size"
+        android:layout_height="@dimen/rs_menu_item_checkmark_size"
+        android:layout_marginStart="@dimen/rs_menu_item_icon_gap"
+        android:importantForAccessibility="no"
+        android:src="@drawable/rs_ic_check_menu"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</LinearLayout>

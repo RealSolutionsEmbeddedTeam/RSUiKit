@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSStatusBadge Icon - Success (checkmark) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="16dp"
+    android:height="16dp"
+    android:viewportWidth="16"
+    android:viewportHeight="16">
+    <path
+        android:fillColor="@color/rs_text_success_tertiary"
+        android:pathData="M8,1.5C4.416,1.5 1.5,4.416 1.5,8C1.5,11.584 4.416,14.5 8,14.5C11.584,14.5 14.5,11.584 14.5,8C14.5,4.416 11.584,1.5 8,1.5ZM11.354,6.354L7.354,10.354C7.26,10.448 7.133,10.5 7,10.5C6.867,10.5 6.74,10.448 6.646,10.354L4.646,8.354C4.452,8.16 4.452,7.84 4.646,7.646C4.84,7.452 5.16,7.452 5.354,7.646L7,9.293L10.646,5.646C10.84,5.452 11.16,5.452 11.354,5.646C11.548,5.84 11.548,6.16 11.354,6.354Z" />
+</vector>

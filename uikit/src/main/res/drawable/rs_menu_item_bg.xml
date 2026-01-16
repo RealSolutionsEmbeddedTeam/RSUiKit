@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSMenuItem Background Selector
+     States: Default, Pressed/Hover, Focus, Selected, Disabled
+     Figma Specs:
+     - Default: transparent
+     - Hover: rs-bg-primary_hover (#FAFAFA)
+     - Focus: 2px solid rs-border-strong (#0A0D12)
+     - Selected: transparent (checkmark handled separately)
+     - Disabled: transparent -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Disabled state - transparent -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <corners android:radius="@dimen/rs_menu_item_radius" />
+        </shape>
+    </item>
+
+    <!-- Focused state - 2dp border -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke android:width="@dimen/rs_menu_item_focus_stroke" android:color="@color/rs_border_strong" />
+            <corners android:radius="@dimen/rs_menu_item_radius" />
+        </shape>
+    </item>
+
+    <!-- Pressed state (Hover simulation) - background color -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/rs_bg_primary_on_hover" />
+            <corners android:radius="@dimen/rs_menu_item_radius" />
+        </shape>
+    </item>
+
+    <!-- Selected state - transparent (checkmark handled in layout) -->
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <corners android:radius="@dimen/rs_menu_item_radius" />
+        </shape>
+    </item>
+
+    <!-- Default state - transparent -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <corners android:radius="@dimen/rs_menu_item_radius" />
+        </shape>
+    </item>
+
+</selector>

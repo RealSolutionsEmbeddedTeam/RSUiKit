@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSStatusBadge Layout
+     Figma Specs:
+     - inline-flex
+     - padding: 2dp vertical, 6dp end, 4-6dp start
+     - gap: 4-8dp
+     - radius: 6dp -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rs_status_badge_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/rs_status_badge_padding_start_dot"
+    android:paddingTop="@dimen/rs_status_badge_padding_vertical"
+    android:paddingEnd="@dimen/rs_status_badge_padding_end"
+    android:paddingBottom="@dimen/rs_status_badge_padding_vertical"
+    tools:background="@drawable/rs_status_badge_bg_outlined">
+
+    <!-- Dot indicator (for type=dot) -->
+    <View
+        android:id="@+id/rs_status_badge_dot"
+        android:layout_width="@dimen/rs_status_badge_dot_size"
+        android:layout_height="@dimen/rs_status_badge_dot_size"
+        android:layout_marginEnd="@dimen/rs_status_badge_gap"
+        android:visibility="visible"
+        tools:background="@color/rs_text_success_tertiary" />
+
+    <!-- Icon indicator (for type=icon) -->
+    <ImageView
+        android:id="@+id/rs_status_badge_icon"
+        android:layout_width="@dimen/rs_status_badge_icon_size"
+        android:layout_height="@dimen/rs_status_badge_icon_size"
+        android:layout_marginEnd="@dimen/rs_status_badge_gap"
+        android:importantForAccessibility="no"
+        android:visibility="gone"
+        tools:src="@drawable/rs_ic_status_badge_success"
+        tools:visibility="visible" />
+
+    <!-- Text -->
+    <TextView
+        android:id="@+id/rs_status_badge_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/rs_text_success_tertiary"
+        android:textSize="@dimen/rs_status_badge_text_size"
+        tools:text="Badge" />
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSSnackbar Icon Container - Critical/Error
+     Figma: 4dp padding, full radius, rs-bg-error-solid -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="@color/rs_bg_error_solid" />
+</shape>
