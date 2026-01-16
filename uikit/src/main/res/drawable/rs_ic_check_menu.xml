@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Checkmark Icon for RSMenuItem Selected State
+     Figma Specs: 20x20dp, stroke-based, rs-text-primary color -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M16.6667,5L7.5,14.1667L3.3333,10"
+        android:strokeWidth="1.67"
+        android:strokeColor="@color/rs_text_primary"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+</vector>

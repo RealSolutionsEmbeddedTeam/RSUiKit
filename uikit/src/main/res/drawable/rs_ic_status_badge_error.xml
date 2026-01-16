@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSStatusBadge Icon - Error (circle with exclamation) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="16dp"
+    android:height="16dp"
+    android:viewportWidth="16"
+    android:viewportHeight="16">
+    <path
+        android:fillColor="@color/rs_text_error_tertiary"
+        android:pathData="M8,1.5C4.416,1.5 1.5,4.416 1.5,8C1.5,11.584 4.416,14.5 8,14.5C11.584,14.5 14.5,11.584 14.5,8C14.5,4.416 11.584,1.5 8,1.5ZM8,12.5C7.586,12.5 7.25,12.164 7.25,11.75C7.25,11.336 7.586,11 8,11C8.414,11 8.75,11.336 8.75,11.75C8.75,12.164 8.414,12.5 8,12.5ZM8.5,9.5C8.5,9.776 8.276,10 8,10C7.724,10 7.5,9.776 7.5,9.5V5.5C7.5,5.224 7.724,5 8,5C8.276,5 8.5,5.224 8.5,5.5V9.5Z" />
+</vector>

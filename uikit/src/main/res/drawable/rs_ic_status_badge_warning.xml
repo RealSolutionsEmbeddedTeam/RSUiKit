@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSStatusBadge Icon - Warning (triangle with exclamation) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="16dp"
+    android:height="16dp"
+    android:viewportWidth="16"
+    android:viewportHeight="16">
+    <path
+        android:fillColor="@color/rs_text_warning_tertiary"
+        android:pathData="M14.564,12.249L9.128,2.654C8.872,2.212 8.449,1.996 8,1.996C7.551,1.996 7.128,2.212 6.872,2.654L1.436,12.249C1.179,12.692 1.179,13.248 1.436,13.691C1.693,14.134 2.139,14.35 2.653,14.35H13.347C13.861,14.35 14.307,14.134 14.564,13.691C14.821,13.248 14.821,12.692 14.564,12.249ZM8,12.5C7.586,12.5 7.25,12.164 7.25,11.75C7.25,11.336 7.586,11 8,11C8.414,11 8.75,11.336 8.75,11.75C8.75,12.164 8.414,12.5 8,12.5ZM8.5,9.5C8.5,9.776 8.276,10 8,10C7.724,10 7.5,9.776 7.5,9.5V6.5C7.5,6.224 7.724,6 8,6C8.276,6 8.5,6.224 8.5,6.5V9.5Z" />
+</vector>

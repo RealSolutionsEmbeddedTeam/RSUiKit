@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSSnackbar Icon - Info (Circle with "i") - White for dark bg -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+
+    <!-- Circle -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M10,18.333C14.602,18.333 18.333,14.602 18.333,10C18.333,5.398 14.602,1.667 10,1.667C5.398,1.667 1.667,5.398 1.667,10C1.667,14.602 5.398,18.333 10,18.333Z"
+        android:strokeWidth="1.67"
+        android:strokeColor="@color/rs_text_white"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- i line (bottom) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M10,10L10,13.333"
+        android:strokeWidth="1.67"
+        android:strokeColor="@color/rs_text_white"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- i dot (top) -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M10,6.667L10.0083,6.667"
+        android:strokeWidth="2"
+        android:strokeColor="@color/rs_text_white"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+</vector>

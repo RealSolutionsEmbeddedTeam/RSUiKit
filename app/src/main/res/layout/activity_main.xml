@@ -1,81 +1,801 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-    <com.realsolutions.uikit.RSTextArea
-        android:id="@+id/rsTa"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/rsNavBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.372"
-        app:rsHint="Placeholder text..."
-        app:rsMaxLength="200"
-        app:rsShowCounter="true"
-        app:rsState="normal" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <com.realsolutions.uikit.navbar.RSNavBar
-        android:id="@+id/rsNavBar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_gravity="bottom"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:rsBarPaddingHorizontal="12dp"
-        app:rsBarPaddingVertical="8dp"
-        app:rsIconSize="24dp"
-        app:rsIndicatorColor="@color/rs_text_brand_solid"
-        app:rsIndicatorMode="topLine"
-        app:rsLabelMode="selectedOnly"
-        app:rsSelectedColor="@color/rs_text_brand_solid"
-        app:rsUnselectedColor="@color/rs_text_secondary">
-
-        <com.realsolutions.uikit.navbar.RSNavBarItemView
-            android:layout_width="0dp"
+        <!-- RSSnackbar Demo -->
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:rsIcon="@drawable/rs_ic_check"
-            app:rsItemId="@id/nav_search"
-            app:rsLabel="Ara" />
+            android:layout_marginBottom="8dp"
+            android:text="RSSnackbar"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-        <com.realsolutions.uikit.navbar.RSNavBarItemView
-            android:layout_width="0dp"
+        <com.realsolutions.uikit.RSSnackbar
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:rsBadge="3"
-            app:rsIcon="@drawable/rs_ic_check"
-            app:rsItemId="@id/nav_scan"
-            app:rsLabel="Tara" />
+            android:layout_marginBottom="8dp"
+            app:rsSnackbarActionText="Geri Al"
+            app:rsSnackbarMessage="İşlem başarıyla tamamlandı!"
+            app:rsSnackbarShowAction="true"
+            app:rsSnackbarType="success" />
 
-        <com.realsolutions.uikit.navbar.RSNavBarItemView
-            android:layout_width="0dp"
+        <com.realsolutions.uikit.RSSnackbar
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:rsIcon="@drawable/rs_ic_check"
-            app:rsItemId="@id/nav_profile"
-            app:rsLabel="Profil" />
+            android:layout_marginBottom="8dp"
+            app:rsSnackbarActionText="Tekrar Dene"
+            app:rsSnackbarMessage="Bir hata oluştu, lütfen tekrar deneyin."
+            app:rsSnackbarShowAction="true"
+            app:rsSnackbarType="critical" />
 
-        <com.realsolutions.uikit.navbar.RSNavBarItemView
-            android:layout_width="0dp"
+        <com.realsolutions.uikit.RSSnackbar
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:rsIcon="@drawable/rs_ic_check"
-            app:rsItemId="@id/nav_demo"
-            app:rsLabel="Profil" />
+            android:layout_marginBottom="8dp"
+            app:rsSnackbarMessage="Bilgilendirme mesajı gösteriliyor."
+            app:rsSnackbarShowAction="false"
+            app:rsSnackbarType="informative" />
 
-        <com.realsolutions.uikit.navbar.RSNavBarItemView
-            android:layout_width="0dp"
+        <com.realsolutions.uikit.RSSnackbar
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:rsIcon="@drawable/rs_ic_check"
-            app:rsItemId="@id/nav_demo_1"
-            app:rsLabel="Profil" />
+            android:layout_marginBottom="16dp"
+            app:rsSnackbarMessage="Değişiklikler kaydedildi."
+            app:rsSnackbarShowAction="false"
+            app:rsSnackbarType="success" />
 
-    </com.realsolutions.uikit.navbar.RSNavBar>
+        <!-- RSMenu + RSMenuItem Demo  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="RSMenu / RSMenuItem"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.realsolutions.uikit.RSMenu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <!-- Normal - İkonsuz -->
+            <com.realsolutions.uikit.RSMenuItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rsMenuItemIconVisible="false"
+                app:rsMenuItemLabel="Normal (ikonsuz)"
+                app:rsMenuItemState="normal" />
+
+            <!-- Normal - İkonlu -->
+            <com.realsolutions.uikit.RSMenuItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rsMenuItemIcon="@drawable/rs_ic_dialog_location"
+                app:rsMenuItemIconVisible="true"
+                app:rsMenuItemLabel="Normal (ikonlu)"
+                app:rsMenuItemState="normal" />
+
+            <!-- Hover -->
+            <com.realsolutions.uikit.RSMenuItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rsMenuItemIcon="@drawable/rs_ic_dialog_location"
+                app:rsMenuItemIconVisible="true"
+                app:rsMenuItemLabel="Hover state"
+                app:rsMenuItemState="hover" />
+
+            <!-- Focus -->
+            <com.realsolutions.uikit.RSMenuItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rsMenuItemIconVisible="false"
+                app:rsMenuItemLabel="Focus state"
+                app:rsMenuItemState="focus" />
+
+            <!-- Selected -->
+            <com.realsolutions.uikit.RSMenuItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rsMenuItemIcon="@drawable/rs_ic_dialog_location"
+                app:rsMenuItemIconVisible="true"
+                app:rsMenuItemLabel="Selected (ikonlu)"
+                app:rsMenuItemState="selected" />
+
+            <!-- Disabled -->
+            <com.realsolutions.uikit.RSMenuItem
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:rsMenuItemIcon="@drawable/rs_ic_dialog_location"
+                app:rsMenuItemIconVisible="true"
+                app:rsMenuItemLabel="Disabled state"
+                app:rsMenuItemState="disabled" />
+
+        </com.realsolutions.uikit.RSMenu>
+
+        <!-- RSTag Demo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="RSTag"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+            <!-- Default type - Tüm varyantlar -->
+            <com.realsolutions.uikit.RSTag
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTagShowIcon="true"
+                app:rsTagText="Informative"
+                app:rsTagType="tag_default"
+                app:rsTagVariant="informative" />
+
+            <com.realsolutions.uikit.RSTag
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTagShowIcon="true"
+                app:rsTagText="Success"
+                app:rsTagType="tag_default"
+                app:rsTagVariant="success" />
+
+            <com.realsolutions.uikit.RSTag
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTagText="Warning"
+                app:rsTagType="tag_default"
+                app:rsTagVariant="warning" />
+
+            <com.realsolutions.uikit.RSTag
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTagText="Critical"
+                app:rsTagType="tag_default"
+                app:rsTagVariant="critical" />
+
+            <com.realsolutions.uikit.RSTag
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rsTagShowIcon="true"
+                app:rsTagText="Neutral"
+                app:rsTagType="tag_default"
+                app:rsTagVariant="neutral" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+            <!-- Subdued type - Tüm varyantlar -->
+            <com.realsolutions.uikit.RSTag
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTagShowIcon="true"
+                app:rsTagText="Informative"
+                app:rsTagType="subdued"
+                app:rsTagVariant="informative" />
+
+            <com.realsolutions.uikit.RSTag
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTagText="Success"
+                app:rsTagType="subdued"
+                app:rsTagVariant="success" />
+
+            <com.realsolutions.uikit.RSTag
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTagShowIcon="true"
+                app:rsTagText="Warning"
+                app:rsTagType="subdued"
+                app:rsTagVariant="warning" />
+
+            <com.realsolutions.uikit.RSTag
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTagText="Critical"
+                app:rsTagType="subdued"
+                app:rsTagVariant="critical" />
+
+            <com.realsolutions.uikit.RSTag
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rsTagText="Neutral"
+                app:rsTagType="subdued"
+                app:rsTagVariant="neutral" />
+        </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- RSStatusBadge Demo-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="RSStatusBadge"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Row 1: Dot type, outlined variant -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.realsolutions.uikit.RSStatusBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsStatusBadgeStatus="success"
+                app:rsStatusBadgeText="Success"
+                app:rsStatusBadgeType="dot"
+                app:rsStatusBadgeVariant="outlined" />
+
+            <com.realsolutions.uikit.RSStatusBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsStatusBadgeStatus="warning"
+                app:rsStatusBadgeText="Warning"
+                app:rsStatusBadgeType="dot"
+                app:rsStatusBadgeVariant="outlined" />
+
+            <com.realsolutions.uikit.RSStatusBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsStatusBadgeStatus="error"
+                app:rsStatusBadgeText="Error"
+                app:rsStatusBadgeType="dot"
+                app:rsStatusBadgeVariant="outlined" />
+
+            <com.realsolutions.uikit.RSStatusBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsStatusBadgeStatus="information"
+                app:rsStatusBadgeText="Info"
+                app:rsStatusBadgeType="dot"
+                app:rsStatusBadgeVariant="outlined" />
+
+            <com.realsolutions.uikit.RSStatusBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rsStatusBadgeStatus="badge_default"
+                app:rsStatusBadgeText="Default"
+                app:rsStatusBadgeType="dot"
+                app:rsStatusBadgeVariant="outlined" />
+        </LinearLayout>
+
+        <!-- Row 2: Icon type, contained variant -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <com.realsolutions.uikit.RSStatusBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsStatusBadgeStatus="success"
+                app:rsStatusBadgeText="Success"
+                app:rsStatusBadgeType="icon"
+                app:rsStatusBadgeVariant="contained" />
+
+            <com.realsolutions.uikit.RSStatusBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsStatusBadgeStatus="warning"
+                app:rsStatusBadgeText="Warning"
+                app:rsStatusBadgeType="icon"
+                app:rsStatusBadgeVariant="contained" />
+
+            <com.realsolutions.uikit.RSStatusBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsStatusBadgeStatus="error"
+                app:rsStatusBadgeText="Error"
+                app:rsStatusBadgeType="icon"
+                app:rsStatusBadgeVariant="contained" />
+
+            <com.realsolutions.uikit.RSStatusBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsStatusBadgeStatus="information"
+                app:rsStatusBadgeText="Info"
+                app:rsStatusBadgeType="icon"
+                app:rsStatusBadgeVariant="contained" />
+
+            <com.realsolutions.uikit.RSStatusBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rsStatusBadgeStatus="badge_default"
+                app:rsStatusBadgeText="Default"
+                app:rsStatusBadgeType="icon"
+                app:rsStatusBadgeVariant="linked" />
+        </LinearLayout>
+
+
+        <!-- RSBadge Demo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="RSBadge (New)"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Row 1: All types - Lighter style, Success color -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsBadgeColor="success"
+                app:rsBadgeStyle="lighter"
+                app:rsBadgeText="Basic"
+                app:rsBadgeType="basic" />
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsBadgeColor="success"
+                app:rsBadgeIcon="@drawable/rs_ic_check"
+                app:rsBadgeStyle="lighter"
+                app:rsBadgeText="Left Icon"
+                app:rsBadgeType="left_icon" />
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsBadgeColor="success"
+                app:rsBadgeIcon="@drawable/rs_ic_check"
+                app:rsBadgeStyle="lighter"
+                app:rsBadgeText="Right Icon"
+                app:rsBadgeType="right_icon" />
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsBadgeColor="success"
+                app:rsBadgeStyle="lighter"
+                app:rsBadgeText="With Dot"
+                app:rsBadgeType="with_dot" />
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rsBadgeColor="success"
+                app:rsBadgeNumber="5"
+                app:rsBadgeStyle="lighter"
+                app:rsBadgeType="basic" />
+        </LinearLayout>
+
+        <!-- Row 2: All colors - Stroke style -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsBadgeColor="badge_default"
+                app:rsBadgeStyle="stroke"
+                app:rsBadgeText="Default"
+                app:rsBadgeType="basic" />
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsBadgeColor="brand"
+                app:rsBadgeStyle="stroke"
+                app:rsBadgeText="Brand"
+                app:rsBadgeType="basic" />
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsBadgeColor="warning"
+                app:rsBadgeStyle="stroke"
+                app:rsBadgeText="Warning"
+                app:rsBadgeType="basic" />
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsBadgeColor="error"
+                app:rsBadgeStyle="stroke"
+                app:rsBadgeText="Error"
+                app:rsBadgeType="basic" />
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rsBadgeColor="success"
+                app:rsBadgeStyle="stroke"
+                app:rsBadgeText="Success"
+                app:rsBadgeType="basic" />
+        </LinearLayout>
+
+        <!-- Row 3: All colors - Light style with icons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsBadgeColor="brand"
+                app:rsBadgeIcon="@drawable/rs_ic_check"
+                app:rsBadgeStyle="light"
+                app:rsBadgeText="Brand"
+                app:rsBadgeType="left_icon" />
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsBadgeColor="warning"
+                app:rsBadgeStyle="light"
+                app:rsBadgeText="Warning"
+                app:rsBadgeType="with_dot" />
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsBadgeColor="error"
+                app:rsBadgeIcon="@drawable/rs_ic_check"
+                app:rsBadgeStyle="light"
+                app:rsBadgeText="Error"
+                app:rsBadgeType="right_icon" />
+
+            <com.realsolutions.uikit.RSBadge
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rsBadgeColor="success"
+                app:rsBadgeNumber="99"
+                app:rsBadgeStyle="light"
+                app:rsBadgeType="basic" />
+        </LinearLayout>
+
+
+        <!-- RSTabItem Demo-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="RSTabItem"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Full-circle type - Small size -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Full-circle (Small)"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.realsolutions.uikit.RSTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTabLabel="Normal"
+                app:rsTabSize="small"
+                app:rsTabState="normal"
+                app:rsTabType="full_circle" />
+
+            <com.realsolutions.uikit.RSTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTabLabel="Selected"
+                app:rsTabSize="small"
+                app:rsTabState="selected"
+                app:rsTabType="full_circle" />
+
+            <com.realsolutions.uikit.RSTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTabCounter="5"
+                app:rsTabLabel="With Counter"
+                app:rsTabSize="small"
+                app:rsTabState="selected"
+                app:rsTabType="full_circle" />
+
+            <com.realsolutions.uikit.RSTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rsTabIcon="@drawable/rs_ic_check"
+                app:rsTabLabel="With Icon"
+                app:rsTabSize="small"
+                app:rsTabState="selected"
+                app:rsTabType="full_circle" />
+        </LinearLayout>
+
+        <!-- Full-circle type - Medium size -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Full-circle (Medium)"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.realsolutions.uikit.RSTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTabLabel="Normal"
+                app:rsTabSize="medium"
+                app:rsTabState="normal"
+                app:rsTabType="full_circle" />
+
+            <com.realsolutions.uikit.RSTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTabLabel="Selected"
+                app:rsTabSize="medium"
+                app:rsTabState="selected"
+                app:rsTabType="full_circle" />
+
+            <com.realsolutions.uikit.RSTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTabCounter="12"
+                app:rsTabLabel="Counter"
+                app:rsTabSize="medium"
+                app:rsTabState="selected"
+                app:rsTabType="full_circle" />
+
+            <com.realsolutions.uikit.RSTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rsTabIcon="@drawable/rs_ic_check"
+                app:rsTabLabel="Icon"
+                app:rsTabSize="medium"
+                app:rsTabState="selected"
+                app:rsTabType="full_circle" />
+        </LinearLayout>
+
+        <!-- Underline types -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Underline"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <com.realsolutions.uikit.RSTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTabLabel="Normal"
+                app:rsTabSize="small"
+                app:rsTabState="normal"
+                app:rsTabType="underline" />
+
+            <com.realsolutions.uikit.RSTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTabLabel="Selected"
+                app:rsTabSize="small"
+                app:rsTabState="selected"
+                app:rsTabType="underline" />
+
+            <com.realsolutions.uikit.RSTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTabCounter="3"
+                app:rsTabLabel="Counter"
+                app:rsTabSize="small"
+                app:rsTabState="selected"
+                app:rsTabType="underline" />
+
+            <com.realsolutions.uikit.RSTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTabLabel="Normal"
+                app:rsTabSize="medium"
+                app:rsTabState="normal"
+                app:rsTabType="underline" />
+
+            <com.realsolutions.uikit.RSTabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                app:rsTabLabel="Selected"
+                app:rsTabSize="medium"
+                app:rsTabState="selected"
+                app:rsTabType="underline" />
+
+
+        </LinearLayout>
+
+        <!-- RSTextArea Demo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="RSTextArea"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Normal state -->
+        <com.realsolutions.uikit.RSTextArea
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:rsHint="Normal state - placeholder text..."
+            app:rsMaxLength="200"
+            app:rsShowCounter="true"
+            app:rsState="normal" />
+
+
+        <!-- RSNavBar Demo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="RSNavBar"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- NavBar 1: Standard with icons and labels -->
+        <com.realsolutions.uikit.navbar.RSNavBar
+            android:id="@+id/rsNavBar1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white"
+            app:rsIconSize="24dp"
+            app:rsIndicatorColor="@color/rs_text_brand_solid"
+            app:rsIndicatorMode="topLine"
+            app:rsLabelMode="selectedOnly"
+            app:rsSelectedColor="@color/rs_text_brand_solid"
+            app:rsUnselectedColor="@color/rs_text_secondary">
+
+            <com.realsolutions.uikit.navbar.RSNavBarItemView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:rsIcon="@drawable/rs_ic_check"
+                app:rsItemId="@id/nav_search"
+                app:rsLabel="Ara" />
+
+            <com.realsolutions.uikit.navbar.RSNavBarItemView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:rsBadge="3"
+                app:rsIcon="@drawable/rs_ic_check"
+                app:rsItemId="@id/nav_scan"
+                app:rsLabel="Tara" />
+
+            <com.realsolutions.uikit.navbar.RSNavBarItemView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:rsIcon="@drawable/rs_ic_check"
+                app:rsItemId="@id/nav_profile"
+                app:rsLabel="Profil" />
+
+            <com.realsolutions.uikit.navbar.RSNavBarItemView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:rsIcon="@drawable/rs_ic_check"
+                app:rsItemId="@id/nav_demo"
+                app:rsLabel="Demo" />
+
+        </com.realsolutions.uikit.navbar.RSNavBar>
+
+        <!-- NavBar 2: Different indicator mode -->
+        <com.realsolutions.uikit.navbar.RSNavBar
+            android:id="@+id/rsNavBar2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white"
+            app:rsIconSize="24dp"
+            app:rsIndicatorColor="@color/rs_text_success_solid"
+            app:rsIndicatorMode="dot"
+            app:rsLabelMode="always"
+            app:rsSelectedColor="@color/rs_text_success_solid"
+            app:rsUnselectedColor="@color/rs_text_secondary">
+
+            <com.realsolutions.uikit.navbar.RSNavBarItemView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:rsIcon="@drawable/rs_ic_check"
+                app:rsItemId="@id/nav_search"
+                app:rsLabel="Home" />
+
+            <com.realsolutions.uikit.navbar.RSNavBarItemView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:rsIcon="@drawable/rs_ic_check"
+                app:rsItemId="@id/nav_scan"
+                app:rsLabel="Search" />
+
+            <com.realsolutions.uikit.navbar.RSNavBarItemView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:rsBadge="99+"
+                app:rsIcon="@drawable/rs_ic_check"
+                app:rsItemId="@id/nav_profile"
+                app:rsLabel="Inbox" />
+
+        </com.realsolutions.uikit.navbar.RSNavBar>
+
+        <!-- Bottom spacer for scroll -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="32dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -84,6 +84,7 @@
     <color name="rs_text_brand_secondary">@color/rs_ultramarine_700</color>
     <color name="rs_text_brand_quaternary">@color/rs_ultramarine_500</color>
     <color name="rs_text_error_tertiary">@color/rs_red_600</color>
+    <color name="rs_text_success_tertiary">@color/rs_green_600</color>
 
     <color name="rs_text_warning_tertiary">@color/rs_orange_600</color>
     <color name="rs_text_warning_quaternary">@color/rs_orange_500</color>

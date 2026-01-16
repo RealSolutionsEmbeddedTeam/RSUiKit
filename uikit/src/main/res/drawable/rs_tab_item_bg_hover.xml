@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSTabItem: Hover state background -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/rs_tab_item_radius" />
+    <solid android:color="@color/rs_bg_primary_on_hover" />
+</shape>

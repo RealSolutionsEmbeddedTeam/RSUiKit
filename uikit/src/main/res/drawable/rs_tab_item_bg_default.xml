@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSTabItem: Default state background (transparent with ripple) -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/rs_bg_primary_on_hover">
+    <item android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/rs_tab_item_radius" />
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+</ripple>

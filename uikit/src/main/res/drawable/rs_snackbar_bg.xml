@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSSnackbar Background
+     Figma Specs:
+     - border-radius: 16dp
+     - background: rs-bg-overlay (#0A0D12)
+     - box-shadow: 0 16px 32px -12px rgba(14, 18, 27, 0.10) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/rs_bg_overlay" />
+    <corners android:radius="@dimen/rs_snackbar_radius" />
+</shape>

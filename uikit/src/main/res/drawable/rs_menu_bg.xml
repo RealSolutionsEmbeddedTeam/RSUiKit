@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RSMenu Container Background
+     Figma Specs: radius 24dp, rs-bg-primary background -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/rs_bg_primary" />
+    <corners android:radius="@dimen/rs_menu_corner_radius" />
+</shape>

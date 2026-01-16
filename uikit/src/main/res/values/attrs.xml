@@ -77,9 +77,12 @@
     <!-- RSLoadingCircle -->
     <!-- ===================== -->
     <declare-styleable name="RSLoadingCircle">
-        <attr name="rsSpeed" format="float" />    <!-- degrees per second -->
-        <attr name="rsTrailDeg" format="float" /> <!-- 0..360 -->
-        <attr name="rsColor" format="color" />    <!-- HEAD color -->
+        <attr name="rsSpeed" format="float" />
+        <!-- degrees per second -->
+        <attr name="rsTrailDeg" format="float" />
+        <!-- 0..360 -->
+        <attr name="rsColor" format="color" />
+        <!-- HEAD color -->
     </declare-styleable>
 
     <!-- ===================== -->
@@ -251,5 +254,171 @@
         <attr name="rsState" />
         <attr name="rsEnabled" />
     </declare-styleable>
+
+    <!-- ===================== -->
+    <!-- RSMenu -->
+    <!-- ===================== -->
+
+    <declare-styleable name="RSMenu">
+        <!-- Optional fixed width for the menu -->
+        <attr name="rsMenuWidth" format="dimension" />
+    </declare-styleable>
+
+    <!-- ===================== -->
+    <!-- RSMenuItem -->
+    <!-- ===================== -->
+
+    <declare-styleable name="RSMenuItem">
+        <!-- Leading icon resource -->
+        <attr name="rsMenuItemIcon" format="reference" />
+        <!-- Show/hide leading icon -->
+        <attr name="rsMenuItemIconVisible" format="boolean" />
+        <!-- Label text -->
+        <attr name="rsMenuItemLabel" format="string" />
+        <!-- MenuItem state -->
+        <attr name="rsMenuItemState" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="hover" value="1" />
+            <enum name="focus" value="2" />
+            <enum name="selected" value="3" />
+            <enum name="disabled" value="4" />
+        </attr>
+    </declare-styleable>
+
+    <!-- ===================== -->
+    <!-- RSSnackbar -->
+    <!-- ===================== -->
+
+    <declare-styleable name="RSSnackbar">
+        <!-- Snackbar type: informative, success, critical -->
+        <attr name="rsSnackbarType" format="enum">
+            <enum name="informative" value="0" />
+            <enum name="success" value="1" />
+            <enum name="critical" value="2" />
+        </attr>
+        <!-- Message text -->
+        <attr name="rsSnackbarMessage" format="string" />
+        <!-- Action button text -->
+        <attr name="rsSnackbarActionText" format="string" />
+        <!-- Show/hide action button -->
+        <attr name="rsSnackbarShowAction" format="boolean" />
+    </declare-styleable>
+
+    <!-- ===================== -->
+    <!-- RSTag -->
+    <!-- ===================== -->
+    <declare-styleable name="RSTag">
+        <!-- Tag type: default (solid bg) or subdued (light bg) -->
+        <attr name="rsTagType" format="enum">
+            <enum name="tag_default" value="0" />
+            <enum name="subdued" value="1" />
+        </attr>
+        <!-- Tag variant: color scheme -->
+        <attr name="rsTagVariant" format="enum">
+            <enum name="informative" value="0" />
+            <enum name="success" value="1" />
+            <enum name="warning" value="2" />
+            <enum name="critical" value="3" />
+            <enum name="neutral" value="4" />
+        </attr>
+        <!-- Tag text -->
+        <attr name="rsTagText" format="string" />
+        <!-- Show leading icon -->
+        <attr name="rsTagShowIcon" format="boolean" />
+        <!-- Custom icon resource -->
+        <attr name="rsTagIcon" format="reference" />
+    </declare-styleable>
+
+    <!-- ===================== -->
+    <!-- RSStatusBadge -->
+    <!-- ===================== -->
+    <declare-styleable name="RSStatusBadge">
+        <!-- Status Badge status: determines color scheme -->
+        <attr name="rsStatusBadgeStatus" format="enum">
+            <enum name="success" value="0" />
+            <enum name="warning" value="1" />
+            <enum name="error" value="2" />
+            <enum name="information" value="3" />
+            <enum name="badge_default" value="4" />
+        </attr>
+        <!-- Status Badge variant: background style -->
+        <attr name="rsStatusBadgeVariant" format="enum">
+            <enum name="linked" value="0" />
+            <enum name="contained" value="1" />
+            <enum name="outlined" value="2" />
+        </attr>
+        <!-- Status Badge type: leading indicator -->
+        <attr name="rsStatusBadgeType" format="enum">
+            <enum name="dot" value="0" />
+            <enum name="icon" value="1" />
+        </attr>
+        <!-- Status Badge text -->
+        <attr name="rsStatusBadgeText" format="string" />
+    </declare-styleable>
+
+    <!-- ===================== -->
+    <!-- RSBadge (New Figma Design) -->
+    <!-- ===================== -->
+    <declare-styleable name="RSBadge">
+        <!-- Badge type: layout configuration -->
+        <attr name="rsBadgeType" format="enum">
+            <enum name="basic" value="0" />
+            <enum name="left_icon" value="1" />
+            <enum name="right_icon" value="2" />
+            <enum name="with_dot" value="3" />
+        </attr>
+        <!-- Badge style: visual appearance -->
+        <attr name="rsBadgeStyle" format="enum">
+            <enum name="light" value="0" />
+            <enum name="lighter" value="1" />
+            <enum name="stroke" value="2" />
+        </attr>
+        <!-- Badge color: color scheme -->
+        <attr name="rsBadgeColor" format="enum">
+            <enum name="badge_default" value="0" />
+            <enum name="brand" value="1" />
+            <enum name="warning" value="2" />
+            <enum name="error" value="3" />
+            <enum name="success" value="4" />
+        </attr>
+        <!-- Badge text -->
+        <attr name="rsBadgeText" format="string" />
+        <!-- Badge number (shows number instead of text when > 0) -->
+        <attr name="rsBadgeNumber" format="integer" />
+        <!-- Badge icon (for left_icon and right_icon types) -->
+        <attr name="rsBadgeIcon" format="reference" />
+    </declare-styleable>
+
+    <!-- RSTabItem: Individual tab button component -->
+    <declare-styleable name="RSTabItem">
+        <!-- Tab type: visual style -->
+        <attr name="rsTabType" format="enum">
+            <enum name="full_circle" value="0" />
+            <enum name="underline" value="1" />
+        </attr>
+        <!-- Tab size: small or medium -->
+        <attr name="rsTabSize" format="enum">
+            <enum name="small" value="0" />
+            <enum name="medium" value="1" />
+        </attr>
+        <!-- Tab label text -->
+        <attr name="rsTabLabel" format="string" />
+        <!-- Tab icon: leading icon drawable -->
+        <attr name="rsTabIcon" format="reference" />
+        <!-- Tab counter: trailing count number (shows as badge) -->
+        <attr name="rsTabCounter" format="integer" />
+        <!-- Tab state: visual state -->
+        <attr name="rsTabState" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="hover" value="1" />
+            <enum name="focus" value="2" />
+            <enum name="selected" value="3" />
+        </attr>
+        <!-- Tab icon visibility: show/hide icon (default: true if icon is set) -->
+        <attr name="rsTabIconVisible" format="boolean" />
+        <!-- Tab counter visibility: show/hide counter (default: true if counter >= 0) -->
+        <attr name="rsTabCounterVisible" format="boolean" />
+    </declare-styleable>
+
 
 </resources>

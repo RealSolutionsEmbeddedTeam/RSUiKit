@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSTabItem: Selected state background (full-circle type) -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/rs_bg_primary_on_hover">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/rs_tab_item_radius" />
+            <solid android:color="@color/rs_bg_brand_solid" />
+            <stroke
+                android:width="@dimen/rs_tab_item_border_width"
+                android:color="@color/rs_border_brand_solid" />
+        </shape>
+    </item>
+</ripple>

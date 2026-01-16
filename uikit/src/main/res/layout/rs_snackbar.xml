@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSSnackbar Layout
+     Figma Specs:
+     - width: 328dp (or match_parent)
+     - padding: 12dp
+     - gap: 8dp
+     - align-items: center
+
+     Structure:
+     - FrameLayout (icon container, 28dp) with colored circle bg
+     - TextView (message, flex: 1)
+     - RSButton (action, plain-dark, small) - optional -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rs_snackbar_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rs_snackbar_bg"
+    android:elevation="@dimen/rs_snackbar_elevation"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/rs_snackbar_padding">
+
+    <!-- Icon Container with colored background -->
+    <FrameLayout
+        android:id="@+id/rs_snackbar_icon_container"
+        android:layout_width="@dimen/rs_snackbar_icon_size"
+        android:layout_height="@dimen/rs_snackbar_icon_size"
+        android:layout_marginEnd="@dimen/rs_snackbar_gap"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/rs_snackbar_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no"
+            tools:src="@drawable/rs_ic_callout_success" />
+    </FrameLayout>
+
+    <!-- Message Text -->
+    <TextView
+        android:id="@+id/rs_snackbar_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/rs_text_white"
+        android:textSize="@dimen/rs_snackbar_text_size"
+        tools:text="Message" />
+
+    <!-- Action Button (optional) -->
+    <com.realsolutions.uikit.RSButton
+        android:id="@+id/rs_snackbar_action"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginStart="@dimen/rs_snackbar_gap"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="0dp"
+        android:text="Action"
+        android:textSize="12sp"
+        app:rsType="primary"
+        tools:visibility="visible" />
+
+</LinearLayout>

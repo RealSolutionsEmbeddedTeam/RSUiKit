@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSBadge Layout (New Figma Design)
+     Figma Specs:
+     - display: inline-flex
+     - padding: 2dp vertical, 2-8dp horizontal (varies by type)
+     - gap: 2dp
+     - radius: 999dp (fully rounded pill) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rs_badge_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/rs_badge_padding_horizontal"
+    android:paddingTop="@dimen/rs_badge_padding_vertical"
+    android:paddingEnd="@dimen/rs_badge_padding_horizontal"
+    android:paddingBottom="@dimen/rs_badge_padding_vertical"
+    tools:background="@drawable/rs_badge_bg_success_lighter">
+
+    <!-- Dot indicator (for type=with_dot) -->
+    <View
+        android:id="@+id/rs_badge_dot"
+        android:layout_width="@dimen/rs_badge_dot_size"
+        android:layout_height="@dimen/rs_badge_dot_size"
+        android:layout_marginEnd="@dimen/rs_badge_gap"
+        android:visibility="gone"
+        tools:background="@color/rs_text_success_tertiary"
+        tools:visibility="visible" />
+
+    <!-- Left icon (for type=left_icon) -->
+    <ImageView
+        android:id="@+id/rs_badge_left_icon"
+        android:layout_width="@dimen/rs_badge_icon_size"
+        android:layout_height="@dimen/rs_badge_icon_size"
+        android:layout_marginEnd="@dimen/rs_badge_gap"
+        android:importantForAccessibility="no"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        tools:src="@drawable/rs_ic_check"
+        tools:visibility="visible" />
+
+    <!-- Text / Number -->
+    <TextView
+        android:id="@+id/rs_badge_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:includeFontPadding="false"
+        android:textColor="@color/rs_text_success_tertiary"
+        android:textSize="@dimen/rs_badge_text_size"
+        tools:text="Badge" />
+
+    <!-- Right icon (for type=right_icon) -->
+    <ImageView
+        android:id="@+id/rs_badge_right_icon"
+        android:layout_width="@dimen/rs_badge_icon_size"
+        android:layout_height="@dimen/rs_badge_icon_size"
+        android:layout_marginStart="@dimen/rs_badge_gap"
+        android:importantForAccessibility="no"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        tools:src="@drawable/rs_ic_check"
+        tools:visibility="gone" />
+
+</LinearLayout>

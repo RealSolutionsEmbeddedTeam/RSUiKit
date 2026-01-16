@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><!-- RSTag Background - Informative Subdued (light) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/rs_bg_brand_tertiary" />
+    <corners android:radius="@dimen/rs_tag_radius" />
+</shape>
