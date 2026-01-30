@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <!-- Label Row -->
+    <LinearLayout
+        android:id="@+id/rsCounterLabelRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="4dp">
+
+        <!-- Label Text -->
+        <TextView
+            android:id="@+id/rsCounterLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/rs_text_primary"
+            android:textSize="14sp"
+            tools:text="Counter Input" />
+
+        <!-- Required Indicator -->
+        <TextView
+            android:id="@+id/rsCounterRequired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/rs_text_brand_tertiary"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <!-- Sublabel (Optional) -->
+        <TextView
+            android:id="@+id/rsCounterSublabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/rs_text_tertiary"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:text="(Optional)"
+            tools:visibility="visible" />
+
+        <!-- Info Icon -->
+        <ImageView
+            android:id="@+id/rsCounterInfoIcon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/rs_ic_info_circle"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <!-- Counter Row (Input Area) -->
+    <LinearLayout
+        android:id="@+id/rsCounterInputRow"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/rs_counter_input_bg_default"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <!-- Minus Button -->
+        <ImageView
+            android:id="@+id/rsCounterBtnMinus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:clickable="true"
+            android:contentDescription="Decrease"
+            android:focusable="true"
+            android:src="@drawable/rs_ic_counter_minus" />
+
+        <!-- Value Text -->
+        <TextView
+            android:id="@+id/rsCounterValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:textColor="@color/rs_text_primary"
+            android:textSize="16sp"
+            tools:text="16" />
+
+        <!-- Plus Button -->
+        <ImageView
+            android:id="@+id/rsCounterBtnPlus"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:clickable="true"
+            android:contentDescription="Increase"
+            android:focusable="true"
+            android:src="@drawable/rs_ic_counter_plus" />
+    </LinearLayout>
+
+    <!-- Hint Row -->
+    <LinearLayout
+        android:id="@+id/rsCounterHintRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <!-- Hint Icon -->
+        <ImageView
+            android:id="@+id/rsCounterHintIcon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/rs_ic_info_hint" />
+
+        <!-- Hint Text -->
+        <TextView
+            android:id="@+id/rsCounterHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/rs_text_tertiary"
+            android:textSize="12sp"
+            tools:text="This is a hint text to help user." />
+    </LinearLayout>
+
+</merge>

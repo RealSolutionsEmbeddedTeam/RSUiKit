@@ -11,6 +11,7 @@
     <dimen name="rs_radius_sm">4dp</dimen>
     <dimen name="rs_radius_md">8dp</dimen>
     <dimen name="rs_radius_lg">12dp</dimen>
+    <dimen name="rs_radius_xl">16dp</dimen>
 
     <!-- Checkbox -->
     <dimen name="rs_checkbox_radius">8dp</dimen>
@@ -36,6 +37,24 @@
     <dimen name="rs_input_padding_vertical">14dp</dimen>
     <dimen name="rs_input_text_size">15sp</dimen>
     <dimen name="rs_input_label_size">10sp</dimen>
+
+    <!-- RSInput -->
+    <dimen name="rs_input_height_xs">32dp</dimen>
+    <dimen name="rs_input_height_sm">36dp</dimen>
+    <dimen name="rs_input_height_md">40dp</dimen>
+    <dimen name="rs_input_radius_new">8dp</dimen>
+    <dimen name="rs_input_padding_horizontal_xs">10dp</dimen>
+    <dimen name="rs_input_padding_horizontal_sm">12dp</dimen>
+    <dimen name="rs_input_padding_horizontal_md">12dp</dimen>
+    <dimen name="rs_input_text_size_xs">12sp</dimen>
+    <dimen name="rs_input_text_size_sm">14sp</dimen>
+    <dimen name="rs_input_text_size_md">14sp</dimen>
+    <dimen name="rs_input_helper_text_size">12sp</dimen>
+    <dimen name="rs_input_icon_size_xs">16dp</dimen>
+    <dimen name="rs_input_icon_size_sm">20dp</dimen>
+    <dimen name="rs_input_icon_size_md">20dp</dimen>
+    <dimen name="rs_input_gap">4dp</dimen>
+
 
     <!-- RadioButton -->
     <dimen name="rs_radio_size_sm">16dp</dimen>
@@ -164,4 +183,20 @@
     <dimen name="rs_badge_dot_size">8dp</dimen>
     <dimen name="rs_badge_text_size">12sp</dimen>
     <dimen name="rs_badge_stroke_width">1dp</dimen>
+
+    <!-- Avatar -->
+    <dimen name="rs_avatar_size_88">88dp</dimen>
+    <dimen name="rs_avatar_size_72">72dp</dimen>
+    <dimen name="rs_avatar_size_64">64dp</dimen>
+    <dimen name="rs_avatar_size_56">56dp</dimen>
+    <dimen name="rs_avatar_size_48">48dp</dimen>
+    <dimen name="rs_avatar_size_36">36dp</dimen>
+    <dimen name="rs_avatar_size_32">32dp</dimen>
+    <dimen name="rs_avatar_size_28">28dp</dimen>
+    <dimen name="rs_avatar_size_24">24dp</dimen>
+    <dimen name="rs_avatar_size_20">20dp</dimen>
+    <dimen name="rs_avatar_size_16">16dp</dimen>
+    <dimen name="rs_avatar_group_overlap">-8dp</dimen>
+    <dimen name="rs_avatar_border_width">2dp</dimen>
+
 </resources>

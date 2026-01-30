@@ -39,8 +39,8 @@ import androidx.core.widget.CompoundButtonCompat;
  */
 public class RSCheckBox extends AppCompatCheckBox {
 
-    public static final int SIZE_SM = 0;
-    public static final int SIZE_MD = 1;
+    public static final int SIZE_SM = 1;
+    public static final int SIZE_MD = 2;
 
     public static final int STATUS_UNCHECKED = 0;
     public static final int STATUS_CHECKED = 1;
@@ -96,15 +96,19 @@ public class RSCheckBox extends AppCompatCheckBox {
         int resId;
 
         if (size == SIZE_SM) {
-            if (status == STATUS_CHECKED) resId = R.drawable.rs_checkbox_checked_sm;
+            if (status == STATUS_CHECKED)
+                resId = R.drawable.rs_checkbox_checked_sm;
             else if (status == STATUS_INDETERMINATE)
                 resId = R.drawable.rs_checkbox_indeterminate_sm;
-            else resId = R.drawable.rs_checkbox_unchecked_sm;
+            else
+                resId = R.drawable.rs_checkbox_unchecked_sm;
         } else {
-            if (status == STATUS_CHECKED) resId = R.drawable.rs_checkbox_checked_md;
+            if (status == STATUS_CHECKED)
+                resId = R.drawable.rs_checkbox_checked_md;
             else if (status == STATUS_INDETERMINATE)
                 resId = R.drawable.rs_checkbox_indeterminate_md;
-            else resId = R.drawable.rs_checkbox_unchecked_md;
+            else
+                resId = R.drawable.rs_checkbox_unchecked_md;
         }
 
         setButtonDrawable(resId);
@@ -142,9 +146,12 @@ public class RSCheckBox extends AppCompatCheckBox {
     public boolean performClick() {
         // 3'lü döngü:
         // unchecked -> checked -> indeterminate -> unchecked
-        if (status == STATUS_UNCHECKED) setStatus(STATUS_CHECKED);
-        else if (status == STATUS_CHECKED) setStatus(STATUS_INDETERMINATE);
-        else setStatus(STATUS_UNCHECKED);
+        if (status == STATUS_UNCHECKED)
+            setStatus(STATUS_CHECKED);
+        else if (status == STATUS_CHECKED)
+            setStatus(STATUS_INDETERMINATE);
+        else
+            setStatus(STATUS_UNCHECKED);
 
         // super çağır (accessibility vs)
         return super.performClick();

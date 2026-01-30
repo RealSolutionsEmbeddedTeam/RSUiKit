@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="Widget.RS.Button.Primary" parent="Widget.Material3.Button">
         <item name="android:minHeight">48dp</item>
         <item name="cornerRadius">12dp</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RSAvatarCircleOverlay">
+        <item name="cornerSize">50%</item>
     </style>
 </resources>

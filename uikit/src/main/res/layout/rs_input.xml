@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:orientation="vertical"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <com.realsolutions.uikit.RSLabel
+        android:id="@+id/rsInputLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/rs_input_gap" />
+
+    <!-- Actual Input Box Container -->
+    <LinearLayout
+        android:id="@+id/rsInputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/rs_input_bg_default"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- Boxed Prefix (e.g., https://) -->
+        <LinearLayout
+            android:id="@+id/rsInputPrefixBox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/rs_bg_secondary"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/rsInputPrefixText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/rs_text_secondary"
+                android:textSize="14sp"
+                tools:text="https://" />
+        </LinearLayout>
+
+        <!-- Vertical Divider for Prefix -->
+        <View
+            android:id="@+id/rsInputPrefixDivider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/rs_border_secondary"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <!-- Leading Icon - no tint, icons have colors baked in -->
+        <ImageView
+            android:id="@+id/rsInputLeadingIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/rs_ic_mail"
+            android:visibility="gone" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rsInputEt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="Placeholder..."
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:paddingHorizontal="12dp"
+            android:textColor="@color/rs_text_primary"
+            android:textColorHint="@color/rs_text_placeholder"
+            android:textSize="14sp" />
+
+        <!-- Info Icon (shown when rsShowInfo is true) - no tint -->
+        <ImageView
+            android:id="@+id/rsInputInfoIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/rs_ic_info_circle"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <!-- Trailing Icon (type-specific: eye for password, chevron for dropdown, etc.) - no tint -->
+        <ImageView
+            android:id="@+id/rsInputTrailingIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/rs_ic_eye"
+            android:visibility="gone" />
+
+        <!-- Vertical Divider for Copy Box (for link type) -->
+        <View
+            android:id="@+id/rsInputCopyDivider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/rs_border_secondary"
+            android:visibility="gone" />
+
+        <!-- Copy Button Box (inside border with divider - for link type) -->
+        <LinearLayout
+            android:id="@+id/rsInputCopyBox"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <!-- Copy Icon - no tint -->
+            <ImageView
+                android:id="@+id/rsInputCopyIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rs_ic_copy" />
+
+        </LinearLayout>
+
+        <!-- Vertical Divider for Suffix Box -->
+        <View
+            android:id="@+id/rsInputSuffixDivider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/rs_border_secondary"
+            android:visibility="gone" />
+
+        <!-- Suffix Box (for dropdown: globe icon + text + chevron) -->
+        <LinearLayout
+            android:id="@+id/rsInputSuffixBox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <!-- Globe/Suffix Icon - no tint -->
+            <ImageView
+                android:id="@+id/rsInputSuffixIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/rs_ic_globe" />
+
+            <TextView
+                android:id="@+id/rsInputSuffixText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="can view"
+                android:textColor="@color/rs_text_secondary"
+                android:textSize="14sp" />
+
+            <!-- Suffix Chevron - no tint -->
+            <ImageView
+                android:id="@+id/rsInputSuffixChevron"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="2dp"
+                android:src="@drawable/rs_ic_chevron_down" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rsInputHelperLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rs_input_gap"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <!-- Helper Info Icon - no tint -->
+        <ImageView
+            android:id="@+id/rsInputHelperIcon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/rs_ic_info_circle" />
+
+        <TextView
+            android:id="@+id/rsInputHelperText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/rs_text_secondary"
+            android:textSize="@dimen/rs_input_helper_text_size"
+            tools:text="This is a hint text to help user." />
+
+    </LinearLayout>
+
+</merge>

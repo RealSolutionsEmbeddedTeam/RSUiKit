@@ -39,7 +39,12 @@ public class RSButton extends MaterialButton {
     public static final int TYPE_PLAIN_DARK = 3;
     public static final int TYPE_PLAIN_LIGHT = 4;
 
+    // Size constants
+    public static final int SIZE_SM = 1;
+    public static final int SIZE_MD = 2;
+
     private int type = TYPE_PRIMARY;
+    private int size = SIZE_MD;
 
     public RSButton(Context context) {
         super(context);
@@ -59,31 +64,49 @@ public class RSButton extends MaterialButton {
     private void init(@Nullable AttributeSet attrs) {
         // Defaults
         setAllCaps(false);
-        setMinHeight(dp(48));
-        setCornerRadius(dp(12));
         setInsetTop(0);
         setInsetBottom(0);
+
+        // Read attributes from XML
+        if (attrs != null) {
+            TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.RSButton);
+            type = a.getInt(R.styleable.RSButton_rsType, TYPE_PRIMARY);
+            size = a.getInt(R.styleable.RSButton_rsSize, SIZE_MD);
+            a.recycle();
+        }
 
         // CRITICAL: Disable MaterialButton's built-in backgroundTint
         // This allows our custom drawable backgrounds to work correctly
         setBackgroundTintList(null);
 
-        // Optional: keep padding nice if user doesn't set it
-        // (MaterialButton already has padding, but some themes override it)
-        if (getPaddingLeft() == 0 && getPaddingRight() == 0) {
-            int pxH = dp(16);
-            int pxV = dp(12);
-            setPadding(pxH, pxV, pxH, pxV);
-        }
-
-        // Read rsType from XML
-        if (attrs != null) {
-            TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.RSButton);
-            type = a.getInt(R.styleable.RSButton_rsType, TYPE_PRIMARY);
-            a.recycle();
-        }
-
+        applySize(size);
         applyType(type);
+    }
+
+    /**
+     * Apply size programmatically.
+     */
+    public void applySize(int size) {
+        this.size = size;
+        if (size == SIZE_SM) {
+            int px = dp(28);
+            setMinHeight(px);
+            setMaxHeight(px);
+            setCornerRadius(dp(8));
+            setTextSize(12f);
+            int pxH = dp(10);
+            setPadding(pxH, 0, pxH, 0);
+        } else {
+            setMinHeight(dp(48));
+            setMaxHeight(dp(1000)); // Reset max height
+            setCornerRadius(dp(12));
+            setTextSize(14f);
+            if (getPaddingLeft() == 0 && getPaddingRight() == 0) {
+                int pxH = dp(16);
+                int pxV = dp(12);
+                setPadding(pxH, pxV, pxH, pxV);
+            }
+        }
     }
 
     /**
@@ -92,38 +115,41 @@ public class RSButton extends MaterialButton {
     public void applyType(int type) {
         this.type = type;
 
+        android.graphics.drawable.Drawable bg;
+        android.content.res.ColorStateList textColors;
+
         switch (type) {
             case TYPE_SECONDARY:
-                setBackground(Objects
-                        .requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_secondary_bg)));
-                setTextColor(ContextCompat.getColorStateList(getContext(), R.color.rs_btn_secondary_text));
+                bg = ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_secondary_bg);
+                textColors = ContextCompat.getColorStateList(getContext(), R.color.rs_btn_secondary_text);
                 break;
 
             case TYPE_NEUTRAL:
-                setBackground(
-                        Objects.requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_neutral_bg)));
-                setTextColor(ContextCompat.getColorStateList(getContext(), R.color.rs_btn_neutral_text));
+                bg = ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_neutral_bg);
+                textColors = ContextCompat.getColorStateList(getContext(), R.color.rs_btn_neutral_text);
                 break;
 
             case TYPE_PLAIN_DARK:
-                setBackground(Objects
-                        .requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_plain_dark_bg)));
-                setTextColor(ContextCompat.getColorStateList(getContext(), R.color.rs_btn_plain_dark_text));
+                bg = ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_plain_dark_bg);
+                textColors = ContextCompat.getColorStateList(getContext(), R.color.rs_btn_plain_dark_text);
                 break;
 
             case TYPE_PLAIN_LIGHT:
-                setBackground(Objects
-                        .requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_plain_light_bg)));
-                setTextColor(ContextCompat.getColorStateList(getContext(), R.color.rs_btn_plain_light_text));
+                bg = ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_plain_light_bg);
+                textColors = ContextCompat.getColorStateList(getContext(), R.color.rs_btn_plain_light_text);
                 break;
 
             case TYPE_PRIMARY:
             default:
-                setBackground(
-                        Objects.requireNonNull(ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_primary_bg)));
-                setTextColor(ContextCompat.getColorStateList(getContext(), R.color.rs_btn_primary_text));
+                bg = ContextCompat.getDrawable(getContext(), R.drawable.rs_btn_primary_bg);
+                textColors = ContextCompat.getColorStateList(getContext(), R.color.rs_btn_primary_text);
                 break;
         }
+
+        if (bg != null)
+            setBackground(bg);
+        if (textColors != null)
+            setTextColor(textColors);
 
         // Make sure it redraws
         invalidate();

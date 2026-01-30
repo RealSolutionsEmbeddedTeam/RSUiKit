@@ -12,7 +12,18 @@
         <enum name="focused" value="1" />
         <enum name="error" value="2" />
         <enum name="success" value="3" />
+        <enum name="hovered" value="4" />
     </attr>
+    <attr name="rsSize" format="enum">
+        <enum name="xs" value="0" />
+        <enum name="sm" value="1" />
+        <enum name="md" value="2" />
+    </attr>
+    <attr name="rsRequired" format="boolean" />
+    <attr name="rsShowInfo" format="boolean" />
+    <attr name="rsSuffixText" format="string" />
+    <attr name="rsLeadingIcon" format="reference" />
+    <attr name="rsTrailingIcon" format="reference" />
 
     <!-- ===================== -->
     <!-- RSButton -->
@@ -25,16 +36,14 @@
             <enum name="plain_dark" value="3" />
             <enum name="plain_light" value="4" />
         </attr>
+        <attr name="rsSize" />
     </declare-styleable>
 
     <!-- ===================== -->
     <!-- RSCheckBox -->
     <!-- ===================== -->
     <declare-styleable name="RSCheckBox">
-        <attr name="rsSize" format="enum">
-            <enum name="sm" value="0" />
-            <enum name="md" value="1" />
-        </attr>
+        <attr name="rsSize" />
         <attr name="rsStatus" format="enum">
             <enum name="unchecked" value="0" />
             <enum name="checked" value="1" />
@@ -53,6 +62,37 @@
         <attr name="rsLabel" />
         <attr name="rsHint" />
         <attr name="rsState" />
+    </declare-styleable>
+
+    <!-- ===================== -->
+    <!-- RSInput -->
+    <!-- ===================== -->
+    <declare-styleable name="RSInput">
+        <attr name="rsLabel" />
+        <attr name="rsText" />
+        <attr name="rsHint" />
+        <attr name="rsState" />
+        <attr name="rsSize" />
+        <attr name="rsEnabled" />
+        <attr name="rsInputType" format="enum">
+            <enum name="basic" value="0" />
+            <enum name="email" value="1" />
+            <enum name="password" value="2" />
+            <enum name="search" value="3" />
+            <enum name="website" value="4" />
+            <enum name="date" value="5" />
+            <enum name="link" value="6" />
+            <enum name="dropdown" value="7" />
+            <enum name="phone" value="8" />
+            <enum name="button" value="9" />
+        </attr>
+        <attr name="rsRequired" />
+        <attr name="rsShowInfo" />
+        <attr name="rsSuffixText" />
+        <attr name="rsPrefixText" format="string" />
+        <attr name="rsHelperText" format="string" />
+        <attr name="rsLeadingIcon" />
+        <attr name="rsTrailingIcon" />
     </declare-styleable>
 
     <!-- ===================== -->
@@ -214,9 +254,9 @@
 
     <declare-styleable name="RSLabel">
         <attr name="rsText" />
-        <attr name="rsRequired" format="boolean" />
-        <attr name="rsSuffixText" format="string" />
-        <attr name="rsShowInfo" format="boolean" />
+        <attr name="rsRequired" />
+        <attr name="rsSuffixText" />
+        <attr name="rsShowInfo" />
         <attr name="rsEnabled" />
     </declare-styleable>
 
@@ -236,7 +276,7 @@
 
     <declare-styleable name="RSSelect">
         <attr name="rsPlaceholder" format="string" />
-        <attr name="rsLeadingIcon" format="reference" />
+        <attr name="rsLeadingIcon" />
         <attr name="rsState" />
         <attr name="rsEnabled" />
         <attr name="rsClearable" format="boolean" />
@@ -381,6 +421,7 @@
             <enum name="error" value="3" />
             <enum name="success" value="4" />
         </attr>
+
         <!-- Badge text -->
         <attr name="rsBadgeText" format="string" />
         <!-- Badge number (shows number instead of text when > 0) -->
@@ -420,5 +461,156 @@
         <attr name="rsTabCounterVisible" format="boolean" />
     </declare-styleable>
 
+
+    <!-- ===================== -->
+    <!-- RSRadioCard -->
+    <!-- ===================== -->
+
+    <declare-styleable name="RSRadioCard">
+        <!-- Card label text -->
+        <attr name="rsRadioCardLabel" format="string" />
+        <!-- Description text below label -->
+        <attr name="rsRadioCardDescription" format="string" />
+        <!-- Helper text at bottom -->
+        <attr name="rsRadioCardHelper" format="string" />
+        <!-- Show description -->
+        <attr name="rsRadioCardShowDescription" format="boolean" />
+        <!-- Show helper -->
+        <attr name="rsRadioCardShowHelper" format="boolean" />
+        <!-- Selected state (Status: True/False in Figma) -->
+        <attr name="rsRadioCardSelected" format="boolean" />
+        <!-- Enabled state -->
+        <attr name="rsRadioCardEnabled" format="boolean" />
+        <!-- Size: sm (16dp) or md (20dp) radio indicator -->
+        <attr name="rsSize" />
+        <!-- Visual state for preview/demo (State in Figma) -->
+        <attr name="rsRadioCardState" format="enum">
+            <enum name="default_state" value="0" />
+            <enum name="hover" value="1" />
+            <enum name="focus" value="2" />
+            <enum name="pressed" value="3" />
+        </attr>
+    </declare-styleable>
+
+
+    <!-- ===================== -->
+    <!-- RSTooltip -->
+    <!-- ===================== -->
+    <declare-styleable name="RSTooltip">
+        <!-- Title text -->
+        <attr name="rsTooltipTitle" format="string" />
+        <!-- Message text -->
+        <attr name="rsTooltipMessage" format="string" />
+        <!-- Arrow position (12 directions) -->
+        <attr name="rsTooltipArrowPosition" format="enum">
+            <enum name="top_left" value="0" />
+            <enum name="top_center" value="1" />
+            <enum name="top_right" value="2" />
+            <enum name="bottom_left" value="3" />
+            <enum name="bottom_center" value="4" />
+            <enum name="bottom_right" value="5" />
+            <enum name="left_top" value="6" />
+            <enum name="left_center" value="7" />
+            <enum name="left_bottom" value="8" />
+            <enum name="right_top" value="9" />
+            <enum name="right_center" value="10" />
+            <enum name="right_bottom" value="11" />
+        </attr>
+        <!-- Action type: none, one (Continue), two (Previous + Continue) -->
+        <attr name="rsTooltipActionType" format="enum">
+            <enum name="none" value="0" />
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+        </attr>
+        <!-- Show/hide close button -->
+        <attr name="rsTooltipShowClose" format="boolean" />
+    </declare-styleable>
+
+
+    <!-- ===================== -->
+    <!-- RSCounterInput -->
+    <!-- ===================== -->
+    <declare-styleable name="RSCounterInput">
+        <attr name="rsSize" />
+        <attr name="rsState" />
+        <attr name="rsLabel" />
+        <attr name="rsRequired" />
+        <attr name="rsCounterSublabel" format="string" />
+        <attr name="rsShowInfo" />
+        <attr name="rsCounterHint" format="string" />
+        <attr name="rsCounterValue" format="integer" />
+        <attr name="rsCounterMinValue" format="integer" />
+        <attr name="rsCounterMaxValue" format="integer" />
+        <attr name="rsCounterStep" format="integer" />
+        <attr name="rsEnabled" />
+    </declare-styleable>
+
+    <!-- ===================== -->
+    <!-- RSAvatar -->
+    <!-- ===================== -->
+    <declare-styleable name="RSAvatar">
+        <!-- Avatar size: size_88, size_72, ..., size_16 -->
+        <attr name="rsAvatarSize" format="enum">
+            <enum name="size_88" value="0" />
+            <enum name="size_72" value="1" />
+            <enum name="size_64" value="2" />
+            <enum name="size_56" value="3" />
+            <enum name="size_48" value="4" />
+            <enum name="size_36" value="5" />
+            <enum name="size_32" value="6" />
+            <enum name="size_28" value="7" />
+            <enum name="size_24" value="8" />
+            <enum name="size_20" value="9" />
+            <enum name="size_16" value="10" />
+        </attr>
+        <!-- Content variant -->
+        <attr name="rsAvatarVariant" format="enum">
+            <enum name="image" value="0" />
+            <enum name="text" value="1" />
+            <enum name="icon" value="2" />
+            <enum name="memoji" value="3" />
+        </attr>
+        <!-- Color scheme -->
+        <attr name="rsAvatarType" format="enum">
+            <enum name="neutral" value="0" />
+            <enum name="brand" value="1" />
+            <enum name="success" value="2" />
+            <enum name="warning" value="3" />
+            <enum name="error" value="4" />
+            <enum name="yellow" value="5" />
+            <enum name="orange" value="6" />
+            <enum name="purple" value="7" />
+        </attr>
+        <!-- Initials text for text variant -->
+        <attr name="rsAvatarText" format="string" />
+        <!-- Image resource -->
+        <attr name="rsAvatarImage" format="reference" />
+        <!-- Custom icon resource -->
+        <attr name="rsAvatarIcon" format="reference" />
+        <!-- Show white border (useful in groups) -->
+        <attr name="rsAvatarHasBorder" format="boolean" />
+    </declare-styleable>
+
+    <!-- ===================== -->
+    <!-- RSAvatarGroup -->
+    <!-- ===================== -->
+    <declare-styleable name="RSAvatarGroup">
+        <!-- Size for all avatars in the group -->
+        <attr name="rsAvatarGroupSize" format="enum">
+            <enum name="size_88" value="0" />
+            <enum name="size_72" value="1" />
+            <enum name="size_64" value="2" />
+            <enum name="size_56" value="3" />
+            <enum name="size_48" value="4" />
+            <enum name="size_36" value="5" />
+            <enum name="size_32" value="6" />
+            <enum name="size_28" value="7" />
+            <enum name="size_24" value="8" />
+            <enum name="size_20" value="9" />
+            <enum name="size_16" value="10" />
+        </attr>
+        <!-- Max number of avatars to display -->
+        <attr name="rsAvatarGroupMax" format="integer" />
+    </declare-styleable>
 
 </resources>

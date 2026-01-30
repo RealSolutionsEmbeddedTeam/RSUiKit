@@ -48,8 +48,8 @@ import androidx.core.widget.CompoundButtonCompat;
  */
 public class RSRadioButton extends AppCompatRadioButton {
 
-    public static final int SIZE_SM = 0;
-    public static final int SIZE_MD = 1;
+    public static final int SIZE_SM = 1;
+    public static final int SIZE_MD = 2;
 
     private int size = SIZE_MD;
 

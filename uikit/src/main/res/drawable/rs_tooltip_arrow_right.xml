@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Arrow pointing RIGHT (right positions) - Figma design -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="8dp"
+    android:height="24dp"
+    android:viewportWidth="10"
+    android:viewportHeight="56">
+
+    <path
+        android:fillColor="#0A0D12"
+        android:pathData="M0,16L9.65,26.8906C10.1167,27.5624 10.1167,28.4376 9.65,29.1094L0,40L0,16Z" />
+
+</vector>

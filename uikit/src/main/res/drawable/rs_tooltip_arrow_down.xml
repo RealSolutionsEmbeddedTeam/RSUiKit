@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Arrow pointing DOWN (bottom positions) - Figma design -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="8dp"
+    android:viewportWidth="56"
+    android:viewportHeight="10">
+
+    <path
+        android:fillColor="#0A0D12"
+        android:pathData="M16,0L26.8906,9.65C27.5624,10.1167 28.4376,10.1167 29.1094,9.65L40,0H16Z" />
+
+</vector>

@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
-
 public class RSLabel extends LinearLayout {
 
     private TextView tvText;
@@ -27,8 +26,8 @@ public class RSLabel extends LinearLayout {
     private int colorTextDisabled;
     private int colorSuffixEnabled;
     private int colorSuffixDisabled;
-    private int colorRequired;      // mavi yıldız
-    private int colorInfoEnabled;   // gri daire
+    private int colorRequired; // mavi yıldız
+    private int colorInfoEnabled; // gri daire
     private int colorInfoDisabled;
 
     public RSLabel(Context context) {
@@ -47,15 +46,15 @@ public class RSLabel extends LinearLayout {
         ivInfo = findViewById(R.id.rsLabelInfo);
 
         colorTextEnabled = ContextCompat.getColor(context, R.color.rs_text_primary);
-        colorTextDisabled = ContextCompat.getColor(context, R.color.rs_text_tertiary);
+        colorTextDisabled = ContextCompat.getColor(context, R.color.rs_text_disabled);
 
-        colorSuffixEnabled = ContextCompat.getColor(context, R.color.rs_text_secondary);
-        colorSuffixDisabled = ContextCompat.getColor(context, R.color.rs_text_tertiary);
+        colorSuffixEnabled = ContextCompat.getColor(context, R.color.rs_text_placeholder);
+        colorSuffixDisabled = ContextCompat.getColor(context, R.color.rs_text_disabled);
 
         colorRequired = ContextCompat.getColor(context, R.color.rs_text_brand_solid);
 
-        colorInfoEnabled = ContextCompat.getColor(context, R.color.rs_border_secondary);
-        colorInfoDisabled = ContextCompat.getColor(context, R.color.rs_border_tertiary);
+        colorInfoEnabled = ContextCompat.getColor(context, R.color.rs_text_placeholder);
+        colorInfoDisabled = ContextCompat.getColor(context, R.color.rs_text_disabled);
 
         if (attrs != null) {
             TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RSLabel);
@@ -129,8 +128,11 @@ public class RSLabel extends LinearLayout {
         tvSuffix.setTextColor(enabled ? colorSuffixEnabled : colorSuffixDisabled);
         tvRequired.setTextColor(colorRequired);
 
+        // Don't apply tint to info icon - it's a multi-color vector (grey circle +
+        // white 'i')
+        // Tint would override all colors and make it invisible
         if (ivInfo.getVisibility() == VISIBLE) {
-            ivInfo.setAlpha(enabled ? 1f : 0.55f);
+            ivInfo.setAlpha(enabled ? 1.0f : 0.5f);
         }
     }
 }

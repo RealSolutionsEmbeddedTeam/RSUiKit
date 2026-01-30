@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Plus icon for RSCounterInput - 20x20dp container, 15x15dp content -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+    <path
+        android:fillColor="@color/rs_text_tertiary"
+        android:fillType="nonZero"
+        android:pathData="M10,2.5v15M2.5,10h15"
+        android:strokeWidth="1.5"
+        android:strokeColor="@color/rs_text_tertiary" />
+</vector>

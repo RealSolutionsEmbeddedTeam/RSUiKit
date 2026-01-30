@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="rs_input_bg">#FFFFFF</color>
-    <color name="rs_input_bg_focused">#EEF1FF</color>
+    <!-- RSInput Colors -->
+    <color name="rs_input_bg">@color/rs_bg_primary</color>
+    <color name="rs_input_bg_hovered">@color/rs_bg_primary_on_hover</color>
+    <color name="rs_input_bg_focused">@color/rs_bg_primary</color>
+    <color name="rs_input_bg_disabled">@color/rs_bg_disabled_subtle</color>
 
-    <color name="rs_input_stroke_default">#E9EAEB</color>
-    <color name="rs_input_stroke_focused">#5768FF</color>
-    <color name="rs_input_stroke_error">#FB3748</color>
-    <color name="rs_input_stroke_success">#E9EAEB</color>
+    <color name="rs_input_stroke_default">@color/rs_border_primary</color>
+    <color name="rs_input_stroke_hovered">@color/rs_border_strong</color>
+    <color name="rs_input_stroke_focused">@color/rs_border_brand_solid</color>
+    <color name="rs_input_stroke_error">@color/rs_border_error_solid</color>
+    <color name="rs_input_stroke_success">@color/rs_border_success_solid</color>
+    <color name="rs_input_stroke_disabled">@color/rs_border_disabled</color>
 
-    <color name="rs_input_icon_default">#E9EAEB</color>
-    <color name="rs_input_icon_focused">#5768FF</color>
-    <color name="rs_input_icon_error">#FB3748</color>
-    <color name="rs_input_icon_success">#1FC168</color>
+    <color name="rs_input_text">@color/rs_text_primary</color>
+    <color name="rs_input_text_disabled">@color/rs_text_disabled</color>
+    <color name="rs_input_hint">@color/rs_text_placeholder</color>
 
-    <color name="rs_input_text">#181D27</color>
-    <color name="rs_input_hint">#A4A7AE</color>
+    <color name="rs_input_label_default">@color/rs_text_secondary</color>
+    <color name="rs_input_label_hovered">@color/rs_text_secondary</color>
+    <color name="rs_input_label_focused">@color/rs_text_brand_solid</color>
+    <color name="rs_input_label_error">@color/rs_text_error_solid</color>
+    <color name="rs_input_label_disabled">@color/rs_text_disabled</color>
 
-    <color name="rs_input_label_focused">#5768FF</color>
-    <color name="rs_input_label_error">#FB3748</color>
-    <color name="rs_input_label_default">#717680</color>
+    <color name="rs_input_icon_default">@color/rs_text_tertiary</color>
+    <color name="rs_input_icon_focused">@color/rs_text_brand_solid</color>
+    <color name="rs_input_icon_error">@color/rs_text_error_solid</color>
+    <color name="rs_input_icon_success">@color/rs_text_success_solid</color>
+    <color name="rs_input_icon_disabled">@color/rs_text_disabled</color>
 
     <color name="rs_toast_error_bg">#1C1C1E</color>
     <color name="rs_toast_success_bg">#1E7F43</color>
